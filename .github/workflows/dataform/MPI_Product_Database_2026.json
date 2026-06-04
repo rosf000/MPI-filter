@@ -1,0 +1,5497 @@
+[
+  {
+    "product_name": "AquaBead R331E",
+    "core_properties": {
+      "Melt_Point_C": "80",
+      "Density_g_cc_25C": "1.00",
+      "Mean_Particle_Size": {
+        "type": "sub-micron",
+        "min": 0.1,
+        "max": 0.9,
+        "raw": "Sub-micron aqueous emulsion"
+      },
+      "Max_Particle_Size": {
+        "type": "sub-micron",
+        "min": 0.1,
+        "max": 0.9,
+        "raw": "Sub-micron aqueous emulsion"
+      }
+    },
+    "application_profiles": {
+      "ArchitecturalCoatings": {
+        "Available_as_Waterborne_Dispersion": false,
+        "Description": "Rice bran wax emulsion",
+        "Suggested_Use_Level": "3.0 - 10.0%",
+        "Recommended_System_Type": [
+          "W"
+        ],
+        "Interior_Exterior": "I,E",
+        "Burnish_Resistance": 1,
+        "Matting_and_Gloss_Control": 0,
+        "Block_Resistance": 3,
+        "Resistance_to_Dirt_Pick_Up": 2,
+        "Cleanability": 3,
+        "Water_Repellency_Beading": 3,
+        "Moisture_and_Stain_Resistance": 0,
+        "Scratch_and_Mar_Resistance": 2,
+        "Texture": 0,
+        "Lubricity_and_Smooth_Feel": 3,
+        "Soft_Touch": 0,
+        "Heel_Mark_Resistance": 0,
+        "Anti_Skid": 0,
+        "Film_Clarity": 3,
+        "In_Can_Stability": 3,
+        "Natural_Naturally_Derived": 3
+      },
+      "CanContainerCoatings": {
+        "Available_as_Waterborne_Dispersion": false,
+        "Description": "Rice bran wax emulsion",
+        "Suggested_Use_Level": "3.0 - 5.0%",
+        "FDA_21CFR_175_300_Compliance": "Yes",
+        "Recommended_System_Type": [
+          "W"
+        ],
+        "Scratch_and_Abrasion_Resistance": 2,
+        "Slip_and_Mobility": 3,
+        "Block_Resistance": 2,
+        "Heat_Resistance": 0,
+        "Moisture_Resistance": 3,
+        "Crown_Closure_Seal_Adhesion": 0,
+        "Meat_Release": 1,
+        "Gloss_Retention": 3,
+        "Matting_and_Gloss_Control": 0,
+        "Texture": 0,
+        "Soft_Touch": 0,
+        "Natural_Naturally_Derived": 0,
+        "PTFE_Alternative": 0
+      },
+      "WoodCoatings": {
+        "Available_as_Waterborne_Dispersion": false,
+        "Description": "Rice bran wax emulsion",
+        "Suggested_Use_Level": "3.0 - 10.0%",
+        "Recommended_System_Type": [
+          "W"
+        ],
+        "Scratch_and_Mar_Resistance": 3,
+        "Lubricity_and_Smooth_Feel": 3,
+        "Soft_Touch": 0,
+        "Block_Resistance": 2,
+        "Matting_and_Gloss_Control": 0,
+        "Burnish_Resistance": 0,
+        "Texture": 0,
+        "Water_Repellency_beading": 3,
+        "Sanding_Efficiency": 0,
+        "Gloss_Retention": 1,
+        "Clarity": 1,
+        "PTFE_Alternative": 0,
+        "Natural_Naturally_Derived": 3
+      }
+    }
+  },
+  {
+    "product_name": "AquaBead 519",
+    "core_properties": {
+      "Melt_Point_C": "126 - 132",
+      "Density_g_cc_25C": "0.94",
+      "Mean_Particle_Size": {
+        "type": "micron",
+        "min": 5.5,
+        "max": 8.0,
+        "raw": "5.5 - 8.0"
+      },
+      "Max_Particle_Size": {
+        "type": "micron",
+        "min": 22.0,
+        "max": 22.0,
+        "raw": "22.00"
+      }
+    },
+    "application_profiles": {
+      "ArchitecturalCoatings": {
+        "Available_as_Waterborne_Dispersion": true,
+        "Description": "Hydrophobically modified synthetic wax",
+        "Suggested_Use_Level": "1.0 - 4.0%",
+        "Recommended_System_Type": [
+          "S"
+        ],
+        "Interior_Exterior": "E",
+        "Burnish_Resistance": 0,
+        "Matting_and_Gloss_Control": 0,
+        "Block_Resistance": 1,
+        "Resistance_to_Dirt_Pick_Up": 2,
+        "Cleanability": 1,
+        "Water_Repellency_Beading": 3,
+        "Moisture_and_Stain_Resistance": 0,
+        "Scratch_and_Mar_Resistance": 0,
+        "Texture": 0,
+        "Lubricity_and_Smooth_Feel": 0,
+        "Soft_Touch": 0,
+        "Heel_Mark_Resistance": 0,
+        "Anti_Skid": 0,
+        "Film_Clarity": 0,
+        "In_Can_Stability": 0,
+        "Natural_Naturally_Derived": 0
+      },
+      "IndustrialFlooringCoatings": {
+        "Available_as_Waterborne_Dispersion": true,
+        "Description": "Hydrophobically modified synthetic wax",
+        "Suggested_Use_Level": "1.0 - 4.0%",
+        "Recommended_System_Type": [
+          "W",
+          "S"
+        ],
+        "Suitable_Floor_Type": {
+          "Wood": true,
+          "Concrete": true,
+          "Laminate": false
+        },
+        "Texture": 0,
+        "Non_Skid": 0,
+        "Matting_and_Gloss_Control": 0,
+        "Block_Resistance": 0,
+        "Abrasion_and_Scratch_Resistance": 0,
+        "Scuff_and_Heel_Mark_Resistance": 1,
+        "Resistance_to_Hot_Tire_Pick_up": 0,
+        "Water_Repellency_Beading": 2,
+        "Cleanability": 1,
+        "Soft_Touch": 0,
+        "Granite_Effect": 0,
+        "Film_Clarity": 0,
+        "In_Can_Stability": 0,
+        "PTFE_Alternative": 0,
+        "Natural_Naturally_Derived": 0
+      },
+      "WoodCoatings": {
+        "Available_as_Waterborne_Dispersion": true,
+        "Description": "Hydrophobically modified synthetic wax",
+        "Suggested_Use_Level": "1.0 - 4.0%",
+        "Recommended_System_Type": [
+          "W",
+          "S"
+        ],
+        "Scratch_and_Mar_Resistance": 0,
+        "Lubricity_and_Smooth_Feel": 0,
+        "Soft_Touch": 0,
+        "Block_Resistance": 0,
+        "Matting_and_Gloss_Control": 0,
+        "Burnish_Resistance": 0,
+        "Texture": 0,
+        "Water_Repellency_beading": 3,
+        "Sanding_Efficiency": 0,
+        "Gloss_Retention": 0,
+        "Clarity": 0,
+        "PTFE_Alternative": 0,
+        "Natural_Naturally_Derived": 0
+      }
+    }
+  },
+  {
+    "product_name": "AquaBead 525E",
+    "core_properties": {
+      "Melt_Point_C": "60",
+      "Density_g_cc_25C": "1.00",
+      "Mean_Particle_Size": {
+        "type": "sub-micron",
+        "min": 0.1,
+        "max": 0.9,
+        "raw": "Sub-micron aqueous emulsion"
+      },
+      "Max_Particle_Size": {
+        "type": "sub-micron",
+        "min": 0.1,
+        "max": 0.9,
+        "raw": "Sub-micron aqueous emulsion"
+      }
+    },
+    "application_profiles": {
+      "ArchitecturalCoatings": {
+        "Available_as_Waterborne_Dispersion": false,
+        "Description": "Paraffin/carnauba wax emulsion",
+        "Suggested_Use_Level": "2.0 - 10.0%",
+        "Recommended_System_Type": [
+          "W"
+        ],
+        "Interior_Exterior": "E",
+        "Burnish_Resistance": 0,
+        "Matting_and_Gloss_Control": 0,
+        "Block_Resistance": 0,
+        "Resistance_to_Dirt_Pick_Up": 2,
+        "Cleanability": 1,
+        "Water_Repellency_Beading": 3,
+        "Moisture_and_Stain_Resistance": 0,
+        "Scratch_and_Mar_Resistance": 0,
+        "Texture": 0,
+        "Lubricity_and_Smooth_Feel": 0,
+        "Soft_Touch": 0,
+        "Heel_Mark_Resistance": 0,
+        "Anti_Skid": 0,
+        "Film_Clarity": 2,
+        "In_Can_Stability": 0,
+        "Natural_Naturally_Derived": 0
+      },
+      "IndustrialFlooringCoatings": {
+        "Available_as_Waterborne_Dispersion": false,
+        "Description": "Paraffin/carnauba wax emulsion",
+        "Suggested_Use_Level": "2.0 - 10.0%",
+        "Recommended_System_Type": [
+          "W"
+        ],
+        "Suitable_Floor_Type": {
+          "Wood": true,
+          "Concrete": true,
+          "Laminate": false
+        },
+        "Texture": 0,
+        "Non_Skid": 0,
+        "Matting_and_Gloss_Control": 0,
+        "Block_Resistance": 0,
+        "Abrasion_and_Scratch_Resistance": 0,
+        "Scuff_and_Heel_Mark_Resistance": 0,
+        "Resistance_to_Hot_Tire_Pick_up": 0,
+        "Water_Repellency_Beading": 3,
+        "Cleanability": 2,
+        "Soft_Touch": 0,
+        "Granite_Effect": 0,
+        "Film_Clarity": 2,
+        "In_Can_Stability": 0,
+        "PTFE_Alternative": 0,
+        "Natural_Naturally_Derived": 0
+      },
+      "WoodCoatings": {
+        "Available_as_Waterborne_Dispersion": false,
+        "Description": "Paraffin/carnauba wax emulsion",
+        "Suggested_Use_Level": "2.0 - 10.0%",
+        "Recommended_System_Type": [
+          "W"
+        ],
+        "Scratch_and_Mar_Resistance": 0,
+        "Lubricity_and_Smooth_Feel": 0,
+        "Soft_Touch": 0,
+        "Block_Resistance": 0,
+        "Matting_and_Gloss_Control": 0,
+        "Burnish_Resistance": 0,
+        "Texture": 0,
+        "Water_Repellency_beading": 3,
+        "Sanding_Efficiency": 0,
+        "Gloss_Retention": 2,
+        "Clarity": 1,
+        "PTFE_Alternative": 0,
+        "Natural_Naturally_Derived": 2
+      }
+    }
+  },
+  {
+    "product_name": "AquaMatte 26HD",
+    "core_properties": {
+      "Melt_Point_C": "105 - 111",
+      "Density_g_cc_25C": "1.08",
+      "Mean_Particle_Size": {
+        "type": "micron",
+        "min": 6.0,
+        "max": 8.5,
+        "raw": "6.0 - 8.5"
+      },
+      "Max_Particle_Size": {
+        "type": "micron",
+        "min": 26.0,
+        "max": 26.0,
+        "raw": "26.00"
+      }
+    },
+    "application_profiles": {
+      "ArchitecturalCoatings": {
+        "Available_as_Waterborne_Dispersion": false,
+        "Description": "Densified oxidized polyethylene",
+        "Suggested_Use_Level": "1.0 - 2.0%",
+        "Recommended_System_Type": [
+          "W"
+        ],
+        "Interior_Exterior": "I,E",
+        "Burnish_Resistance": 2,
+        "Matting_and_Gloss_Control": 3,
+        "Block_Resistance": 2,
+        "Resistance_to_Dirt_Pick_Up": 3,
+        "Cleanability": 1,
+        "Water_Repellency_Beading": 0,
+        "Moisture_and_Stain_Resistance": 0,
+        "Scratch_and_Mar_Resistance": 2,
+        "Texture": 0,
+        "Lubricity_and_Smooth_Feel": 2,
+        "Soft_Touch": 0,
+        "Heel_Mark_Resistance": 0,
+        "Anti_Skid": 0,
+        "Film_Clarity": 0,
+        "In_Can_Stability": 3,
+        "Natural_Naturally_Derived": 0
+      }
+    }
+  },
+  {
+    "product_name": "AquaPoly 215",
+    "core_properties": {
+      "Melt_Point_C": "102 - 114",
+      "Density_g_cc_25C": "0.94",
+      "Mean_Particle_Size": {
+        "type": "micron",
+        "min": 9.0,
+        "max": 11.0,
+        "raw": "9.0 - 11.0"
+      },
+      "Max_Particle_Size": {
+        "type": "micron",
+        "min": 31.0,
+        "max": 31.0,
+        "raw": "31.00"
+      }
+    },
+    "application_profiles": {
+      "ArchitecturalCoatings": {
+        "Available_as_Waterborne_Dispersion": true,
+        "Description": "Oxidized polyethylene",
+        "Suggested_Use_Level": "1.0 - 2.0%",
+        "Recommended_System_Type": [
+          "W"
+        ],
+        "Interior_Exterior": "I",
+        "Burnish_Resistance": 0,
+        "Matting_and_Gloss_Control": 0,
+        "Block_Resistance": 2,
+        "Resistance_to_Dirt_Pick_Up": 0,
+        "Cleanability": 1,
+        "Water_Repellency_Beading": 0,
+        "Moisture_and_Stain_Resistance": 0,
+        "Scratch_and_Mar_Resistance": 2,
+        "Texture": 0,
+        "Lubricity_and_Smooth_Feel": 1,
+        "Soft_Touch": 0,
+        "Heel_Mark_Resistance": 0,
+        "Anti_Skid": 0,
+        "Film_Clarity": 0,
+        "In_Can_Stability": 0,
+        "Natural_Naturally_Derived": 0
+      }
+    }
+  },
+  {
+    "product_name": "Aquawax 214",
+    "core_properties": {
+      "Melt_Point_C": "98 - 102",
+      "Density_g_cc_25C": "0.96",
+      "Mean_Particle_Size": {
+        "type": "micron",
+        "min": 9.0,
+        "max": 11.0,
+        "raw": "9.0 - 11.00"
+      },
+      "Max_Particle_Size": {
+        "type": "micron",
+        "min": 31.0,
+        "max": 31.0,
+        "raw": "31.00"
+      }
+    },
+    "application_profiles": {
+      "ArchitecturalCoatings": {
+        "Available_as_Waterborne_Dispersion": true,
+        "Description": "Oxidized synthetic wax",
+        "Suggested_Use_Level": "1.0 - 2.0%",
+        "Recommended_System_Type": [
+          "W"
+        ],
+        "Interior_Exterior": "I",
+        "Burnish_Resistance": 0,
+        "Matting_and_Gloss_Control": 0,
+        "Block_Resistance": 2,
+        "Resistance_to_Dirt_Pick_Up": 0,
+        "Cleanability": 1,
+        "Water_Repellency_Beading": 0,
+        "Moisture_and_Stain_Resistance": 0,
+        "Scratch_and_Mar_Resistance": 2,
+        "Texture": 0,
+        "Lubricity_and_Smooth_Feel": 1,
+        "Soft_Touch": 0,
+        "Heel_Mark_Resistance": 0,
+        "Anti_Skid": 0,
+        "Film_Clarity": 0,
+        "In_Can_Stability": 0,
+        "Natural_Naturally_Derived": 0
+      }
+    }
+  },
+  {
+    "product_name": "MicroMatte 1011UVW",
+    "core_properties": {
+      "Melt_Point_C": "150 - 156",
+      "Density_g_cc_25C": "1.07",
+      "Mean_Particle_Size": {
+        "type": "micron",
+        "min": 5.0,
+        "max": 7.5,
+        "raw": "5.0 - 7.5"
+      },
+      "Max_Particle_Size": {
+        "type": "micron",
+        "min": 22.0,
+        "max": 22.0,
+        "raw": "22.00"
+      }
+    },
+    "application_profiles": {
+      "ArchitecturalCoatings": {
+        "Available_as_Waterborne_Dispersion": false,
+        "Description": "Densified modified polypropylene",
+        "Suggested_Use_Level": "2.0 - 5.0%",
+        "Recommended_System_Type": [
+          "W",
+          "S"
+        ],
+        "Interior_Exterior": "I",
+        "Burnish_Resistance": 3,
+        "Matting_and_Gloss_Control": 2,
+        "Block_Resistance": 2,
+        "Resistance_to_Dirt_Pick_Up": 3,
+        "Cleanability": 3,
+        "Water_Repellency_Beading": 0,
+        "Moisture_and_Stain_Resistance": 0,
+        "Scratch_and_Mar_Resistance": 2,
+        "Texture": 0,
+        "Lubricity_and_Smooth_Feel": 2,
+        "Soft_Touch": 1,
+        "Heel_Mark_Resistance": 0,
+        "Anti_Skid": 0,
+        "Film_Clarity": 0,
+        "In_Can_Stability": 2,
+        "Natural_Naturally_Derived": 0
+      }
+    }
+  },
+  {
+    "product_name": "MicroMatte 1415-EZ",
+    "core_properties": {
+      "Melt_Point_C": "136 -140",
+      "Density_g_cc_25C": "1.06",
+      "Mean_Particle_Size": {
+        "type": "micron",
+        "min": 10.0,
+        "max": 15.0,
+        "raw": "10.0 - 15.0"
+      },
+      "Max_Particle_Size": {
+        "type": "micron",
+        "min": 44.0,
+        "max": 44.0,
+        "raw": "44.00"
+      }
+    },
+    "application_profiles": {
+      "ArchitecturalCoatings": {
+        "Available_as_Waterborne_Dispersion": false,
+        "Description": "Modified synthetic wax",
+        "Suggested_Use_Level": "1.0 - 4.0%",
+        "Recommended_System_Type": [
+          "W"
+        ],
+        "Interior_Exterior": "I,E",
+        "Burnish_Resistance": 3,
+        "Matting_and_Gloss_Control": 3,
+        "Block_Resistance": 3,
+        "Resistance_to_Dirt_Pick_Up": 2,
+        "Cleanability": 3,
+        "Water_Repellency_Beading": 0,
+        "Moisture_and_Stain_Resistance": 0,
+        "Scratch_and_Mar_Resistance": 2,
+        "Texture": 0,
+        "Lubricity_and_Smooth_Feel": 3,
+        "Soft_Touch": 0,
+        "Heel_Mark_Resistance": 0,
+        "Anti_Skid": 0,
+        "Film_Clarity": 0,
+        "In_Can_Stability": 0,
+        "Natural_Naturally_Derived": 0
+      },
+      "WoodCoatings": {
+        "Available_as_Waterborne_Dispersion": false,
+        "Description": "Modified synthetic wax",
+        "Suggested_Use_Level": "2.0 - 4.0%",
+        "Recommended_System_Type": [
+          "W"
+        ],
+        "Scratch_and_Mar_Resistance": 2,
+        "Lubricity_and_Smooth_Feel": 2,
+        "Soft_Touch": 0,
+        "Block_Resistance": 3,
+        "Matting_and_Gloss_Control": 3,
+        "Burnish_Resistance": 3,
+        "Texture": 0,
+        "Water_Repellency_beading": 0,
+        "Sanding_Efficiency": 0,
+        "Gloss_Retention": 0,
+        "Clarity": 0,
+        "PTFE_Alternative": 0,
+        "Natural_Naturally_Derived": 0
+      }
+    }
+  },
+  {
+    "product_name": "Micropro 400",
+    "core_properties": {
+      "Melt_Point_C": "140 - 143",
+      "Density_g_cc_25C": "0.94",
+      "Mean_Particle_Size": {
+        "type": "micron",
+        "min": 4.5,
+        "max": 7.5,
+        "raw": "4.5 - 7.5"
+      },
+      "Max_Particle_Size": {
+        "type": "micron",
+        "min": 22.0,
+        "max": 22.0,
+        "raw": "22.00"
+      }
+    },
+    "application_profiles": {
+      "ArchitecturalCoatings": {
+        "Available_as_Waterborne_Dispersion": false,
+        "Description": "Modified polypropylene",
+        "Suggested_Use_Level": "2.0 - 4.0%",
+        "Recommended_System_Type": [
+          "S"
+        ],
+        "Interior_Exterior": "E",
+        "Burnish_Resistance": 2,
+        "Matting_and_Gloss_Control": 2,
+        "Block_Resistance": 2,
+        "Resistance_to_Dirt_Pick_Up": 1,
+        "Cleanability": 2,
+        "Water_Repellency_Beading": 1,
+        "Moisture_and_Stain_Resistance": 0,
+        "Scratch_and_Mar_Resistance": 2,
+        "Texture": 0,
+        "Lubricity_and_Smooth_Feel": 1,
+        "Soft_Touch": 0,
+        "Heel_Mark_Resistance": 0,
+        "Anti_Skid": 0,
+        "Film_Clarity": 0,
+        "In_Can_Stability": 0,
+        "Natural_Naturally_Derived": 0
+      },
+      "EnergyCurableInks&Coatings": {
+        "Description": "Modified polypropylene",
+        "Suggested_Use_Level": "3.0 - 6.0%",
+        "Scratch_and_Mar_Resistance": 2,
+        "Slip_and_Lubricity": 1,
+        "Block_Resistance": 1,
+        "Matting_and_Gloss_Control": 0,
+        "Gloss_Retention": 0,
+        "Clarity": 0,
+        "Soft_Touch_Silky_Feel": 0,
+        "Lubricity_and_Smooth_Feel": 1,
+        "Texture": 0,
+        "Increased_COF": 0,
+        "Tape_Release": 0,
+        "In_Can_Stability": 0,
+        "Natural_Naturally_Derived": 0,
+        "Recommended_System_Type": []
+      },
+      "PowderCoatings": {
+        "Description": "Modified polypropylene",
+        "Suggested_Use_Level": "2.0 - 5.0%",
+        "Scratch_and_Abrasion_Resistance": 0,
+        "Slip_and_Lubricity": 0,
+        "Improved_Extrusion_Flow": 0,
+        "Apparent_Hardness": 0,
+        "Block_Resistance": 2,
+        "Metal_Mark_Resistance": 1,
+        "Matting_and_Gloss_Control": 2,
+        "Anti_Gassing": 0,
+        "Texture_and_Structure": 0,
+        "Soft_Touch": 0,
+        "Sealant_Adhesion": 0,
+        "PTFE_Alternative": 0,
+        "Edge_Coverage": 0,
+        "Corrosion_Resistance": 0,
+        "Recommended_System_Type": []
+      },
+      "WoodCoatings": {
+        "Available_as_Waterborne_Dispersion": false,
+        "Description": "Modified polypropylene",
+        "Suggested_Use_Level": "2.0 - 4.0%",
+        "Recommended_System_Type": [
+          "W",
+          "S"
+        ],
+        "Scratch_and_Mar_Resistance": 2,
+        "Lubricity_and_Smooth_Feel": 0,
+        "Soft_Touch": 0,
+        "Block_Resistance": 3,
+        "Matting_and_Gloss_Control": 3,
+        "Burnish_Resistance": 3,
+        "Texture": 0,
+        "Water_Repellency_beading": 2,
+        "Sanding_Efficiency": 1,
+        "Gloss_Retention": 0,
+        "Clarity": 0,
+        "PTFE_Alternative": 2,
+        "Natural_Naturally_Derived": 0
+      }
+    }
+  },
+  {
+    "product_name": "MicroTouch Series",
+    "core_properties": {
+      "Melt_Point_C": "-",
+      "Density_g_cc_25C": "1.05",
+      "Mean_Particle_Size": {
+        "type": "micron",
+        "min": 5.0,
+        "max": 35.0,
+        "raw": "Available from 5 μm - 35 μm mean"
+      },
+      "Max_Particle_Size": {
+        "type": "unknown",
+        "min": null,
+        "max": null,
+        "raw": null
+      }
+    },
+    "application_profiles": {
+      "ArchitecturalCoatings": {
+        "Available_as_Waterborne_Dispersion": false,
+        "Description": "Aliphatic polyurethane",
+        "Suggested_Use_Level": "2.0 - 8.0%",
+        "Recommended_System_Type": [
+          "W"
+        ],
+        "Interior_Exterior": "I",
+        "Burnish_Resistance": 3,
+        "Matting_and_Gloss_Control": 2,
+        "Block_Resistance": 0,
+        "Resistance_to_Dirt_Pick_Up": 0,
+        "Cleanability": 0,
+        "Water_Repellency_Beading": 0,
+        "Moisture_and_Stain_Resistance": 0,
+        "Scratch_and_Mar_Resistance": 0,
+        "Texture": 1,
+        "Lubricity_and_Smooth_Feel": 2,
+        "Soft_Touch": 3,
+        "Heel_Mark_Resistance": 0,
+        "Anti_Skid": 2,
+        "Film_Clarity": 1,
+        "In_Can_Stability": 2,
+        "Natural_Naturally_Derived": 0
+      },
+      "CanContainerCoatings": {
+        "Available_as_Waterborne_Dispersion": false,
+        "Description": "Aliphatic polyurethane",
+        "Suggested_Use_Level": "3.0 - 6.0%",
+        "FDA_21CFR_175_300_Compliance": "No",
+        "Recommended_System_Type": [
+          "W",
+          "S",
+          "UV"
+        ],
+        "Scratch_and_Abrasion_Resistance": 0,
+        "Slip_and_Mobility": 0,
+        "Block_Resistance": 0,
+        "Heat_Resistance": 0,
+        "Moisture_Resistance": 0,
+        "Crown_Closure_Seal_Adhesion": 0,
+        "Meat_Release": 0,
+        "Gloss_Retention": 0,
+        "Matting_and_Gloss_Control": 2,
+        "Texture": 1,
+        "Soft_Touch": 3,
+        "Natural_Naturally_Derived": 0,
+        "PTFE_Alternative": 0
+      },
+      "EnergyCurableInks&Coatings": {
+        "Description": "Aliphatic polyurethane",
+        "Suggested_Use_Level": "2.0 - 10.0%",
+        "Scratch_and_Mar_Resistance": 1,
+        "Slip_and_Lubricity": 0,
+        "Block_Resistance": 0,
+        "Matting_and_Gloss_Control": 3,
+        "Gloss_Retention": 0,
+        "Clarity": 0,
+        "Soft_Touch_Silky_Feel": 3,
+        "Lubricity_and_Smooth_Feel": 1,
+        "Texture": 1,
+        "Increased_COF": 1,
+        "Tape_Release": 0,
+        "In_Can_Stability": 0,
+        "Natural_Naturally_Derived": 0,
+        "Recommended_System_Type": []
+      },
+      "IndustrialCoatings": {
+        "Available_as_Waterborne_Dispersion": false,
+        "Description": "Aliphatic polyurethane",
+        "Suggested_Use_Level": "4.0 - 8.0%",
+        "Recommended_System_Type": [
+          "W",
+          "S"
+        ],
+        "Scratch_and_Abrasion_Resistance": 0,
+        "Burnish_Resistance": 3,
+        "Metal_Mark_Resistance": 0,
+        "Apparent_Hardness": 0,
+        "Slip_and_Lubricity": 0,
+        "Block_Resistance": 0,
+        "Increased_COF": 2,
+        "Matting_and_Gloss_Control": 2,
+        "Texture": 1,
+        "Soft_Touch": 3,
+        "Heat_Resistance": 0,
+        "Early_Water_Resistance": 0,
+        "Gloss_Retention": 2,
+        "In_Can_Stability": 0,
+        "Natural_Naturally_Derived": 0,
+        "PTFE_Alternative": 0
+      },
+      "IndustrialFlooringCoatings": {
+        "Available_as_Waterborne_Dispersion": false,
+        "Description": "Aliphatic polyurethane",
+        "Suggested_Use_Level": "2.0 - 8.0%",
+        "Recommended_System_Type": [
+          "2.0 - 8.0%"
+        ],
+        "Suitable_Floor_Type": {
+          "Wood": true,
+          "Concrete": false,
+          "Laminate": true
+        },
+        "Texture": 1,
+        "Non_Skid": 0,
+        "Matting_and_Gloss_Control": 2,
+        "Block_Resistance": 0,
+        "Abrasion_and_Scratch_Resistance": 0,
+        "Scuff_and_Heel_Mark_Resistance": 2,
+        "Resistance_to_Hot_Tire_Pick_up": 0,
+        "Water_Repellency_Beading": 0,
+        "Cleanability": 0,
+        "Soft_Touch": 3,
+        "Granite_Effect": 0,
+        "Film_Clarity": 0,
+        "In_Can_Stability": 0,
+        "PTFE_Alternative": 0,
+        "Natural_Naturally_Derived": 0
+      }
+    }
+  },
+  {
+    "product_name": "MP-22",
+    "core_properties": {
+      "Melt_Point_C": "110 - 115",
+      "Density_g_cc_25C": "0.93",
+      "Mean_Particle_Size": {
+        "type": "micron",
+        "min": 7.0,
+        "max": 10.0,
+        "raw": "7.0 - 10.0"
+      },
+      "Max_Particle_Size": {
+        "type": "micron",
+        "min": 31.0,
+        "max": 31.0,
+        "raw": "31.00"
+      }
+    },
+    "application_profiles": {
+      "ArchitecturalCoatings": {
+        "Available_as_Waterborne_Dispersion": true,
+        "Description": "Synthetic wax",
+        "Suggested_Use_Level": "1.0 - 2.0%",
+        "Recommended_System_Type": [
+          "W",
+          "S"
+        ],
+        "Interior_Exterior": "I,E",
+        "Burnish_Resistance": 0,
+        "Matting_and_Gloss_Control": 0,
+        "Block_Resistance": 2,
+        "Resistance_to_Dirt_Pick_Up": 0,
+        "Cleanability": 1,
+        "Water_Repellency_Beading": 1,
+        "Moisture_and_Stain_Resistance": 0,
+        "Scratch_and_Mar_Resistance": 2,
+        "Texture": 0,
+        "Lubricity_and_Smooth_Feel": 1,
+        "Soft_Touch": 0,
+        "Heel_Mark_Resistance": 0,
+        "Anti_Skid": 1,
+        "Film_Clarity": 0,
+        "In_Can_Stability": 0,
+        "Natural_Naturally_Derived": 0
+      }
+    }
+  },
+  {
+    "product_name": "MP-28AL-G",
+    "core_properties": {
+      "Melt_Point_C": "114 - 118",
+      "Density_g_cc_25C": "0.99",
+      "Mean_Particle_Size": {
+        "type": "micron",
+        "min": 10.0,
+        "max": 14.0,
+        "raw": "10.0 - 14.0"
+      },
+      "Max_Particle_Size": {
+        "type": "micron",
+        "min": 44.0,
+        "max": 44.0,
+        "raw": "44.00"
+      }
+    },
+    "application_profiles": {
+      "ArchitecturalCoatings": {
+        "Available_as_Waterborne_Dispersion": true,
+        "Description": "Synthetic wax/Aluminum oxide",
+        "Suggested_Use_Level": "1.0 - 4.0%",
+        "Recommended_System_Type": [
+          "W",
+          "S"
+        ],
+        "Interior_Exterior": "I,E",
+        "Burnish_Resistance": 2,
+        "Matting_and_Gloss_Control": 3,
+        "Block_Resistance": 2,
+        "Resistance_to_Dirt_Pick_Up": 1,
+        "Cleanability": 3,
+        "Water_Repellency_Beading": 1,
+        "Moisture_and_Stain_Resistance": 0,
+        "Scratch_and_Mar_Resistance": 3,
+        "Texture": 1,
+        "Lubricity_and_Smooth_Feel": 0,
+        "Soft_Touch": 0,
+        "Heel_Mark_Resistance": 2,
+        "Anti_Skid": 0,
+        "Film_Clarity": 0,
+        "In_Can_Stability": 1,
+        "Natural_Naturally_Derived": 0
+      },
+      "IndustrialFlooringCoatings": {
+        "Available_as_Waterborne_Dispersion": false,
+        "Description": "Synthetic wax/Aluminum oxide",
+        "Suggested_Use_Level": "1.0 - 1.0%",
+        "Recommended_System_Type": [
+          "W",
+          "S",
+          "UV"
+        ],
+        "Suitable_Floor_Type": {
+          "Wood": true,
+          "Concrete": false,
+          "Laminate": true
+        },
+        "Texture": 0,
+        "Non_Skid": 0,
+        "Matting_and_Gloss_Control": 2,
+        "Block_Resistance": 0,
+        "Abrasion_and_Scratch_Resistance": 3,
+        "Scuff_and_Heel_Mark_Resistance": 2,
+        "Resistance_to_Hot_Tire_Pick_up": 0,
+        "Water_Repellency_Beading": 2,
+        "Cleanability": 0,
+        "Soft_Touch": 0,
+        "Granite_Effect": 0,
+        "Film_Clarity": 0,
+        "In_Can_Stability": 2,
+        "PTFE_Alternative": 3,
+        "Natural_Naturally_Derived": 0
+      },
+      "PowderCoatings": {
+        "Description": "Synthetic wax/ Aluminum oxide",
+        "Suggested_Use_Level": "1.0 - 3.0%",
+        "Scratch_and_Abrasion_Resistance": 3,
+        "Slip_and_Lubricity": 2,
+        "Improved_Extrusion_Flow": 0,
+        "Apparent_Hardness": 2,
+        "Block_Resistance": 0,
+        "Metal_Mark_Resistance": 2,
+        "Matting_and_Gloss_Control": 2,
+        "Anti_Gassing": 1,
+        "Texture_and_Structure": 0,
+        "Soft_Touch": 0,
+        "Sealant_Adhesion": 0,
+        "PTFE_Alternative": 3,
+        "Edge_Coverage": 0,
+        "Corrosion_Resistance": 0,
+        "Recommended_System_Type": []
+      }
+    }
+  },
+  {
+    "product_name": "MPP-123AL",
+    "core_properties": {
+      "Melt_Point_C": "110 - 113",
+      "Density_g_cc_25C": "0.97",
+      "Mean_Particle_Size": {
+        "type": "micron",
+        "min": 9.5,
+        "max": 12.5,
+        "raw": "9.5 - 12.5"
+      },
+      "Max_Particle_Size": {
+        "type": "micron",
+        "min": 31.0,
+        "max": 31.0,
+        "raw": "31.00"
+      }
+    },
+    "application_profiles": {
+      "ArchitecturalCoatings": {
+        "Available_as_Waterborne_Dispersion": true,
+        "Description": "Polyethylene/Aluminum oxide",
+        "Suggested_Use_Level": "0.5 - 1.5%",
+        "Recommended_System_Type": [
+          "W",
+          "S"
+        ],
+        "Interior_Exterior": "I,E",
+        "Burnish_Resistance": 3,
+        "Matting_and_Gloss_Control": 0,
+        "Block_Resistance": 3,
+        "Resistance_to_Dirt_Pick_Up": 0,
+        "Cleanability": 1,
+        "Water_Repellency_Beading": 0,
+        "Moisture_and_Stain_Resistance": 0,
+        "Scratch_and_Mar_Resistance": 3,
+        "Texture": 0,
+        "Lubricity_and_Smooth_Feel": 0,
+        "Soft_Touch": 0,
+        "Heel_Mark_Resistance": 2,
+        "Anti_Skid": 1,
+        "Film_Clarity": 0,
+        "In_Can_Stability": 0,
+        "Natural_Naturally_Derived": 0
+      },
+      "IndustrialFlooringCoatings": {
+        "Available_as_Waterborne_Dispersion": true,
+        "Description": "Polyethylene/Aluminum oxide",
+        "Suggested_Use_Level": "0.5 - 1.5%",
+        "Recommended_System_Type": [
+          "W",
+          "S",
+          "UV"
+        ],
+        "Suitable_Floor_Type": {
+          "Wood": true,
+          "Concrete": true,
+          "Laminate": true
+        },
+        "Texture": 0,
+        "Non_Skid": 0,
+        "Matting_and_Gloss_Control": 0,
+        "Block_Resistance": 0,
+        "Abrasion_and_Scratch_Resistance": 3,
+        "Scuff_and_Heel_Mark_Resistance": 3,
+        "Resistance_to_Hot_Tire_Pick_up": 1,
+        "Water_Repellency_Beading": 0,
+        "Cleanability": 1,
+        "Soft_Touch": 0,
+        "Granite_Effect": 0,
+        "Film_Clarity": 0,
+        "In_Can_Stability": 0,
+        "PTFE_Alternative": 3,
+        "Natural_Naturally_Derived": 0
+      },
+      "PowderCoatings": {
+        "Description": "Polyethylene/Aluminum oxide",
+        "Suggested_Use_Level": "0.5 - 1.5%",
+        "Scratch_and_Abrasion_Resistance": 3,
+        "Slip_and_Lubricity": 0,
+        "Improved_Extrusion_Flow": 0,
+        "Apparent_Hardness": 2,
+        "Block_Resistance": 2,
+        "Metal_Mark_Resistance": 3,
+        "Matting_and_Gloss_Control": 0,
+        "Anti_Gassing": 0,
+        "Texture_and_Structure": 0,
+        "Soft_Touch": 0,
+        "Sealant_Adhesion": 0,
+        "PTFE_Alternative": 0,
+        "Edge_Coverage": 0,
+        "Corrosion_Resistance": 0,
+        "Recommended_System_Type": []
+      }
+    }
+  },
+  {
+    "product_name": "NatureFine R331",
+    "core_properties": {
+      "Melt_Point_C": "77 - 82",
+      "Density_g_cc_25C": "0.97",
+      "Mean_Particle_Size": {
+        "type": "micron",
+        "min": 6.0,
+        "max": 10.0,
+        "raw": "6.0 - 10.0"
+      },
+      "Max_Particle_Size": {
+        "type": "micron",
+        "min": 31.0,
+        "max": 31.0,
+        "raw": "31.00"
+      }
+    },
+    "application_profiles": {
+      "ArchitecturalCoatings": {
+        "Available_as_Waterborne_Dispersion": true,
+        "Description": "Rice bran wax",
+        "Suggested_Use_Level": "1.0 - 2.0%",
+        "Recommended_System_Type": [
+          "W",
+          "S"
+        ],
+        "Interior_Exterior": "I,E",
+        "Burnish_Resistance": 3,
+        "Matting_and_Gloss_Control": 3,
+        "Block_Resistance": 0,
+        "Resistance_to_Dirt_Pick_Up": 1,
+        "Cleanability": 1,
+        "Water_Repellency_Beading": 0,
+        "Moisture_and_Stain_Resistance": 0,
+        "Scratch_and_Mar_Resistance": 3,
+        "Texture": 0,
+        "Lubricity_and_Smooth_Feel": 0,
+        "Soft_Touch": 0,
+        "Heel_Mark_Resistance": 0,
+        "Anti_Skid": 0,
+        "Film_Clarity": 0,
+        "In_Can_Stability": 0,
+        "Natural_Naturally_Derived": 3
+      },
+      "CanContainerCoatings": {
+        "Available_as_Waterborne_Dispersion": true,
+        "Description": "Rice bran wax",
+        "Suggested_Use_Level": "0.5 - 1.5%",
+        "FDA_21CFR_175_300_Compliance": "Yes",
+        "Recommended_System_Type": [
+          "W",
+          "S",
+          "UV"
+        ],
+        "Scratch_and_Abrasion_Resistance": 2,
+        "Slip_and_Mobility": 2,
+        "Block_Resistance": 0,
+        "Heat_Resistance": 0,
+        "Moisture_Resistance": 0,
+        "Crown_Closure_Seal_Adhesion": 0,
+        "Meat_Release": 0,
+        "Gloss_Retention": 0,
+        "Matting_and_Gloss_Control": 0,
+        "Texture": 0,
+        "Soft_Touch": 3,
+        "Natural_Naturally_Derived": 3,
+        "PTFE_Alternative": 0
+      },
+      "EnergyCurableInks&Coatings": {
+        "Description": "Rice bran wax",
+        "Suggested_Use_Level": "1.0 - 3.0%",
+        "Scratch_and_Mar_Resistance": 2,
+        "Slip_and_Lubricity": 1,
+        "Block_Resistance": 0,
+        "Matting_and_Gloss_Control": 2,
+        "Gloss_Retention": 0,
+        "Clarity": 0,
+        "Soft_Touch_Silky_Feel": 0,
+        "Lubricity_and_Smooth_Feel": 1,
+        "Texture": 0,
+        "Increased_COF": 0,
+        "Tape_Release": 0,
+        "In_Can_Stability": 0,
+        "Natural_Naturally_Derived": 3,
+        "Recommended_System_Type": []
+      },
+      "WoodCoatings": {
+        "Available_as_Waterborne_Dispersion": true,
+        "Description": "Rice bran wax",
+        "Suggested_Use_Level": "1.0 - 3.0%",
+        "Recommended_System_Type": [
+          "W",
+          "S"
+        ],
+        "Scratch_and_Mar_Resistance": 2,
+        "Lubricity_and_Smooth_Feel": 2,
+        "Soft_Touch": 1,
+        "Block_Resistance": 2,
+        "Matting_and_Gloss_Control": 2,
+        "Burnish_Resistance": 3,
+        "Texture": 0,
+        "Water_Repellency_beading": 0,
+        "Sanding_Efficiency": 0,
+        "Gloss_Retention": 0,
+        "Clarity": 0,
+        "PTFE_Alternative": 0,
+        "Natural_Naturally_Derived": 3
+      }
+    }
+  },
+  {
+    "product_name": "NatureMatte 31",
+    "core_properties": {
+      "Melt_Point_C": "170 - 180",
+      "Density_g_cc_25C": "1.25",
+      "Mean_Particle_Size": {
+        "type": "micron",
+        "min": 7.5,
+        "max": 10.5,
+        "raw": "7.5 - 10.5"
+      },
+      "Max_Particle_Size": {
+        "type": "micron",
+        "min": 31.0,
+        "max": 31.0,
+        "raw": "31.00"
+      }
+    },
+    "application_profiles": {
+      "ArchitecturalCoatings": {
+        "Available_as_Waterborne_Dispersion": true,
+        "Description": "Poly(hydroxybutyrate-co-hydroxyvalerate)",
+        "Suggested_Use_Level": "2.0 - 5.0%",
+        "Recommended_System_Type": [
+          "W",
+          "S"
+        ],
+        "Interior_Exterior": "I,E",
+        "Burnish_Resistance": 3,
+        "Matting_and_Gloss_Control": 3,
+        "Block_Resistance": 1,
+        "Resistance_to_Dirt_Pick_Up": 2,
+        "Cleanability": 1,
+        "Water_Repellency_Beading": 0,
+        "Moisture_and_Stain_Resistance": 0,
+        "Scratch_and_Mar_Resistance": 0,
+        "Texture": 0,
+        "Lubricity_and_Smooth_Feel": 1,
+        "Soft_Touch": 0,
+        "Heel_Mark_Resistance": 0,
+        "Anti_Skid": 1,
+        "Film_Clarity": 0,
+        "In_Can_Stability": 2,
+        "Natural_Naturally_Derived": 3
+      },
+      "EnergyCurableInks&Coatings": {
+        "Description": "Poly(hydroxybutyrate-co-hydroxyvalerate)",
+        "Suggested_Use_Level": "2.0 - 5.0%",
+        "Scratch_and_Mar_Resistance": 2,
+        "Slip_and_Lubricity": 0,
+        "Block_Resistance": 0,
+        "Matting_and_Gloss_Control": 3,
+        "Gloss_Retention": 0,
+        "Clarity": 0,
+        "Soft_Touch_Silky_Feel": 0,
+        "Lubricity_and_Smooth_Feel": 0,
+        "Texture": 0,
+        "Increased_COF": 1,
+        "Tape_Release": 0,
+        "In_Can_Stability": 2,
+        "Natural_Naturally_Derived": 3,
+        "Recommended_System_Type": []
+      },
+      "IndustrialFlooringCoatings": {
+        "Available_as_Waterborne_Dispersion": true,
+        "Description": "Poly(hydroxybutyrate-co-hydroxyvalerate)",
+        "Suggested_Use_Level": "3.0 - 10.0%",
+        "Recommended_System_Type": [
+          "W",
+          "S",
+          "UV"
+        ],
+        "Suitable_Floor_Type": {
+          "Wood": true,
+          "Concrete": true,
+          "Laminate": true
+        },
+        "Texture": 0,
+        "Non_Skid": 3,
+        "Matting_and_Gloss_Control": 3,
+        "Block_Resistance": 2,
+        "Abrasion_and_Scratch_Resistance": 1,
+        "Scuff_and_Heel_Mark_Resistance": 1,
+        "Resistance_to_Hot_Tire_Pick_up": 0,
+        "Water_Repellency_Beading": 0,
+        "Cleanability": 0,
+        "Soft_Touch": 0,
+        "Granite_Effect": 0,
+        "Film_Clarity": 1,
+        "In_Can_Stability": 0,
+        "PTFE_Alternative": 0,
+        "Natural_Naturally_Derived": 3
+      },
+      "WoodCoatings": {
+        "Available_as_Waterborne_Dispersion": true,
+        "Description": "Poly(hydroxybutyrate-co-hydroxyvalerate)",
+        "Suggested_Use_Level": "1.5 - 5.0%",
+        "Recommended_System_Type": [
+          "W",
+          "S"
+        ],
+        "Scratch_and_Mar_Resistance": 2,
+        "Lubricity_and_Smooth_Feel": 2,
+        "Soft_Touch": 2,
+        "Block_Resistance": 1,
+        "Matting_and_Gloss_Control": 3,
+        "Burnish_Resistance": 3,
+        "Texture": 0,
+        "Water_Repellency_beading": 0,
+        "Sanding_Efficiency": 0,
+        "Gloss_Retention": 0,
+        "Clarity": 0,
+        "PTFE_Alternative": 0,
+        "Natural_Naturally_Derived": 3
+      }
+    }
+  },
+  {
+    "product_name": "NatureMatte C44",
+    "core_properties": {
+      "Melt_Point_C": "-",
+      "Density_g_cc_25C": "1.46",
+      "Mean_Particle_Size": {
+        "type": "micron",
+        "min": 10.0,
+        "max": 15.0,
+        "raw": "10.0 - 15.0"
+      },
+      "Max_Particle_Size": {
+        "type": "micron",
+        "min": 44.0,
+        "max": 44.0,
+        "raw": "44.00"
+      }
+    },
+    "application_profiles": {
+      "ArchitecturalCoatings": {
+        "Available_as_Waterborne_Dispersion": false,
+        "Description": "Cellulose",
+        "Suggested_Use_Level": "2.0 - 5.0%",
+        "Recommended_System_Type": [
+          "W",
+          "S"
+        ],
+        "Interior_Exterior": "I,E",
+        "Burnish_Resistance": 3,
+        "Matting_and_Gloss_Control": 3,
+        "Block_Resistance": 0,
+        "Resistance_to_Dirt_Pick_Up": 0,
+        "Cleanability": 0,
+        "Water_Repellency_Beading": 0,
+        "Moisture_and_Stain_Resistance": 0,
+        "Scratch_and_Mar_Resistance": 0,
+        "Texture": 0,
+        "Lubricity_and_Smooth_Feel": 0,
+        "Soft_Touch": 2,
+        "Heel_Mark_Resistance": 0,
+        "Anti_Skid": 0,
+        "Film_Clarity": 3,
+        "In_Can_Stability": 3,
+        "Natural_Naturally_Derived": 3
+      },
+      "CanContainerCoatings": {
+        "Available_as_Waterborne_Dispersion": false,
+        "Description": "Cellulose",
+        "Suggested_Use_Level": "2.0 - 5.0%",
+        "FDA_21CFR_175_300_Compliance": "Yes",
+        "Recommended_System_Type": [
+          "W",
+          "S",
+          "UV"
+        ],
+        "Scratch_and_Abrasion_Resistance": 0,
+        "Slip_and_Mobility": 0,
+        "Block_Resistance": 0,
+        "Heat_Resistance": 0,
+        "Moisture_Resistance": 0,
+        "Crown_Closure_Seal_Adhesion": 0,
+        "Meat_Release": 0,
+        "Gloss_Retention": 0,
+        "Matting_and_Gloss_Control": 3,
+        "Texture": 0,
+        "Soft_Touch": 3,
+        "Natural_Naturally_Derived": 0,
+        "PTFE_Alternative": 0
+      },
+      "EnergyCurableInks&Coatings": {
+        "Description": "Cellulose",
+        "Suggested_Use_Level": "2.0 - 5.0%",
+        "Scratch_and_Mar_Resistance": 0,
+        "Slip_and_Lubricity": 0,
+        "Block_Resistance": 0,
+        "Matting_and_Gloss_Control": 3,
+        "Gloss_Retention": 0,
+        "Clarity": 0,
+        "Soft_Touch_Silky_Feel": 0,
+        "Lubricity_and_Smooth_Feel": 0,
+        "Texture": 0,
+        "Increased_COF": 0,
+        "Tape_Release": 0,
+        "In_Can_Stability": 3,
+        "Natural_Naturally_Derived": 3,
+        "Recommended_System_Type": []
+      },
+      "IndustrialCoatings": {
+        "Available_as_Waterborne_Dispersion": false,
+        "Description": "Cellulose",
+        "Suggested_Use_Level": "2.0 - 5.0%",
+        "Recommended_System_Type": [
+          "W",
+          "S"
+        ],
+        "Scratch_and_Abrasion_Resistance": 1,
+        "Burnish_Resistance": 2,
+        "Metal_Mark_Resistance": 0,
+        "Apparent_Hardness": 0,
+        "Slip_and_Lubricity": 0,
+        "Block_Resistance": 0,
+        "Increased_COF": 0,
+        "Matting_and_Gloss_Control": 3,
+        "Texture": 0,
+        "Soft_Touch": 0,
+        "Heat_Resistance": 3,
+        "Early_Water_Resistance": 0,
+        "Gloss_Retention": 0,
+        "In_Can_Stability": 3,
+        "Natural_Naturally_Derived": 1,
+        "PTFE_Alternative": 0
+      },
+      "IndustrialFlooringCoatings": {
+        "Available_as_Waterborne_Dispersion": false,
+        "Description": "Cellulose",
+        "Suggested_Use_Level": "2.0 - 5.0%",
+        "Recommended_System_Type": [
+          "W",
+          "S",
+          "UV"
+        ],
+        "Suitable_Floor_Type": {
+          "Wood": true,
+          "Concrete": true,
+          "Laminate": true
+        },
+        "Texture": 0,
+        "Non_Skid": 0,
+        "Matting_and_Gloss_Control": 3,
+        "Block_Resistance": 0,
+        "Abrasion_and_Scratch_Resistance": 0,
+        "Scuff_and_Heel_Mark_Resistance": 0,
+        "Resistance_to_Hot_Tire_Pick_up": 0,
+        "Water_Repellency_Beading": 0,
+        "Cleanability": 0,
+        "Soft_Touch": 1,
+        "Granite_Effect": 0,
+        "Film_Clarity": 3,
+        "In_Can_Stability": 0,
+        "PTFE_Alternative": 0,
+        "Natural_Naturally_Derived": 3
+      },
+      "PowderCoatings": {
+        "Description": "Cellulose",
+        "Suggested_Use_Level": "3.0 - 5.0%",
+        "Scratch_and_Abrasion_Resistance": 0,
+        "Slip_and_Lubricity": 0,
+        "Improved_Extrusion_Flow": 0,
+        "Apparent_Hardness": 0,
+        "Block_Resistance": 0,
+        "Metal_Mark_Resistance": 0,
+        "Matting_and_Gloss_Control": 3,
+        "Anti_Gassing": 0,
+        "Texture_and_Structure": 0,
+        "Soft_Touch": 0,
+        "Sealant_Adhesion": 0,
+        "PTFE_Alternative": 0,
+        "Edge_Coverage": 0,
+        "Corrosion_Resistance": 0,
+        "Recommended_System_Type": []
+      },
+      "WoodCoatings": {
+        "Available_as_Waterborne_Dispersion": false,
+        "Description": "Cellulose",
+        "Suggested_Use_Level": "2.0 - 5.0%",
+        "Recommended_System_Type": [
+          "W",
+          "S"
+        ],
+        "Scratch_and_Mar_Resistance": 0,
+        "Lubricity_and_Smooth_Feel": 0,
+        "Soft_Touch": 2,
+        "Block_Resistance": 0,
+        "Matting_and_Gloss_Control": 3,
+        "Burnish_Resistance": 3,
+        "Texture": 0,
+        "Water_Repellency_beading": 0,
+        "Sanding_Efficiency": 0,
+        "Gloss_Retention": 3,
+        "Clarity": 0,
+        "PTFE_Alternative": 0,
+        "Natural_Naturally_Derived": 3
+      }
+    }
+  },
+  {
+    "product_name": "NatureTex Series",
+    "core_properties": {
+      "Melt_Point_C": ">230",
+      "Density_g_cc_25C": "1.30",
+      "Mean_Particle_Size": {
+        "type": "mesh",
+        "min": 140,
+        "max": 325,
+        "raw": "Range available (140 mesh - 325 mesh)"
+      },
+      "Max_Particle_Size": {
+        "type": "mesh",
+        "min": 140,
+        "max": 325,
+        "raw": "Range available (140 mesh - 325 mesh)"
+      }
+    },
+    "application_profiles": {
+      "ArchitecturalCoatings": {
+        "Available_as_Waterborne_Dispersion": false,
+        "Description": "Cellulose Acetate",
+        "Suggested_Use_Level": "2.0 - 5.0%",
+        "Recommended_System_Type": [
+          "W",
+          "S"
+        ],
+        "Interior_Exterior": "I,E",
+        "Burnish_Resistance": 3,
+        "Matting_and_Gloss_Control": 3,
+        "Block_Resistance": 3,
+        "Resistance_to_Dirt_Pick_Up": 1,
+        "Cleanability": 3,
+        "Water_Repellency_Beading": 0,
+        "Moisture_and_Stain_Resistance": 0,
+        "Scratch_and_Mar_Resistance": 3,
+        "Texture": 3,
+        "Lubricity_and_Smooth_Feel": 0,
+        "Soft_Touch": 0,
+        "Heel_Mark_Resistance": 0,
+        "Anti_Skid": 2,
+        "Film_Clarity": 0,
+        "In_Can_Stability": 3,
+        "Natural_Naturally_Derived": 3
+      },
+      "CanContainerCoatings": {
+        "Available_as_Waterborne_Dispersion": true,
+        "Description": "Cellulose Acetate",
+        "Suggested_Use_Level": "2.0 - 8.0%",
+        "FDA_21CFR_175_300_Compliance": "Yes",
+        "Recommended_System_Type": [
+          "W",
+          "S",
+          "UV"
+        ],
+        "Scratch_and_Abrasion_Resistance": 2,
+        "Slip_and_Mobility": 0,
+        "Block_Resistance": 0,
+        "Heat_Resistance": 2,
+        "Moisture_Resistance": 0,
+        "Crown_Closure_Seal_Adhesion": 0,
+        "Meat_Release": 0,
+        "Gloss_Retention": 0,
+        "Matting_and_Gloss_Control": 3,
+        "Texture": 3,
+        "Soft_Touch": 2,
+        "Natural_Naturally_Derived": 3,
+        "PTFE_Alternative": 0
+      },
+      "EnergyCurableInks&Coatings": {
+        "Description": "Cellulose Acetate",
+        "Suggested_Use_Level": "2.0 - 5.0%",
+        "Scratch_and_Mar_Resistance": 3,
+        "Slip_and_Lubricity": 0,
+        "Block_Resistance": 1,
+        "Matting_and_Gloss_Control": 3,
+        "Gloss_Retention": 0,
+        "Clarity": 0,
+        "Soft_Touch_Silky_Feel": 0,
+        "Lubricity_and_Smooth_Feel": 0,
+        "Texture": 3,
+        "Increased_COF": 2,
+        "Tape_Release": 0,
+        "In_Can_Stability": 3,
+        "Natural_Naturally_Derived": 3,
+        "Recommended_System_Type": []
+      },
+      "IndustrialFlooringCoatings": {
+        "Available_as_Waterborne_Dispersion": false,
+        "Description": "Cellulose Acetate",
+        "Suggested_Use_Level": "2.0 - 5.0%",
+        "Recommended_System_Type": [
+          "W",
+          "UV"
+        ],
+        "Suitable_Floor_Type": {
+          "Wood": true,
+          "Concrete": false,
+          "Laminate": true
+        },
+        "Texture": 3,
+        "Non_Skid": 1,
+        "Matting_and_Gloss_Control": 3,
+        "Block_Resistance": 0,
+        "Abrasion_and_Scratch_Resistance": 2,
+        "Scuff_and_Heel_Mark_Resistance": 2,
+        "Resistance_to_Hot_Tire_Pick_up": 1,
+        "Water_Repellency_Beading": 0,
+        "Cleanability": 1,
+        "Soft_Touch": 0,
+        "Granite_Effect": 0,
+        "Film_Clarity": 3,
+        "In_Can_Stability": 0,
+        "PTFE_Alternative": 0,
+        "Natural_Naturally_Derived": 2
+      },
+      "WoodCoatings": {
+        "Available_as_Waterborne_Dispersion": false,
+        "Description": "Cellulose acetate",
+        "Suggested_Use_Level": "2.0 - 5.0%",
+        "Recommended_System_Type": [
+          "W",
+          "S"
+        ],
+        "Scratch_and_Mar_Resistance": 1,
+        "Lubricity_and_Smooth_Feel": 0,
+        "Soft_Touch": 1,
+        "Block_Resistance": 0,
+        "Matting_and_Gloss_Control": 2,
+        "Burnish_Resistance": 3,
+        "Texture": 3,
+        "Water_Repellency_beading": 0,
+        "Sanding_Efficiency": 0,
+        "Gloss_Retention": 0,
+        "Clarity": 0,
+        "PTFE_Alternative": 0,
+        "Natural_Naturally_Derived": 2
+      }
+    }
+  },
+  {
+    "product_name": "PolyTuf 1229",
+    "core_properties": {
+      "Melt_Point_C": "110 - 113",
+      "Density_g_cc_25C": "0.97",
+      "Mean_Particle_Size": {
+        "type": "micron",
+        "min": 9.0,
+        "max": 12.0,
+        "raw": "9.0 - 12.0"
+      },
+      "Max_Particle_Size": {
+        "type": "micron",
+        "min": 31.11,
+        "max": 31.11,
+        "raw": "31.11"
+      }
+    },
+    "application_profiles": {
+      "ArchitecturalCoatings": {
+        "Available_as_Waterborne_Dispersion": true,
+        "Description": "Ceramic Modified Polyethylene",
+        "Suggested_Use_Level": "0.5 - 2.0%",
+        "Recommended_System_Type": [
+          "W",
+          "S"
+        ],
+        "Interior_Exterior": "I,E",
+        "Burnish_Resistance": 3,
+        "Matting_and_Gloss_Control": 2,
+        "Block_Resistance": 2,
+        "Resistance_to_Dirt_Pick_Up": 1,
+        "Cleanability": 3,
+        "Water_Repellency_Beading": 0,
+        "Moisture_and_Stain_Resistance": 0,
+        "Scratch_and_Mar_Resistance": 3,
+        "Texture": 0,
+        "Lubricity_and_Smooth_Feel": 2,
+        "Soft_Touch": 1,
+        "Heel_Mark_Resistance": 0,
+        "Anti_Skid": 0,
+        "Film_Clarity": 1,
+        "In_Can_Stability": 0,
+        "Natural_Naturally_Derived": 0
+      },
+      "IndustrialCoatings": {
+        "Available_as_Waterborne_Dispersion": true,
+        "Description": "Ceramic modified polyethylene",
+        "Suggested_Use_Level": "0.5 - 2.0%",
+        "Recommended_System_Type": [
+          "W",
+          "S"
+        ],
+        "Scratch_and_Abrasion_Resistance": 3,
+        "Burnish_Resistance": 3,
+        "Metal_Mark_Resistance": 2,
+        "Apparent_Hardness": 2,
+        "Slip_and_Lubricity": 3,
+        "Block_Resistance": 2,
+        "Increased_COF": 0,
+        "Matting_and_Gloss_Control": 1,
+        "Texture": 0,
+        "Soft_Touch": 0,
+        "Heat_Resistance": 1,
+        "Early_Water_Resistance": 0,
+        "Gloss_Retention": 0,
+        "In_Can_Stability": 2,
+        "Natural_Naturally_Derived": 0,
+        "PTFE_Alternative": 3
+      },
+      "IndustrialFlooringCoatings": {
+        "Available_as_Waterborne_Dispersion": true,
+        "Description": "Ceramic modified polyethylene",
+        "Suggested_Use_Level": "0.5 - 2.0%",
+        "Recommended_System_Type": [
+          "W",
+          "S",
+          "UV"
+        ],
+        "Suitable_Floor_Type": {
+          "Wood": true,
+          "Concrete": true,
+          "Laminate": true
+        },
+        "Texture": 0,
+        "Non_Skid": 1,
+        "Matting_and_Gloss_Control": 0,
+        "Block_Resistance": 2,
+        "Abrasion_and_Scratch_Resistance": 3,
+        "Scuff_and_Heel_Mark_Resistance": 3,
+        "Resistance_to_Hot_Tire_Pick_up": 2,
+        "Water_Repellency_Beading": 0,
+        "Cleanability": 2,
+        "Soft_Touch": 0,
+        "Granite_Effect": 0,
+        "Film_Clarity": 2,
+        "In_Can_Stability": 0,
+        "PTFE_Alternative": 3,
+        "Natural_Naturally_Derived": 0
+      },
+      "PowderCoatings": {
+        "Description": "Ceramic modified polyethylene",
+        "Suggested_Use_Level": "0.5 - 2.0%",
+        "Scratch_and_Abrasion_Resistance": 3,
+        "Slip_and_Lubricity": 1,
+        "Improved_Extrusion_Flow": 0,
+        "Apparent_Hardness": 2,
+        "Block_Resistance": 2,
+        "Metal_Mark_Resistance": 2,
+        "Matting_and_Gloss_Control": 0,
+        "Anti_Gassing": 0,
+        "Texture_and_Structure": 0,
+        "Soft_Touch": 0,
+        "Sealant_Adhesion": 0,
+        "PTFE_Alternative": 3,
+        "Edge_Coverage": 0,
+        "Corrosion_Resistance": 0,
+        "Recommended_System_Type": []
+      },
+      "WoodCoatings": {
+        "Available_as_Waterborne_Dispersion": true,
+        "Description": "Ceramic modified polyethylene",
+        "Suggested_Use_Level": "0.5 - 2.0%",
+        "Recommended_System_Type": [
+          "W",
+          "S"
+        ],
+        "Scratch_and_Mar_Resistance": 3,
+        "Lubricity_and_Smooth_Feel": 2,
+        "Soft_Touch": 0,
+        "Block_Resistance": 1,
+        "Matting_and_Gloss_Control": 3,
+        "Burnish_Resistance": 3,
+        "Texture": 0,
+        "Water_Repellency_beading": 0,
+        "Sanding_Efficiency": 0,
+        "Gloss_Retention": 0,
+        "Clarity": 0,
+        "PTFE_Alternative": 3,
+        "Natural_Naturally_Derived": 0
+      }
+    }
+  },
+  {
+    "product_name": "PropylMatte 31",
+    "core_properties": {
+      "Melt_Point_C": "160 - 170",
+      "Density_g_cc_25C": "0.89",
+      "Mean_Particle_Size": {
+        "type": "micron",
+        "min": 8.0,
+        "max": 12.0,
+        "raw": "8.0 - 12.0"
+      },
+      "Max_Particle_Size": {
+        "type": "micron",
+        "min": 31.0,
+        "max": 31.0,
+        "raw": "31.00"
+      }
+    },
+    "application_profiles": {
+      "ArchitecturalCoatings": {
+        "Available_as_Waterborne_Dispersion": true,
+        "Description": "Polypropylene",
+        "Suggested_Use_Level": "2.0 - 5.0%",
+        "Recommended_System_Type": [
+          "W",
+          "S"
+        ],
+        "Interior_Exterior": "I,E",
+        "Burnish_Resistance": 3,
+        "Matting_and_Gloss_Control": 3,
+        "Block_Resistance": 0,
+        "Resistance_to_Dirt_Pick_Up": 2,
+        "Cleanability": 3,
+        "Water_Repellency_Beading": 0,
+        "Moisture_and_Stain_Resistance": 0,
+        "Scratch_and_Mar_Resistance": 0,
+        "Texture": 0,
+        "Lubricity_and_Smooth_Feel": 1,
+        "Soft_Touch": 1,
+        "Heel_Mark_Resistance": 0,
+        "Anti_Skid": 1,
+        "Film_Clarity": 0,
+        "In_Can_Stability": 0,
+        "Natural_Naturally_Derived": 0
+      },
+      "CanContainerCoatings": {
+        "Available_as_Waterborne_Dispersion": true,
+        "Description": "Polypropylene",
+        "Suggested_Use_Level": "2.0 - 4.0%",
+        "FDA_21CFR_175_300_Compliance": "Yes",
+        "Recommended_System_Type": [
+          "W",
+          "UV"
+        ],
+        "Scratch_and_Abrasion_Resistance": 0,
+        "Slip_and_Mobility": 0,
+        "Block_Resistance": 1,
+        "Heat_Resistance": 0,
+        "Moisture_Resistance": 0,
+        "Crown_Closure_Seal_Adhesion": 0,
+        "Meat_Release": 0,
+        "Gloss_Retention": 0,
+        "Matting_and_Gloss_Control": 3,
+        "Texture": 0,
+        "Soft_Touch": 1,
+        "Natural_Naturally_Derived": 0,
+        "PTFE_Alternative": 0
+      },
+      "IndustrialCoatings": {
+        "Available_as_Waterborne_Dispersion": true,
+        "Description": "Polypropylene",
+        "Suggested_Use_Level": "2.0 - 5.0%",
+        "Recommended_System_Type": [
+          "S"
+        ],
+        "Scratch_and_Abrasion_Resistance": 0,
+        "Burnish_Resistance": 3,
+        "Metal_Mark_Resistance": 0,
+        "Apparent_Hardness": 0,
+        "Slip_and_Lubricity": 0,
+        "Block_Resistance": 1,
+        "Increased_COF": 2,
+        "Matting_and_Gloss_Control": 3,
+        "Texture": 0,
+        "Soft_Touch": 0,
+        "Heat_Resistance": 0,
+        "Early_Water_Resistance": 0,
+        "Gloss_Retention": 0,
+        "In_Can_Stability": 0,
+        "Natural_Naturally_Derived": 0,
+        "PTFE_Alternative": 0
+      },
+      "IndustrialFlooringCoatings": {
+        "Available_as_Waterborne_Dispersion": true,
+        "Description": "Polypropylene",
+        "Suggested_Use_Level": "2.0 - 5.0%",
+        "Recommended_System_Type": [
+          "S",
+          "UV"
+        ],
+        "Suitable_Floor_Type": {
+          "Wood": true,
+          "Concrete": true,
+          "Laminate": true
+        },
+        "Texture": 0,
+        "Non_Skid": 2,
+        "Matting_and_Gloss_Control": 3,
+        "Block_Resistance": 0,
+        "Abrasion_and_Scratch_Resistance": 1,
+        "Scuff_and_Heel_Mark_Resistance": 2,
+        "Resistance_to_Hot_Tire_Pick_up": 1,
+        "Water_Repellency_Beading": 0,
+        "Cleanability": 2,
+        "Soft_Touch": 1,
+        "Granite_Effect": 0,
+        "Film_Clarity": 0,
+        "In_Can_Stability": 0,
+        "PTFE_Alternative": 0,
+        "Natural_Naturally_Derived": 0
+      },
+      "PowderCoatings": {
+        "Description": "Polypropylene",
+        "Suggested_Use_Level": "2.0 - 5.0%",
+        "Scratch_and_Abrasion_Resistance": 0,
+        "Slip_and_Lubricity": 0,
+        "Improved_Extrusion_Flow": 0,
+        "Apparent_Hardness": 3,
+        "Block_Resistance": 2,
+        "Metal_Mark_Resistance": 2,
+        "Matting_and_Gloss_Control": 3,
+        "Anti_Gassing": 0,
+        "Texture_and_Structure": 0,
+        "Soft_Touch": 0,
+        "Sealant_Adhesion": 0,
+        "PTFE_Alternative": 0,
+        "Edge_Coverage": 0,
+        "Corrosion_Resistance": 0,
+        "Recommended_System_Type": []
+      },
+      "WoodCoatings": {
+        "Available_as_Waterborne_Dispersion": false,
+        "Description": "Polypropylene",
+        "Suggested_Use_Level": "1.0 - 5.0%",
+        "Recommended_System_Type": [
+          "S"
+        ],
+        "Scratch_and_Mar_Resistance": 0,
+        "Lubricity_and_Smooth_Feel": 0,
+        "Soft_Touch": 1,
+        "Block_Resistance": 2,
+        "Matting_and_Gloss_Control": 3,
+        "Burnish_Resistance": 2,
+        "Texture": 0,
+        "Water_Repellency_beading": 0,
+        "Sanding_Efficiency": 1,
+        "Gloss_Retention": 0,
+        "Clarity": 0,
+        "PTFE_Alternative": 0,
+        "Natural_Naturally_Derived": 0
+      }
+    }
+  },
+  {
+    "product_name": "PropylMatte 31HD",
+    "core_properties": {
+      "Melt_Point_C": "160 - 170",
+      "Density_g_cc_25C": "1.07",
+      "Mean_Particle_Size": {
+        "type": "micron",
+        "min": 8.0,
+        "max": 12.0,
+        "raw": "8.0 - 12.0"
+      },
+      "Max_Particle_Size": {
+        "type": "micron",
+        "min": 31.0,
+        "max": 31.0,
+        "raw": "31.00"
+      }
+    },
+    "application_profiles": {
+      "ArchitecturalCoatings": {
+        "Available_as_Waterborne_Dispersion": true,
+        "Description": "Densified polypropylene",
+        "Suggested_Use_Level": "2.0 - 5.0%",
+        "Recommended_System_Type": [
+          "W"
+        ],
+        "Interior_Exterior": "I,E",
+        "Burnish_Resistance": 3,
+        "Matting_and_Gloss_Control": 3,
+        "Block_Resistance": 0,
+        "Resistance_to_Dirt_Pick_Up": 2,
+        "Cleanability": 3,
+        "Water_Repellency_Beading": 0,
+        "Moisture_and_Stain_Resistance": 0,
+        "Scratch_and_Mar_Resistance": 0,
+        "Texture": 0,
+        "Lubricity_and_Smooth_Feel": 1,
+        "Soft_Touch": 1,
+        "Heel_Mark_Resistance": 0,
+        "Anti_Skid": 1,
+        "Film_Clarity": 3,
+        "In_Can_Stability": 0,
+        "Natural_Naturally_Derived": 0
+      },
+      "EnergyCurableInks&Coatings": {
+        "Description": "Densified polypropylene",
+        "Suggested_Use_Level": "2.5 - 5.0%",
+        "Scratch_and_Mar_Resistance": 1,
+        "Slip_and_Lubricity": 0,
+        "Block_Resistance": 2,
+        "Matting_and_Gloss_Control": 3,
+        "Gloss_Retention": 0,
+        "Clarity": 0,
+        "Soft_Touch_Silky_Feel": 0,
+        "Lubricity_and_Smooth_Feel": 0,
+        "Texture": 0,
+        "Increased_COF": 3,
+        "Tape_Release": 0,
+        "In_Can_Stability": 3,
+        "Natural_Naturally_Derived": 0,
+        "Recommended_System_Type": []
+      },
+      "IndustrialCoatings": {
+        "Available_as_Waterborne_Dispersion": true,
+        "Description": "Densified polypropylene",
+        "Suggested_Use_Level": "2.0 - 5.0%",
+        "Recommended_System_Type": [
+          "W"
+        ],
+        "Scratch_and_Abrasion_Resistance": 0,
+        "Burnish_Resistance": 3,
+        "Metal_Mark_Resistance": 0,
+        "Apparent_Hardness": 0,
+        "Slip_and_Lubricity": 0,
+        "Block_Resistance": 2,
+        "Increased_COF": 2,
+        "Matting_and_Gloss_Control": 3,
+        "Texture": 0,
+        "Soft_Touch": 0,
+        "Heat_Resistance": 0,
+        "Early_Water_Resistance": 0,
+        "Gloss_Retention": 0,
+        "In_Can_Stability": 2,
+        "Natural_Naturally_Derived": 0,
+        "PTFE_Alternative": 0
+      },
+      "IndustrialFlooringCoatings": {
+        "Available_as_Waterborne_Dispersion": true,
+        "Description": "Densified polypropylene",
+        "Suggested_Use_Level": "2.0 - 5.0%",
+        "Recommended_System_Type": [
+          "W",
+          "UV"
+        ],
+        "Suitable_Floor_Type": {
+          "Wood": true,
+          "Concrete": true,
+          "Laminate": true
+        },
+        "Texture": 0,
+        "Non_Skid": 2,
+        "Matting_and_Gloss_Control": 3,
+        "Block_Resistance": 0,
+        "Abrasion_and_Scratch_Resistance": 1,
+        "Scuff_and_Heel_Mark_Resistance": 2,
+        "Resistance_to_Hot_Tire_Pick_up": 1,
+        "Water_Repellency_Beading": 0,
+        "Cleanability": 2,
+        "Soft_Touch": 1,
+        "Granite_Effect": 0,
+        "Film_Clarity": 0,
+        "In_Can_Stability": 0,
+        "PTFE_Alternative": 3,
+        "Natural_Naturally_Derived": 0
+      },
+      "WoodCoatings": {
+        "Available_as_Waterborne_Dispersion": true,
+        "Description": "Densified polypropylene",
+        "Suggested_Use_Level": "1.0 - 5.0%",
+        "Recommended_System_Type": [
+          "W"
+        ],
+        "Scratch_and_Mar_Resistance": 0,
+        "Lubricity_and_Smooth_Feel": 0,
+        "Soft_Touch": 1,
+        "Block_Resistance": 2,
+        "Matting_and_Gloss_Control": 3,
+        "Burnish_Resistance": 2,
+        "Texture": 0,
+        "Water_Repellency_beading": 0,
+        "Sanding_Efficiency": 0,
+        "Gloss_Retention": 0,
+        "Clarity": 0,
+        "PTFE_Alternative": 0,
+        "Natural_Naturally_Derived": 0
+      }
+    }
+  },
+  {
+    "product_name": "PropylTex Series",
+    "core_properties": {
+      "Melt_Point_C": "160 - 170",
+      "Density_g_cc_25C": "0.89",
+      "Mean_Particle_Size": {
+        "type": "mesh",
+        "min": 14,
+        "max": 325,
+        "raw": "Wide range available (14 mesh - 325 mesh)"
+      },
+      "Max_Particle_Size": {
+        "type": "mesh",
+        "min": 14,
+        "max": 325,
+        "raw": "Wide range available (14 mesh - 325 mesh)"
+      }
+    },
+    "application_profiles": {
+      "ArchitecturalCoatings": {
+        "Available_as_Waterborne_Dispersion": false,
+        "Description": "Polypropylene",
+        "Suggested_Use_Level": "3.0 - 10.0%",
+        "Recommended_System_Type": [
+          "W",
+          "S"
+        ],
+        "Interior_Exterior": "I,E",
+        "Burnish_Resistance": 2,
+        "Matting_and_Gloss_Control": 3,
+        "Block_Resistance": 0,
+        "Resistance_to_Dirt_Pick_Up": 0,
+        "Cleanability": 0,
+        "Water_Repellency_Beading": 0,
+        "Moisture_and_Stain_Resistance": 0,
+        "Scratch_and_Mar_Resistance": 0,
+        "Texture": 3,
+        "Lubricity_and_Smooth_Feel": 0,
+        "Soft_Touch": 1,
+        "Heel_Mark_Resistance": 0,
+        "Anti_Skid": 3,
+        "Film_Clarity": 0,
+        "In_Can_Stability": 0,
+        "Natural_Naturally_Derived": 0
+      },
+      "CanContainerCoatings": {
+        "Available_as_Waterborne_Dispersion": false,
+        "Description": "Polypropylene",
+        "Suggested_Use_Level": "2.0 - 8.0%",
+        "FDA_21CFR_175_300_Compliance": "Yes",
+        "Recommended_System_Type": [
+          "W",
+          "S",
+          "UV"
+        ],
+        "Scratch_and_Abrasion_Resistance": 0,
+        "Slip_and_Mobility": 0,
+        "Block_Resistance": 1,
+        "Heat_Resistance": 0,
+        "Moisture_Resistance": 0,
+        "Crown_Closure_Seal_Adhesion": 0,
+        "Meat_Release": 0,
+        "Gloss_Retention": 0,
+        "Matting_and_Gloss_Control": 3,
+        "Texture": 3,
+        "Soft_Touch": 2,
+        "Natural_Naturally_Derived": 0,
+        "PTFE_Alternative": 0
+      },
+      "IndustrialCoatings": {
+        "Available_as_Waterborne_Dispersion": false,
+        "Description": "Polypropylene",
+        "Suggested_Use_Level": "3.0 - 10.0%",
+        "Recommended_System_Type": [
+          "S"
+        ],
+        "Scratch_and_Abrasion_Resistance": 3,
+        "Burnish_Resistance": 3,
+        "Metal_Mark_Resistance": 0,
+        "Apparent_Hardness": 0,
+        "Slip_and_Lubricity": 2,
+        "Block_Resistance": 2,
+        "Increased_COF": 0,
+        "Matting_and_Gloss_Control": 3,
+        "Texture": 0,
+        "Soft_Touch": 0,
+        "Heat_Resistance": 0,
+        "Early_Water_Resistance": 0,
+        "Gloss_Retention": 0,
+        "In_Can_Stability": 2,
+        "Natural_Naturally_Derived": 0,
+        "PTFE_Alternative": 0
+      },
+      "IndustrialFlooringCoatings": {
+        "Available_as_Waterborne_Dispersion": false,
+        "Description": "Polypropylene",
+        "Suggested_Use_Level": "3.0 - 10.0%",
+        "Recommended_System_Type": [
+          "S",
+          "UV"
+        ],
+        "Suitable_Floor_Type": {
+          "Wood": false,
+          "Concrete": true,
+          "Laminate": false
+        },
+        "Texture": 3,
+        "Non_Skid": 3,
+        "Matting_and_Gloss_Control": 2,
+        "Block_Resistance": 0,
+        "Abrasion_and_Scratch_Resistance": 1,
+        "Scuff_and_Heel_Mark_Resistance": 1,
+        "Resistance_to_Hot_Tire_Pick_up": 1,
+        "Water_Repellency_Beading": 0,
+        "Cleanability": 1,
+        "Soft_Touch": 0,
+        "Granite_Effect": 0,
+        "Film_Clarity": 0,
+        "In_Can_Stability": 0,
+        "PTFE_Alternative": 0,
+        "Natural_Naturally_Derived": 0
+      },
+      "WoodCoatings": {
+        "Available_as_Waterborne_Dispersion": false,
+        "Description": "Polypropylene",
+        "Suggested_Use_Level": "3.0 - 10.0%",
+        "Recommended_System_Type": [
+          "S"
+        ],
+        "Scratch_and_Mar_Resistance": 0,
+        "Lubricity_and_Smooth_Feel": 0,
+        "Soft_Touch": 1,
+        "Block_Resistance": 0,
+        "Matting_and_Gloss_Control": 2,
+        "Burnish_Resistance": 0,
+        "Texture": 3,
+        "Water_Repellency_beading": 0,
+        "Sanding_Efficiency": 0,
+        "Gloss_Retention": 0,
+        "Clarity": 0,
+        "PTFE_Alternative": 0,
+        "Natural_Naturally_Derived": 0
+      }
+    }
+  },
+  {
+    "product_name": "PropylTex HD Series",
+    "core_properties": {
+      "Melt_Point_C": "160 - 170",
+      "Density_g_cc_25C": "1.07",
+      "Mean_Particle_Size": {
+        "type": "mesh",
+        "min": 200,
+        "max": 325,
+        "raw": "Range available (200 mesh - 325 mesh)"
+      },
+      "Max_Particle_Size": {
+        "type": "mesh",
+        "min": 200,
+        "max": 325,
+        "raw": "Range available (200 mesh - 325 mesh)"
+      }
+    },
+    "application_profiles": {
+      "ArchitecturalCoatings": {
+        "Available_as_Waterborne_Dispersion": false,
+        "Description": "Densified polypropylene",
+        "Suggested_Use_Level": "3.0 - 10.0%",
+        "Recommended_System_Type": [
+          "W"
+        ],
+        "Interior_Exterior": "I,E",
+        "Burnish_Resistance": 3,
+        "Matting_and_Gloss_Control": 3,
+        "Block_Resistance": 0,
+        "Resistance_to_Dirt_Pick_Up": 0,
+        "Cleanability": 0,
+        "Water_Repellency_Beading": 0,
+        "Moisture_and_Stain_Resistance": 0,
+        "Scratch_and_Mar_Resistance": 0,
+        "Texture": 3,
+        "Lubricity_and_Smooth_Feel": 0,
+        "Soft_Touch": 1,
+        "Heel_Mark_Resistance": 0,
+        "Anti_Skid": 3,
+        "Film_Clarity": 0,
+        "In_Can_Stability": 3,
+        "Natural_Naturally_Derived": 0
+      },
+      "EnergyCurableInks&Coatings": {
+        "Description": "Densified polypropylene",
+        "Suggested_Use_Level": "3.0 - 10.0%",
+        "Scratch_and_Mar_Resistance": 1,
+        "Slip_and_Lubricity": 0,
+        "Block_Resistance": 0,
+        "Matting_and_Gloss_Control": 2,
+        "Gloss_Retention": 0,
+        "Clarity": 0,
+        "Soft_Touch_Silky_Feel": 0,
+        "Lubricity_and_Smooth_Feel": 0,
+        "Texture": 3,
+        "Increased_COF": 3,
+        "Tape_Release": 0,
+        "In_Can_Stability": 3,
+        "Natural_Naturally_Derived": 0,
+        "Recommended_System_Type": []
+      },
+      "IndustrialCoatings": {
+        "Available_as_Waterborne_Dispersion": false,
+        "Description": "Densified polypropylene",
+        "Suggested_Use_Level": "3.0 - 10.0%",
+        "Recommended_System_Type": [
+          "W"
+        ],
+        "Scratch_and_Abrasion_Resistance": 0,
+        "Burnish_Resistance": 3,
+        "Metal_Mark_Resistance": 0,
+        "Apparent_Hardness": 0,
+        "Slip_and_Lubricity": 0,
+        "Block_Resistance": 2,
+        "Increased_COF": 3,
+        "Matting_and_Gloss_Control": 3,
+        "Texture": 3,
+        "Soft_Touch": 1,
+        "Heat_Resistance": 0,
+        "Early_Water_Resistance": 0,
+        "Gloss_Retention": 0,
+        "In_Can_Stability": 2,
+        "Natural_Naturally_Derived": 0,
+        "PTFE_Alternative": 0
+      },
+      "IndustrialFlooringCoatings": {
+        "Available_as_Waterborne_Dispersion": false,
+        "Description": "Densified polypropylene",
+        "Suggested_Use_Level": "3.0 - 10.0%",
+        "Recommended_System_Type": [
+          "W",
+          "UV"
+        ],
+        "Suitable_Floor_Type": {
+          "Wood": true,
+          "Concrete": true,
+          "Laminate": true
+        },
+        "Texture": 3,
+        "Non_Skid": 3,
+        "Matting_and_Gloss_Control": 2,
+        "Block_Resistance": 0,
+        "Abrasion_and_Scratch_Resistance": 1,
+        "Scuff_and_Heel_Mark_Resistance": 1,
+        "Resistance_to_Hot_Tire_Pick_up": 1,
+        "Water_Repellency_Beading": 0,
+        "Cleanability": 1,
+        "Soft_Touch": 0,
+        "Granite_Effect": 0,
+        "Film_Clarity": 0,
+        "In_Can_Stability": 3,
+        "PTFE_Alternative": 0,
+        "Natural_Naturally_Derived": 0
+      },
+      "WoodCoatings": {
+        "Available_as_Waterborne_Dispersion": false,
+        "Description": "Densified Polypropylene",
+        "Suggested_Use_Level": "3.0 - 10.0%",
+        "Recommended_System_Type": [
+          "W"
+        ],
+        "Scratch_and_Mar_Resistance": 0,
+        "Lubricity_and_Smooth_Feel": 0,
+        "Soft_Touch": 1,
+        "Block_Resistance": 0,
+        "Matting_and_Gloss_Control": 2,
+        "Burnish_Resistance": 0,
+        "Texture": 3,
+        "Water_Repellency_beading": 0,
+        "Sanding_Efficiency": 0,
+        "Gloss_Retention": 0,
+        "Clarity": 0,
+        "PTFE_Alternative": 0,
+        "Natural_Naturally_Derived": 0
+      }
+    }
+  },
+  {
+    "product_name": "Spherex 200",
+    "core_properties": {
+      "Melt_Point_C": "-",
+      "Density_g_cc_25C": "1.20",
+      "Mean_Particle_Size": {
+        "type": "micron",
+        "min": 18.5,
+        "max": 21.5,
+        "raw": "18.5 - 21.5"
+      },
+      "Max_Particle_Size": {
+        "type": "micron",
+        "min": 24.0,
+        "max": 24.0,
+        "raw": "24.00"
+      }
+    },
+    "application_profiles": {
+      "ArchitecturalCoatings": {
+        "Available_as_Waterborne_Dispersion": false,
+        "Description": "Acrylic",
+        "Suggested_Use_Level": "0.5 - 8.0%",
+        "Recommended_System_Type": [
+          "W"
+        ],
+        "Interior_Exterior": "I,E",
+        "Burnish_Resistance": 3,
+        "Matting_and_Gloss_Control": 3,
+        "Block_Resistance": 2,
+        "Resistance_to_Dirt_Pick_Up": 0,
+        "Cleanability": 0,
+        "Water_Repellency_Beading": 0,
+        "Moisture_and_Stain_Resistance": 2,
+        "Scratch_and_Mar_Resistance": 2,
+        "Texture": 0,
+        "Lubricity_and_Smooth_Feel": 0,
+        "Soft_Touch": 0,
+        "Heel_Mark_Resistance": 0,
+        "Anti_Skid": 1,
+        "Film_Clarity": 0,
+        "In_Can_Stability": 3,
+        "Natural_Naturally_Derived": 0
+      },
+      "IndustrialCoatings": {
+        "Available_as_Waterborne_Dispersion": false,
+        "Description": "Acrylic",
+        "Suggested_Use_Level": "0.5 - 8.0%",
+        "Recommended_System_Type": [
+          "W",
+          "S"
+        ],
+        "Scratch_and_Abrasion_Resistance": 3,
+        "Burnish_Resistance": 3,
+        "Metal_Mark_Resistance": 0,
+        "Apparent_Hardness": 2,
+        "Slip_and_Lubricity": 0,
+        "Block_Resistance": 0,
+        "Increased_COF": 2,
+        "Matting_and_Gloss_Control": 3,
+        "Texture": 0,
+        "Soft_Touch": 0,
+        "Heat_Resistance": 3,
+        "Early_Water_Resistance": 0,
+        "Gloss_Retention": 0,
+        "In_Can_Stability": 2,
+        "Natural_Naturally_Derived": 0,
+        "PTFE_Alternative": 2
+      },
+      "IndustrialFlooringCoatings": {
+        "Available_as_Waterborne_Dispersion": false,
+        "Description": "Acrylic",
+        "Suggested_Use_Level": "0.5 - 8.0%",
+        "Recommended_System_Type": [
+          "W",
+          "S",
+          "UV"
+        ],
+        "Suitable_Floor_Type": {
+          "Wood": true,
+          "Concrete": true,
+          "Laminate": true
+        },
+        "Texture": 0,
+        "Non_Skid": 2,
+        "Matting_and_Gloss_Control": 3,
+        "Block_Resistance": 0,
+        "Abrasion_and_Scratch_Resistance": 3,
+        "Scuff_and_Heel_Mark_Resistance": 0,
+        "Resistance_to_Hot_Tire_Pick_up": 0,
+        "Water_Repellency_Beading": 0,
+        "Cleanability": 0,
+        "Soft_Touch": 0,
+        "Granite_Effect": 3,
+        "Film_Clarity": 0,
+        "In_Can_Stability": 0,
+        "PTFE_Alternative": 2,
+        "Natural_Naturally_Derived": 0
+      },
+      "PowderCoatings": {
+        "Description": "Acrylic",
+        "Suggested_Use_Level": "0.5 - 8.0%",
+        "Scratch_and_Abrasion_Resistance": 3,
+        "Slip_and_Lubricity": 0,
+        "Improved_Extrusion_Flow": 0,
+        "Apparent_Hardness": 2,
+        "Block_Resistance": 0,
+        "Metal_Mark_Resistance": 0,
+        "Matting_and_Gloss_Control": 0,
+        "Anti_Gassing": 0,
+        "Texture_and_Structure": 0,
+        "Soft_Touch": 0,
+        "Sealant_Adhesion": 0,
+        "PTFE_Alternative": 2,
+        "Edge_Coverage": 3,
+        "Corrosion_Resistance": 0,
+        "Recommended_System_Type": []
+      }
+    }
+  },
+  {
+    "product_name": "Spherex 200XF",
+    "core_properties": {
+      "Melt_Point_C": "-",
+      "Density_g_cc_25C": "1.20",
+      "Mean_Particle_Size": {
+        "type": "micron",
+        "min": 5.5,
+        "max": 6.5,
+        "raw": "5.5 - 6.5"
+      },
+      "Max_Particle_Size": {
+        "type": "micron",
+        "min": 8.0,
+        "max": 8.0,
+        "raw": "8.00"
+      }
+    },
+    "application_profiles": {
+      "ArchitecturalCoatings": {
+        "Available_as_Waterborne_Dispersion": false,
+        "Description": "Acrylic",
+        "Suggested_Use_Level": "0.5 - 8.0%",
+        "Recommended_System_Type": [
+          "W"
+        ],
+        "Interior_Exterior": "I,E",
+        "Burnish_Resistance": 3,
+        "Matting_and_Gloss_Control": 3,
+        "Block_Resistance": 0,
+        "Resistance_to_Dirt_Pick_Up": 0,
+        "Cleanability": 0,
+        "Water_Repellency_Beading": 0,
+        "Moisture_and_Stain_Resistance": 2,
+        "Scratch_and_Mar_Resistance": 2,
+        "Texture": 0,
+        "Lubricity_and_Smooth_Feel": 0,
+        "Soft_Touch": 0,
+        "Heel_Mark_Resistance": 0,
+        "Anti_Skid": 1,
+        "Film_Clarity": 0,
+        "In_Can_Stability": 3,
+        "Natural_Naturally_Derived": 0
+      },
+      "CanContainerCoatings": {
+        "Available_as_Waterborne_Dispersion": false,
+        "Description": "Acrylic",
+        "Suggested_Use_Level": "0.5 - 8.0%",
+        "FDA_21CFR_175_300_Compliance": "Yes",
+        "Recommended_System_Type": [
+          "W",
+          "S",
+          "UV"
+        ],
+        "Scratch_and_Abrasion_Resistance": 3,
+        "Slip_and_Mobility": 0,
+        "Block_Resistance": 0,
+        "Heat_Resistance": 3,
+        "Moisture_Resistance": 3,
+        "Crown_Closure_Seal_Adhesion": 0,
+        "Meat_Release": 0,
+        "Gloss_Retention": 0,
+        "Matting_and_Gloss_Control": 0,
+        "Texture": 0,
+        "Soft_Touch": 0,
+        "Natural_Naturally_Derived": 0,
+        "PTFE_Alternative": 2
+      },
+      "EnergyCurableInks&Coatings": {
+        "Description": "Acrylic",
+        "Suggested_Use_Level": "0.5 - 8.0%",
+        "Scratch_and_Mar_Resistance": 3,
+        "Slip_and_Lubricity": 0,
+        "Block_Resistance": 0,
+        "Matting_and_Gloss_Control": 3,
+        "Gloss_Retention": 0,
+        "Clarity": 3,
+        "Soft_Touch_Silky_Feel": 0,
+        "Lubricity_and_Smooth_Feel": 0,
+        "Texture": 0,
+        "Increased_COF": 3,
+        "Tape_Release": 0,
+        "In_Can_Stability": 0,
+        "Natural_Naturally_Derived": 0,
+        "Recommended_System_Type": []
+      },
+      "IndustrialCoatings": {
+        "Available_as_Waterborne_Dispersion": false,
+        "Description": "Acrylic",
+        "Suggested_Use_Level": "0.5 - 8.0%",
+        "Recommended_System_Type": [
+          "W",
+          "S"
+        ],
+        "Scratch_and_Abrasion_Resistance": 3,
+        "Burnish_Resistance": 3,
+        "Metal_Mark_Resistance": 0,
+        "Apparent_Hardness": 2,
+        "Slip_and_Lubricity": 0,
+        "Block_Resistance": 0,
+        "Increased_COF": 2,
+        "Matting_and_Gloss_Control": 3,
+        "Texture": 0,
+        "Soft_Touch": 0,
+        "Heat_Resistance": 3,
+        "Early_Water_Resistance": 2,
+        "Gloss_Resistance": 3,
+        "Gloss_Retention": 0,
+        "In_Can_Stability": 2,
+        "Natural_Naturally_Derived": 0,
+        "PTFE_Alternative": 2
+      },
+      "IndustrialFlooringCoatings": {
+        "Available_as_Waterborne_Dispersion": false,
+        "Description": "Acrylic",
+        "Suggested_Use_Level": "0.5 - 8.0%",
+        "Recommended_System_Type": [
+          "W",
+          "S",
+          "UV"
+        ],
+        "Suitable_Floor_Type": {
+          "Wood": true,
+          "Concrete": true,
+          "Laminate": true
+        },
+        "Texture": 0,
+        "Non_Skid": 2,
+        "Matting_and_Gloss_Control": 3,
+        "Block_Resistance": 0,
+        "Abrasion_and_Scratch_Resistance": 3,
+        "Scuff_and_Heel_Mark_Resistance": 0,
+        "Resistance_to_Hot_Tire_Pick_up": 0,
+        "Water_Repellency_Beading": 0,
+        "Cleanability": 0,
+        "Soft_Touch": 0,
+        "Granite_Effect": 3,
+        "Film_Clarity": 0,
+        "In_Can_Stability": 0,
+        "PTFE_Alternative": 2,
+        "Natural_Naturally_Derived": 0
+      },
+      "PowderCoatings": {
+        "Description": "Acrylic",
+        "Suggested_Use_Level": "0.5 - 8.0%",
+        "Scratch_and_Abrasion_Resistance": 2,
+        "Slip_and_Lubricity": 0,
+        "Improved_Extrusion_Flow": 0,
+        "Apparent_Hardness": 2,
+        "Block_Resistance": 0,
+        "Metal_Mark_Resistance": 0,
+        "Matting_and_Gloss_Control": 0,
+        "Anti_Gassing": 0,
+        "Texture_and_Structure": 0,
+        "Soft_Touch": 0,
+        "Sealant_Adhesion": 0,
+        "PTFE_Alternative": 2,
+        "Edge_Coverage": 3,
+        "Corrosion_Resistance": 0,
+        "Recommended_System_Type": []
+      },
+      "WoodCoatings": {
+        "Available_as_Waterborne_Dispersion": false,
+        "Description": "Acrylic",
+        "Suggested_Use_Level": "0.5 -8.0%",
+        "Recommended_System_Type": [
+          "W",
+          "S"
+        ],
+        "Scratch_and_Mar_Resistance": 3,
+        "Lubricity_and_Smooth_Feel": 0,
+        "Soft_Touch": 0,
+        "Block_Resistance": 0,
+        "Matting_and_Gloss_Control": 3,
+        "Burnish_Resistance": 0,
+        "Texture": 0,
+        "Water_Repellency_beading": 0,
+        "Sanding_Efficiency": 0,
+        "Gloss_Retention": 3,
+        "Clarity": 2,
+        "PTFE_Alternative": 0,
+        "Natural_Naturally_Derived": 0
+      }
+    }
+  },
+  {
+    "product_name": "AquaKlean 418",
+    "core_properties": {
+      "Melt_Point_C": "85",
+      "Density_g_cc_25C": "1.00",
+      "Mean_Particle_Size": {
+        "type": "sub-micron",
+        "min": 0.1,
+        "max": 0.9,
+        "raw": "Sub-micron aqueous emulsion"
+      },
+      "Max_Particle_Size": {
+        "type": "sub-micron",
+        "min": 0.1,
+        "max": 0.9,
+        "raw": "Sub-micron aqueous emulsion"
+      }
+    },
+    "application_profiles": {
+      "CanContainerCoatings": {
+        "Available_as_Waterborne_Dispersion": false,
+        "Description": "Carnauba wax emulsion",
+        "Suggested_Use_Level": "3.0 - 5.0%",
+        "FDA_21CFR_175_300_Compliance": "Yes",
+        "Recommended_System_Type": [
+          "W"
+        ],
+        "Scratch_and_Abrasion_Resistance": 1,
+        "Slip_and_Mobility": 2,
+        "Block_Resistance": 2,
+        "Heat_Resistance": 0,
+        "Moisture_Resistance": 3,
+        "Crown_Closure_Seal_Adhesion": 0,
+        "Meat_Release": 1,
+        "Gloss_Retention": 3,
+        "Matting_and_Gloss_Control": 0,
+        "Texture": 0,
+        "Soft_Touch": 0,
+        "Natural_Naturally_Derived": 3,
+        "PTFE_Alternative": 0
+      }
+    }
+  },
+  {
+    "product_name": "AquaPoly 275",
+    "core_properties": {
+      "Melt_Point_C": "132 - 135",
+      "Density_g_cc_25C": "0.93",
+      "Mean_Particle_Size": {
+        "type": "micron",
+        "min": 8.0,
+        "max": 12.0,
+        "raw": "8.0 - 12.0"
+      },
+      "Max_Particle_Size": {
+        "type": "micron",
+        "min": 31.0,
+        "max": 31.0,
+        "raw": "31.00"
+      }
+    },
+    "application_profiles": {
+      "CanContainerCoatings": {
+        "Available_as_Waterborne_Dispersion": false,
+        "Description": "Oxidized polyethylene",
+        "Suggested_Use_Level": "0.5 - 2.0%",
+        "FDA_21CFR_175_300_Compliance": "Yes",
+        "Recommended_System_Type": [
+          "W"
+        ],
+        "Scratch_and_Abrasion_Resistance": 2,
+        "Slip_and_Mobility": 3,
+        "Block_Resistance": 3,
+        "Heat_Resistance": 0,
+        "Moisture_Resistance": 0,
+        "Crown_Closure_Seal_Adhesion": 3,
+        "Meat_Release": 0,
+        "Gloss_Retention": 0,
+        "Matting_and_Gloss_Control": 0,
+        "Texture": 0,
+        "Soft_Touch": 0,
+        "Natural_Naturally_Derived": 0,
+        "PTFE_Alternative": 0
+      }
+    }
+  },
+  {
+    "product_name": "MicroKlear 116",
+    "core_properties": {
+      "Melt_Point_C": "107 - 113",
+      "Density_g_cc_25C": "0.98",
+      "Mean_Particle_Size": {
+        "type": "micron",
+        "min": 4.0,
+        "max": 5.25,
+        "raw": "4.0 - 5.25"
+      },
+      "Max_Particle_Size": {
+        "type": "micron",
+        "min": 15.56,
+        "max": 15.56,
+        "raw": "15.56"
+      }
+    },
+    "application_profiles": {
+      "CanContainerCoatings": {
+        "Available_as_Waterborne_Dispersion": false,
+        "Description": "Polyethylene/Carnauba",
+        "Suggested_Use_Level": "1.0 - 2.0%",
+        "FDA_21CFR_175_300_Compliance": "Yes",
+        "Recommended_System_Type": [
+          "W",
+          "S",
+          "UV"
+        ],
+        "Scratch_and_Abrasion_Resistance": 2,
+        "Slip_and_Mobility": 3,
+        "Block_Resistance": 3,
+        "Heat_Resistance": 0,
+        "Moisture_Resistance": 1,
+        "Crown_Closure_Seal_Adhesion": 0,
+        "Meat_Release": 1,
+        "Gloss_Retention": 2,
+        "Matting_and_Gloss_Control": 0,
+        "Texture": 0,
+        "Soft_Touch": 0,
+        "Natural_Naturally_Derived": 0,
+        "PTFE_Alternative": 0
+      },
+      "EnergyCurableInks&Coatings": {
+        "Description": "Polyethylene/Carnauba wax",
+        "Suggested_Use_Level": "0.2 - 0.5%",
+        "Scratch_and_Mar_Resistance": 1,
+        "Slip_and_Lubricity": 1,
+        "Block_Resistance": 1,
+        "Matting_and_Gloss_Control": 0,
+        "Gloss_Retention": 3,
+        "Clarity": 3,
+        "Soft_Touch_Silky_Feel": 0,
+        "Lubricity_and_Smooth_Feel": 2,
+        "Texture": 0,
+        "Increased_COF": 0,
+        "Tape_Release": 1,
+        "In_Can_Stability": 0,
+        "Natural_Naturally_Derived": 0,
+        "Recommended_System_Type": []
+      },
+      "IndustrialCoatings": {
+        "Available_as_Waterborne_Dispersion": false,
+        "Description": "Polyethylene/carnauba wax",
+        "Suggested_Use_Level": "1.0 - 3.0%",
+        "Recommended_System_Type": [
+          "W",
+          "S"
+        ],
+        "Scratch_and_Abrasion_Resistance": 2,
+        "Burnish_Resistance": 0,
+        "Metal_Mark_Resistance": 0,
+        "Apparent_Hardness": 2,
+        "Slip_and_Lubricity": 3,
+        "Block_Resistance": 3,
+        "Increased_COF": 0,
+        "Matting_and_Gloss_Control": 0,
+        "Texture": 0,
+        "Soft_Touch": 0,
+        "Heat_Resistance": 0,
+        "Early_Water_Resistance": 2,
+        "Gloss_Retention": 0,
+        "In_Can_Stability": 0,
+        "Natural_Naturally_Derived": 1,
+        "PTFE_Alternative": 0
+      }
+    }
+  },
+  {
+    "product_name": "MicroKlear 116AL",
+    "core_properties": {
+      "Melt_Point_C": "107 - 113",
+      "Density_g_cc_25C": "1.01",
+      "Mean_Particle_Size": {
+        "type": "micron",
+        "min": 3.5,
+        "max": 5.5,
+        "raw": "3.5 - 5.5"
+      },
+      "Max_Particle_Size": {
+        "type": "micron",
+        "min": 15.56,
+        "max": 15.56,
+        "raw": "15.56"
+      }
+    },
+    "application_profiles": {
+      "CanContainerCoatings": {
+        "Available_as_Waterborne_Dispersion": false,
+        "Description": "Polyethylene/Carnauba/Aluminum oxide",
+        "Suggested_Use_Level": "0.5 - 1.5%",
+        "FDA_21CFR_175_300_Compliance": "Yes",
+        "Recommended_System_Type": [
+          "W",
+          "S",
+          "UV"
+        ],
+        "Scratch_and_Abrasion_Resistance": 3,
+        "Slip_and_Mobility": 3,
+        "Block_Resistance": 3,
+        "Heat_Resistance": 0,
+        "Moisture_Resistance": 1,
+        "Crown_Closure_Seal_Adhesion": 0,
+        "Meat_Release": 1,
+        "Gloss_Retention": 2,
+        "Matting_and_Gloss_Control": 0,
+        "Texture": 0,
+        "Soft_Touch": 0,
+        "Natural_Naturally_Derived": 0,
+        "PTFE_Alternative": 3
+      }
+    }
+  },
+  {
+    "product_name": "MicroKlear 418",
+    "core_properties": {
+      "Melt_Point_C": "81 - 86",
+      "Density_g_cc_25C": "1.00",
+      "Mean_Particle_Size": {
+        "type": "micron",
+        "min": 6.0,
+        "max": 8.0,
+        "raw": "6.0 - 8.0"
+      },
+      "Max_Particle_Size": {
+        "type": "micron",
+        "min": 22.0,
+        "max": 22.0,
+        "raw": "22.00"
+      }
+    },
+    "application_profiles": {
+      "CanContainerCoatings": {
+        "Available_as_Waterborne_Dispersion": true,
+        "Description": "Carnauba",
+        "Suggested_Use_Level": "1.0 - 2.0%",
+        "FDA_21CFR_175_300_Compliance": "Yes",
+        "Recommended_System_Type": [
+          "S",
+          "UV"
+        ],
+        "Scratch_and_Abrasion_Resistance": 2,
+        "Slip_and_Mobility": 3,
+        "Block_Resistance": 2,
+        "Heat_Resistance": 0,
+        "Moisture_Resistance": 1,
+        "Crown_Closure_Seal_Adhesion": 0,
+        "Meat_Release": 2,
+        "Gloss_Retention": 1,
+        "Matting_and_Gloss_Control": 0,
+        "Texture": 0,
+        "Soft_Touch": 0,
+        "Natural_Naturally_Derived": 3,
+        "PTFE_Alternative": 0
+      },
+      "EnergyCurableInks&Coatings": {
+        "Description": "Carnauba",
+        "Suggested_Use_Level": "1.0 - 3.0%",
+        "Scratch_and_Mar_Resistance": 2,
+        "Slip_and_Lubricity": 3,
+        "Block_Resistance": 2,
+        "Matting_and_Gloss_Control": 0,
+        "Gloss_Retention": 1,
+        "Clarity": 3,
+        "Soft_Touch_Silky_Feel": 0,
+        "Lubricity_and_Smooth_Feel": 2,
+        "Texture": 0,
+        "Increased_COF": 0,
+        "Tape_Release": 1,
+        "In_Can_Stability": 1,
+        "Natural_Naturally_Derived": 3,
+        "Recommended_System_Type": []
+      }
+    }
+  },
+  {
+    "product_name": "MicroKlear 418AL",
+    "core_properties": {
+      "Melt_Point_C": "81 - 86",
+      "Density_g_cc_25C": "1.04",
+      "Mean_Particle_Size": {
+        "type": "micron",
+        "min": 6.0,
+        "max": 8.0,
+        "raw": "6.0 - 8.0"
+      },
+      "Max_Particle_Size": {
+        "type": "micron",
+        "min": 22.0,
+        "max": 22.0,
+        "raw": "22.00"
+      }
+    },
+    "application_profiles": {
+      "CanContainerCoatings": {
+        "Available_as_Waterborne_Dispersion": true,
+        "Description": "Carnauba/Aluminum oxide",
+        "Suggested_Use_Level": "1.0 - 3.0%",
+        "FDA_21CFR_175_300_Compliance": "Yes",
+        "Recommended_System_Type": [
+          "W",
+          "S",
+          "UV"
+        ],
+        "Scratch_and_Abrasion_Resistance": 3,
+        "Slip_and_Mobility": 3,
+        "Block_Resistance": 2,
+        "Heat_Resistance": 0,
+        "Moisture_Resistance": 1,
+        "Crown_Closure_Seal_Adhesion": 0,
+        "Meat_Release": 3,
+        "Gloss_Retention": 2,
+        "Matting_and_Gloss_Control": 0,
+        "Texture": 0,
+        "Soft_Touch": 0,
+        "Natural_Naturally_Derived": 3,
+        "PTFE_Alternative": 3
+      },
+      "EnergyCurableInks&Coatings": {
+        "Description": "Carnauba/Aluminum oxide",
+        "Suggested_Use_Level": "1.0 - 3.0%",
+        "Scratch_and_Mar_Resistance": 3,
+        "Slip_and_Lubricity": 3,
+        "Block_Resistance": 2,
+        "Matting_and_Gloss_Control": 0,
+        "Gloss_Retention": 1,
+        "Clarity": 3,
+        "Soft_Touch_Silky_Feel": 0,
+        "Lubricity_and_Smooth_Feel": 2,
+        "Texture": 0,
+        "Increased_COF": 0,
+        "Tape_Release": 1,
+        "In_Can_Stability": 1,
+        "Natural_Naturally_Derived": 3,
+        "Recommended_System_Type": []
+      },
+      "PowderCoatings": {
+        "Description": "Carnauba wax/Aluminum oxide",
+        "Suggested_Use_Level": "1.0 - 3.0%",
+        "Scratch_and_Abrasion_Resistance": 3,
+        "Slip_and_Lubricity": 2,
+        "Improved_Extrusion_Flow": 0,
+        "Apparent_Hardness": 3,
+        "Block_Resistance": 2,
+        "Metal_Mark_Resistance": 1,
+        "Matting_and_Gloss_Control": 0,
+        "Anti_Gassing": 0,
+        "Texture_and_Structure": 0,
+        "Soft_Touch": 0,
+        "Sealant_Adhesion": 0,
+        "PTFE_Alternative": 3,
+        "Edge_Coverage": 0,
+        "Corrosion_Resistance": 0,
+        "Recommended_System_Type": []
+      },
+      "WoodCoatings": {
+        "Available_as_Waterborne_Dispersion": true,
+        "Description": "Carnauba/Aluminum oxide",
+        "Suggested_Use_Level": "1.0 - 3.0%",
+        "Recommended_System_Type": [
+          "W",
+          "S"
+        ],
+        "Scratch_and_Mar_Resistance": 3,
+        "Lubricity_and_Smooth_Feel": 3,
+        "Soft_Touch": 0,
+        "Block_Resistance": 1,
+        "Matting_and_Gloss_Control": 0,
+        "Burnish_Resistance": 0,
+        "Texture": 0,
+        "Water_Repellency_beading": 1,
+        "Sanding_Efficiency": 0,
+        "Gloss_Retention": 2,
+        "Clarity": 2,
+        "PTFE_Alternative": 3,
+        "Natural_Naturally_Derived": 3
+      }
+    }
+  },
+  {
+    "product_name": "Micromide 520",
+    "core_properties": {
+      "Melt_Point_C": "141 - 146",
+      "Density_g_cc_25C": "0.97",
+      "Mean_Particle_Size": {
+        "type": "micron",
+        "min": 5.0,
+        "max": 8.0,
+        "raw": "5.0 - 8.0"
+      },
+      "Max_Particle_Size": {
+        "type": "micron",
+        "min": 22.0,
+        "max": 22.0,
+        "raw": "22.00"
+      }
+    },
+    "application_profiles": {
+      "CanContainerCoatings": {
+        "Available_as_Waterborne_Dispersion": true,
+        "Description": "Ethylene (bis)stearamide wax",
+        "Suggested_Use_Level": "1.0 - 2.0%",
+        "FDA_21CFR_175_300_Compliance": "Yes",
+        "Recommended_System_Type": [
+          "S",
+          "UV"
+        ],
+        "Scratch_and_Abrasion_Resistance": 1,
+        "Slip_and_Mobility": 3,
+        "Block_Resistance": 2,
+        "Heat_Resistance": 0,
+        "Moisture_Resistance": 0,
+        "Crown_Closure_Seal_Adhesion": 0,
+        "Meat_Release": 3,
+        "Gloss_Retention": 0,
+        "Matting_and_Gloss_Control": 0,
+        "Texture": 0,
+        "Soft_Touch": 0,
+        "Natural_Naturally_Derived": 2,
+        "PTFE_Alternative": 0
+      },
+      "PowderCoatings": {
+        "Description": "Ethylene bis(stearamide) wax",
+        "Suggested_Use_Level": "0.5 - 3.0%",
+        "Scratch_and_Abrasion_Resistance": 0,
+        "Slip_and_Lubricity": 2,
+        "Improved_Extrusion_Flow": 0,
+        "Apparent_Hardness": 0,
+        "Block_Resistance": 0,
+        "Metal_Mark_Resistance": 0,
+        "Matting_and_Gloss_Control": 0,
+        "Anti_Gassing": 3,
+        "Texture_and_Structure": 0,
+        "Soft_Touch": 0,
+        "Sealant_Adhesion": 0,
+        "PTFE_Alternative": 0,
+        "Edge_Coverage": 0,
+        "Corrosion_Resistance": 0,
+        "Recommended_System_Type": []
+      }
+    }
+  },
+  {
+    "product_name": "Micropro 500",
+    "core_properties": {
+      "Melt_Point_C": "141 - 143",
+      "Density_g_cc_25C": "0.95",
+      "Mean_Particle_Size": {
+        "type": "micron",
+        "min": 4.5,
+        "max": 7.5,
+        "raw": "4.5 - 7.5"
+      },
+      "Max_Particle_Size": {
+        "type": "micron",
+        "min": 22.0,
+        "max": 22.0,
+        "raw": "22.00"
+      }
+    },
+    "application_profiles": {
+      "CanContainerCoatings": {
+        "Available_as_Waterborne_Dispersion": false,
+        "Description": "Modified polypropylene",
+        "Suggested_Use_Level": "1.0 - 2.0%",
+        "FDA_21CFR_175_300_Compliance": "Yes",
+        "Recommended_System_Type": [
+          "S",
+          "UV"
+        ],
+        "Scratch_and_Abrasion_Resistance": 2,
+        "Slip_and_Mobility": 1,
+        "Block_Resistance": 3,
+        "Heat_Resistance": 0,
+        "Moisture_Resistance": 0,
+        "Crown_Closure_Seal_Adhesion": 0,
+        "Meat_Release": 0,
+        "Gloss_Retention": 0,
+        "Matting_and_Gloss_Control": 2,
+        "Texture": 0,
+        "Soft_Touch": 0,
+        "Natural_Naturally_Derived": 0,
+        "PTFE_Alternative": 0
+      },
+      "IndustrialCoatings": {
+        "Available_as_Waterborne_Dispersion": false,
+        "Description": "Modified polypropylene",
+        "Suggested_Use_Level": "1.0 - 5.0%",
+        "Recommended_System_Type": [
+          "W",
+          "S"
+        ],
+        "Scratch_and_Abrasion_Resistance": 2,
+        "Burnish_Resistance": 2,
+        "Metal_Mark_Resistance": 1,
+        "Apparent_Hardness": 2,
+        "Slip_and_Lubricity": 2,
+        "Block_Resistance": 2,
+        "Increased_COF": 0,
+        "Matting_and_Gloss_Control": 2,
+        "Texture": 0,
+        "Soft_Touch": 0,
+        "Heat_Resistance": 2,
+        "Early_Water_Resistance": 0,
+        "Gloss_Retention": 0,
+        "In_Can_Stability": 0,
+        "Natural_Naturally_Derived": 0,
+        "PTFE_Alternative": 0
+      },
+      "WoodCoatings": {
+        "Available_as_Waterborne_Dispersion": false,
+        "Description": "Modified polypropylene",
+        "Suggested_Use_Level": "2.0 - 4.0%",
+        "Recommended_System_Type": [
+          "W",
+          "S"
+        ],
+        "Scratch_and_Mar_Resistance": 2,
+        "Lubricity_and_Smooth_Feel": 0,
+        "Soft_Touch": 0,
+        "Block_Resistance": 3,
+        "Matting_and_Gloss_Control": 3,
+        "Burnish_Resistance": 3,
+        "Texture": 0,
+        "Water_Repellency_beading": 0,
+        "Sanding_Efficiency": 1,
+        "Gloss_Retention": 0,
+        "Clarity": 0,
+        "PTFE_Alternative": 2,
+        "Natural_Naturally_Derived": 0
+      }
+    }
+  },
+  {
+    "product_name": "MP-22XF",
+    "core_properties": {
+      "Melt_Point_C": "110 - 115",
+      "Density_g_cc_25C": "0.93",
+      "Mean_Particle_Size": {
+        "type": "micron",
+        "min": 4.5,
+        "max": 6.5,
+        "raw": "4.5 - 6.5"
+      },
+      "Max_Particle_Size": {
+        "type": "micron",
+        "min": 22.0,
+        "max": 22.0,
+        "raw": "22.00"
+      }
+    },
+    "application_profiles": {
+      "CanContainerCoatings": {
+        "Available_as_Waterborne_Dispersion": false,
+        "Description": "Synthetic wax",
+        "Suggested_Use_Level": "1.0 - 2.0%",
+        "FDA_21CFR_175_300_Compliance": "Yes",
+        "Recommended_System_Type": [
+          "W",
+          "S",
+          "UV"
+        ],
+        "Scratch_and_Abrasion_Resistance": 1,
+        "Slip_and_Mobility": 3,
+        "Block_Resistance": 2,
+        "Heat_Resistance": 0,
+        "Moisture_Resistance": 0,
+        "Crown_Closure_Seal_Adhesion": 0,
+        "Meat_Release": 0,
+        "Gloss_Retention": 0,
+        "Matting_and_Gloss_Control": 2,
+        "Texture": 0,
+        "Soft_Touch": 0,
+        "Natural_Naturally_Derived": 0,
+        "PTFE_Alternative": 0
+      },
+      "EnergyCurableInks&Coatings": {
+        "Description": "Synthetic wax",
+        "Suggested_Use_Level": "0.5 - 2.0%",
+        "Scratch_and_Mar_Resistance": 1,
+        "Slip_and_Lubricity": 1,
+        "Block_Resistance": 1,
+        "Matting_and_Gloss_Control": 0,
+        "Gloss_Retention": 0,
+        "Clarity": 0,
+        "Soft_Touch_Silky_Feel": 0,
+        "Lubricity_and_Smooth_Feel": 0,
+        "Texture": 0,
+        "Increased_COF": 0,
+        "Tape_Release": 0,
+        "In_Can_Stability": 0,
+        "Natural_Naturally_Derived": 0,
+        "Recommended_System_Type": []
+      },
+      "WoodCoatings": {
+        "Available_as_Waterborne_Dispersion": false,
+        "Description": "Synthetic wax",
+        "Suggested_Use_Level": "1.0 - 3.0%",
+        "Recommended_System_Type": [
+          "W",
+          "S"
+        ],
+        "Scratch_and_Mar_Resistance": 1,
+        "Lubricity_and_Smooth_Feel": 1,
+        "Soft_Touch": 0,
+        "Block_Resistance": 0,
+        "Matting_and_Gloss_Control": 0,
+        "Burnish_Resistance": 0,
+        "Texture": 0,
+        "Water_Repellency_beading": 3,
+        "Sanding_Efficiency": 0,
+        "Gloss_Retention": 2,
+        "Clarity": 0,
+        "PTFE_Alternative": 0,
+        "Natural_Naturally_Derived": 2
+      }
+    }
+  },
+  {
+    "product_name": "MP-28AL-XF",
+    "core_properties": {
+      "Melt_Point_C": "104 - 110",
+      "Density_g_cc_25C": "0.99",
+      "Mean_Particle_Size": {
+        "type": "micron",
+        "min": 4.0,
+        "max": 6.0,
+        "raw": "4.0 - 6.0"
+      },
+      "Max_Particle_Size": {
+        "type": "micron",
+        "min": 15.56,
+        "max": 15.56,
+        "raw": "15.56"
+      }
+    },
+    "application_profiles": {
+      "CanContainerCoatings": {
+        "Available_as_Waterborne_Dispersion": false,
+        "Description": "Synthetic wax/Aluminum oxide",
+        "Suggested_Use_Level": "1.0 - 2.0%",
+        "FDA_21CFR_175_300_Compliance": "Yes",
+        "Recommended_System_Type": [
+          "W",
+          "S",
+          "UV"
+        ],
+        "Scratch_and_Abrasion_Resistance": 2,
+        "Slip_and_Mobility": 3,
+        "Block_Resistance": 2,
+        "Heat_Resistance": 0,
+        "Moisture_Resistance": 0,
+        "Crown_Closure_Seal_Adhesion": 0,
+        "Meat_Release": 0,
+        "Gloss_Retention": 0,
+        "Matting_and_Gloss_Control": 2,
+        "Texture": 0,
+        "Soft_Touch": 0,
+        "Natural_Naturally_Derived": 0,
+        "PTFE_Alternative": 3
+      },
+      "EnergyCurableInks&Coatings": {
+        "Description": "Synthetic wax/Aluminum oxide",
+        "Suggested_Use_Level": "1.0 - 3.0%",
+        "Scratch_and_Mar_Resistance": 3,
+        "Slip_and_Lubricity": 2,
+        "Block_Resistance": 1,
+        "Matting_and_Gloss_Control": 0,
+        "Gloss_Retention": 0,
+        "Clarity": 0,
+        "Soft_Touch_Silky_Feel": 0,
+        "Lubricity_and_Smooth_Feel": 0,
+        "Texture": 0,
+        "Increased_COF": 0,
+        "Tape_Release": 0,
+        "In_Can_Stability": 1,
+        "Natural_Naturally_Derived": 0,
+        "Recommended_System_Type": []
+      }
+    }
+  },
+  {
+    "product_name": "MPP-620XF",
+    "core_properties": {
+      "Melt_Point_C": "120 - 124",
+      "Density_g_cc_25C": "0.96",
+      "Mean_Particle_Size": {
+        "type": "micron",
+        "min": 4.5,
+        "max": 5.5,
+        "raw": "4.5 - 5.5"
+      },
+      "Max_Particle_Size": {
+        "type": "micron",
+        "min": 22.0,
+        "max": 22.0,
+        "raw": "22.00"
+      }
+    },
+    "application_profiles": {
+      "CanContainerCoatings": {
+        "Available_as_Waterborne_Dispersion": false,
+        "Description": "Polyethylene",
+        "Suggested_Use_Level": "1.0 - 2.0%",
+        "FDA_21CFR_175_300_Compliance": "Yes",
+        "Recommended_System_Type": [
+          "W",
+          "S",
+          "UV"
+        ],
+        "Scratch_and_Abrasion_Resistance": 2,
+        "Slip_and_Mobility": 3,
+        "Block_Resistance": 1,
+        "Heat_Resistance": 0,
+        "Moisture_Resistance": 0,
+        "Crown_Closure_Seal_Adhesion": 0,
+        "Meat_Release": 0,
+        "Gloss_Retention": 0,
+        "Matting_and_Gloss_Control": 3,
+        "Texture": 0,
+        "Soft_Touch": 0,
+        "Natural_Naturally_Derived": 0,
+        "PTFE_Alternative": 0
+      },
+      "EnergyCurableInks&Coatings": {
+        "Description": "High density polyethylene",
+        "Suggested_Use_Level": "0.5 - 2.0%",
+        "Scratch_and_Mar_Resistance": 2,
+        "Slip_and_Lubricity": 1,
+        "Block_Resistance": 1,
+        "Matting_and_Gloss_Control": 0,
+        "Gloss_Retention": 0,
+        "Clarity": 0,
+        "Soft_Touch_Silky_Feel": 0,
+        "Lubricity_and_Smooth_Feel": 0,
+        "Texture": 0,
+        "Increased_COF": 0,
+        "Tape_Release": 1,
+        "In_Can_Stability": 0,
+        "Natural_Naturally_Derived": 0,
+        "Recommended_System_Type": []
+      },
+      "IndustrialCoatings": {
+        "Available_as_Waterborne_Dispersion": true,
+        "Description": "High density polyethylene",
+        "Suggested_Use_Level": "1.0 - 3.0%",
+        "Recommended_System_Type": [
+          "W",
+          "S"
+        ],
+        "Scratch_and_Abrasion_Resistance": 2,
+        "Burnish_Resistance": 2,
+        "Metal_Mark_Resistance": 2,
+        "Apparent_Hardness": 2,
+        "Slip_and_Lubricity": 3,
+        "Block_Resistance": 1,
+        "Increased_COF": 0,
+        "Matting_and_Gloss_Control": 0,
+        "Texture": 0,
+        "Soft_Touch": 0,
+        "Heat_Resistance": 0,
+        "Early_Water_Resistance": 0,
+        "Gloss_Retention": 1,
+        "In_Can_Stability": 0,
+        "Natural_Naturally_Derived": 0,
+        "PTFE_Alternative": 0
+      }
+    }
+  },
+  {
+    "product_name": "MPP-620XXF",
+    "core_properties": {
+      "Melt_Point_C": "120 - 124",
+      "Density_g_cc_25C": "0.96",
+      "Mean_Particle_Size": {
+        "type": "micron",
+        "min": 4.25,
+        "max": 4.75,
+        "raw": "4.25 - 4.75"
+      },
+      "Max_Particle_Size": {
+        "type": "micron",
+        "min": 12.0,
+        "max": 12.0,
+        "raw": "12.00"
+      }
+    },
+    "application_profiles": {
+      "CanContainerCoatings": {
+        "Available_as_Waterborne_Dispersion": false,
+        "Description": "Polyethylene",
+        "Suggested_Use_Level": "1.0 - 2.0%",
+        "FDA_21CFR_175_300_Compliance": "Yes",
+        "Recommended_System_Type": [
+          "W",
+          "S",
+          "UV"
+        ],
+        "Scratch_and_Abrasion_Resistance": 2,
+        "Slip_and_Mobility": 3,
+        "Block_Resistance": 1,
+        "Heat_Resistance": 0,
+        "Moisture_Resistance": 0,
+        "Crown_Closure_Seal_Adhesion": 0,
+        "Meat_Release": 0,
+        "Gloss_Retention": 0,
+        "Matting_and_Gloss_Control": 3,
+        "Texture": 0,
+        "Soft_Touch": 0,
+        "Natural_Naturally_Derived": 0,
+        "PTFE_Alternative": 0
+      }
+    }
+  },
+  {
+    "product_name": "MPP-611AL",
+    "core_properties": {
+      "Melt_Point_C": "110 - 116",
+      "Density_g_cc_25C": "0.99",
+      "Mean_Particle_Size": {
+        "type": "micron",
+        "min": 3.5,
+        "max": 5.5,
+        "raw": "3.5 - 5.5"
+      },
+      "Max_Particle_Size": {
+        "type": "micron",
+        "min": 15.56,
+        "max": 15.56,
+        "raw": "15.56"
+      }
+    },
+    "application_profiles": {
+      "CanContainerCoatings": {
+        "Available_as_Waterborne_Dispersion": true,
+        "Description": "Polyethylene/Aluminum oxide",
+        "Suggested_Use_Level": "0.5 - 1.5%",
+        "FDA_21CFR_175_300_Compliance": "Yes",
+        "Recommended_System_Type": [
+          "W",
+          "S",
+          "UV"
+        ],
+        "Scratch_and_Abrasion_Resistance": 3,
+        "Slip_and_Mobility": 3,
+        "Block_Resistance": 1,
+        "Heat_Resistance": 0,
+        "Moisture_Resistance": 0,
+        "Crown_Closure_Seal_Adhesion": 0,
+        "Meat_Release": 0,
+        "Gloss_Retention": 0,
+        "Matting_and_Gloss_Control": 3,
+        "Texture": 0,
+        "Soft_Touch": 0,
+        "Natural_Naturally_Derived": 0,
+        "PTFE_Alternative": 3
+      },
+      "EnergyCurableInks&Coatings": {
+        "Description": "Polyethylene/Aluminum oxide",
+        "Suggested_Use_Level": "0.5 - 1.5%",
+        "Scratch_and_Mar_Resistance": 3,
+        "Slip_and_Lubricity": 2,
+        "Block_Resistance": 1,
+        "Matting_and_Gloss_Control": 0,
+        "Gloss_Retention": 2,
+        "Clarity": 0,
+        "Soft_Touch_Silky_Feel": 0,
+        "Lubricity_and_Smooth_Feel": 2,
+        "Texture": 0,
+        "Increased_COF": 0,
+        "Tape_Release": 0,
+        "In_Can_Stability": 0,
+        "Natural_Naturally_Derived": 0,
+        "Recommended_System_Type": []
+      },
+      "IndustrialCoatings": {
+        "Available_as_Waterborne_Dispersion": true,
+        "Description": "Polyethylene/Aluminum oxide",
+        "Suggested_Use_Level": "0.5 - 1.5%",
+        "Recommended_System_Type": [
+          "W",
+          "S"
+        ],
+        "Scratch_and_Abrasion_Resistance": 3,
+        "Burnish_Resistance": 3,
+        "Metal_Mark_Resistance": 2,
+        "Apparent_Hardness": 3,
+        "Slip_and_Lubricity": 3,
+        "Block_Resistance": 1,
+        "Increased_COF": 0,
+        "Matting_and_Gloss_Control": 0,
+        "Texture": 0,
+        "Soft_Touch": 0,
+        "Heat_Resistance": 0,
+        "Early_Water_Resistance": 0,
+        "Gloss_Retention": 2,
+        "In_Can_Stability": 2,
+        "Natural_Naturally_Derived": 0,
+        "PTFE_Alternative": 3
+      },
+      "PowderCoatings": {
+        "Description": "Polyethylene/Aluminum oxide",
+        "Suggested_Use_Level": "0.5 - 1.5%",
+        "Scratch_and_Abrasion_Resistance": 3,
+        "Slip_and_Lubricity": 0,
+        "Improved_Extrusion_Flow": 0,
+        "Apparent_Hardness": 2,
+        "Block_Resistance": 2,
+        "Metal_Mark_Resistance": 2,
+        "Matting_and_Gloss_Control": 0,
+        "Anti_Gassing": 1,
+        "Texture_and_Structure": 0,
+        "Soft_Touch": 0,
+        "Sealant_Adhesion": 0,
+        "PTFE_Alternative": 0,
+        "Edge_Coverage": 0,
+        "Corrosion_Resistance": 0,
+        "Recommended_System_Type": []
+      },
+      "WoodCoatings": {
+        "Available_as_Waterborne_Dispersion": true,
+        "Description": "Polyethylene/Aluminum oxide",
+        "Suggested_Use_Level": "0.5 - 1.5%",
+        "Recommended_System_Type": [
+          "W",
+          "S"
+        ],
+        "Scratch_and_Mar_Resistance": 3,
+        "Lubricity_and_Smooth_Feel": 2,
+        "Soft_Touch": 0,
+        "Block_Resistance": 0,
+        "Matting_and_Gloss_Control": 0,
+        "Burnish_Resistance": 0,
+        "Texture": 0,
+        "Water_Repellency_beading": 0,
+        "Sanding_Efficiency": 0,
+        "Gloss_Retention": 2,
+        "Clarity": 2,
+        "PTFE_Alternative": 3,
+        "Natural_Naturally_Derived": 0
+      }
+    }
+  },
+  {
+    "product_name": "MPP-611XF",
+    "core_properties": {
+      "Melt_Point_C": "110 - 116",
+      "Density_g_cc_25C": "0.96",
+      "Mean_Particle_Size": {
+        "type": "micron",
+        "min": 4.0,
+        "max": 6.0,
+        "raw": "4.0 - 6.0"
+      },
+      "Max_Particle_Size": {
+        "type": "micron",
+        "min": 22.0,
+        "max": 22.0,
+        "raw": "22.00"
+      }
+    },
+    "application_profiles": {
+      "CanContainerCoatings": {
+        "Available_as_Waterborne_Dispersion": true,
+        "Description": "Polyethylene",
+        "Suggested_Use_Level": "1.0 - 2.0%",
+        "FDA_21CFR_175_300_Compliance": "Yes",
+        "Recommended_System_Type": [
+          "W",
+          "S",
+          "UV"
+        ],
+        "Scratch_and_Abrasion_Resistance": 2,
+        "Slip_and_Mobility": 3,
+        "Block_Resistance": 1,
+        "Heat_Resistance": 0,
+        "Moisture_Resistance": 0,
+        "Crown_Closure_Seal_Adhesion": 0,
+        "Meat_Release": 0,
+        "Gloss_Retention": 0,
+        "Matting_and_Gloss_Control": 3,
+        "Texture": 0,
+        "Soft_Touch": 0,
+        "Natural_Naturally_Derived": 0,
+        "PTFE_Alternative": 0
+      }
+    }
+  },
+  {
+    "product_name": "PolyGlide 1226XF",
+    "core_properties": {
+      "Melt_Point_C": "109 - 115",
+      "Density_g_cc_25C": "0.99",
+      "Mean_Particle_Size": {
+        "type": "micron",
+        "min": 3.5,
+        "max": 5.5,
+        "raw": "3.5 - 5.5"
+      },
+      "Max_Particle_Size": {
+        "type": "micron",
+        "min": 15.56,
+        "max": 15.56,
+        "raw": "15.56"
+      }
+    },
+    "application_profiles": {
+      "CanContainerCoatings": {
+        "Available_as_Waterborne_Dispersion": true,
+        "Description": "Ceramic modified polyethylene",
+        "Suggested_Use_Level": "0.5 - 1.5%",
+        "FDA_21CFR_175_300_Compliance": "Yes",
+        "Recommended_System_Type": [
+          "W",
+          "S",
+          "UV"
+        ],
+        "Scratch_and_Abrasion_Resistance": 3,
+        "Slip_and_Mobility": 3,
+        "Block_Resistance": 2,
+        "Heat_Resistance": 0,
+        "Moisture_Resistance": 0,
+        "Crown_Closure_Seal_Adhesion": 0,
+        "Meat_Release": 0,
+        "Gloss_Retention": 3,
+        "Matting_and_Gloss_Control": 0,
+        "Texture": 0,
+        "Soft_Touch": 0,
+        "Natural_Naturally_Derived": 0,
+        "PTFE_Alternative": 3
+      },
+      "EnergyCurableInks&Coatings": {
+        "Description": "HDPE/Ceramic",
+        "Suggested_Use_Level": "0.5 - 3.0%",
+        "Scratch_and_Mar_Resistance": 3,
+        "Slip_and_Lubricity": 3,
+        "Block_Resistance": 3,
+        "Matting_and_Gloss_Control": 0,
+        "Gloss_Retention": 3,
+        "Clarity": 0,
+        "Soft_Touch_Silky_Feel": 0,
+        "Lubricity_and_Smooth_Feel": 1,
+        "Texture": 0,
+        "Increased_COF": 0,
+        "Tape_Release": 0,
+        "In_Can_Stability": 1,
+        "Natural_Naturally_Derived": 0,
+        "Recommended_System_Type": []
+      },
+      "IndustrialCoatings": {
+        "Available_as_Waterborne_Dispersion": true,
+        "Description": "Ceramic modified polyethylene",
+        "Suggested_Use_Level": "0.5 - 1.5%",
+        "Recommended_System_Type": [
+          "W",
+          "S"
+        ],
+        "Scratch_and_Abrasion_Resistance": 3,
+        "Burnish_Resistance": 3,
+        "Metal_Mark_Resistance": 0,
+        "Apparent_Hardness": 2,
+        "Slip_and_Lubricity": 3,
+        "Block_Resistance": 2,
+        "Increased_COF": 0,
+        "Matting_and_Gloss_Control": 0,
+        "Texture": 0,
+        "Soft_Touch": 0,
+        "Heat_Resistance": 0,
+        "Early_Water_Resistance": 0,
+        "Gloss_Retention": 3,
+        "In_Can_Stability": 1,
+        "Natural_Naturally_Derived": 0,
+        "PTFE_Alternative": 3
+      },
+      "PowderCoatings": {
+        "Description": "Ceramic modified polyethylene",
+        "Suggested_Use_Level": "0.5 - 3.0%",
+        "Scratch_and_Abrasion_Resistance": 3,
+        "Slip_and_Lubricity": 3,
+        "Improved_Extrusion_Flow": 0,
+        "Apparent_Hardness": 2,
+        "Block_Resistance": 1,
+        "Metal_Mark_Resistance": 0,
+        "Matting_and_Gloss_Control": 0,
+        "Anti_Gassing": 0,
+        "Texture_and_Structure": 0,
+        "Soft_Touch": 0,
+        "Sealant_Adhesion": 0,
+        "PTFE_Alternative": 3,
+        "Edge_Coverage": 0,
+        "Corrosion_Resistance": 0,
+        "Recommended_System_Type": []
+      }
+    }
+  },
+  {
+    "product_name": "SuperGlide 1231",
+    "core_properties": {
+      "Melt_Point_C": "141 - 146",
+      "Density_g_cc_25C": "1.00",
+      "Mean_Particle_Size": {
+        "type": "micron",
+        "min": 5.0,
+        "max": 8.0,
+        "raw": "5.0 - 8.0"
+      },
+      "Max_Particle_Size": {
+        "type": "micron",
+        "min": 22.0,
+        "max": 22.0,
+        "raw": "22.00"
+      }
+    },
+    "application_profiles": {
+      "CanContainerCoatings": {
+        "Available_as_Waterborne_Dispersion": false,
+        "Description": "Ceramic modified Ethylene bis(stearamide)",
+        "Suggested_Use_Level": "0.5 - 3.0%",
+        "FDA_21CFR_175_300_Compliance": "Yes",
+        "Recommended_System_Type": [
+          "W",
+          "S",
+          "UV"
+        ],
+        "Scratch_and_Abrasion_Resistance": 3,
+        "Slip_and_Mobility": 3,
+        "Block_Resistance": 2,
+        "Heat_Resistance": 2,
+        "Moisture_Resistance": 0,
+        "Crown_Closure_Seal_Adhesion": 0,
+        "Meat_Release": 3,
+        "Gloss_Retention": 2,
+        "Matting_and_Gloss_Control": 0,
+        "Texture": 0,
+        "Soft_Touch": 0,
+        "Natural_Naturally_Derived": 0,
+        "PTFE_Alternative": 3
+      },
+      "EnergyCurableInks&Coatings": {
+        "Description": "Ceramic modified Ethylene bis(stearamide)",
+        "Suggested_Use_Level": "0.5 - 3.0%",
+        "Scratch_and_Mar_Resistance": 3,
+        "Slip_and_Lubricity": 3,
+        "Block_Resistance": 2,
+        "Matting_and_Gloss_Control": 0,
+        "Gloss_Retention": 2,
+        "Clarity": 0,
+        "Soft_Touch_Silky_Feel": 0,
+        "Lubricity_and_Smooth_Feel": 3,
+        "Texture": 0,
+        "Increased_COF": 0,
+        "Tape_Release": 3,
+        "In_Can_Stability": 0,
+        "Natural_Naturally_Derived": 3,
+        "Recommended_System_Type": []
+      },
+      "IndustrialCoatings": {
+        "Available_as_Waterborne_Dispersion": false,
+        "Description": "Ceramic modified Ethylene bis(stearamide)",
+        "Suggested_Use_Level": "0.5 - 3.0%",
+        "Recommended_System_Type": [
+          "W",
+          "S"
+        ],
+        "Scratch_and_Abrasion_Resistance": 3,
+        "Burnish_Resistance": 0,
+        "Metal_Mark_Resistance": 0,
+        "Apparent_Hardness": 0,
+        "Slip_and_Lubricity": 3,
+        "Block_Resistance": 2,
+        "Increased_COF": 0,
+        "Matting_and_Gloss_Control": 0,
+        "Texture": 0,
+        "Soft_Touch": 0,
+        "Heat_Resistance": 2,
+        "Early_Water_Resistance": 2,
+        "Gloss_Retention": 0,
+        "In_Can_Stability": 0,
+        "Natural_Naturally_Derived": 2,
+        "PTFE_Alternative": 3
+      },
+      "PowderCoatings": {
+        "Description": "Ceramic modified Ethylene bis(stearamide)",
+        "Suggested_Use_Level": "0.5 - 3.0%",
+        "Scratch_and_Abrasion_Resistance": 3,
+        "Slip_and_Lubricity": 3,
+        "Improved_Extrusion_Flow": 0,
+        "Apparent_Hardness": 0,
+        "Block_Resistance": 2,
+        "Metal_Mark_Resistance": 0,
+        "Matting_and_Gloss_Control": 0,
+        "Anti_Gassing": 3,
+        "Texture_and_Structure": 0,
+        "Soft_Touch": 0,
+        "Sealant_Adhesion": 0,
+        "PTFE_Alternative": 3,
+        "Edge_Coverage": 0,
+        "Corrosion_Resistance": 0,
+        "Recommended_System_Type": []
+      },
+      "WoodCoatings": {
+        "Available_as_Waterborne_Dispersion": false,
+        "Description": "Ceramic modified Ethylene bis(stearamide)",
+        "Suggested_Use_Level": "0.5 - 3.0%",
+        "Recommended_System_Type": [
+          "W",
+          "S"
+        ],
+        "Scratch_and_Mar_Resistance": 3,
+        "Lubricity_and_Smooth_Feel": 2,
+        "Soft_Touch": 0,
+        "Block_Resistance": 2,
+        "Matting_and_Gloss_Control": 0,
+        "Burnish_Resistance": 2,
+        "Texture": 0,
+        "Water_Repellency_beading": 3,
+        "Sanding_Efficiency": 0,
+        "Gloss_Retention": 0,
+        "Clarity": 3,
+        "PTFE_Alternative": 0,
+        "Natural_Naturally_Derived": 3
+      }
+    }
+  },
+  {
+    "product_name": "Superslip 6515AL",
+    "core_properties": {
+      "Melt_Point_C": "139 - 145",
+      "Density_g_cc_25C": "0.99",
+      "Mean_Particle_Size": {
+        "type": "micron",
+        "min": 3.5,
+        "max": 5.5,
+        "raw": "3.5 - 5.5"
+      },
+      "Max_Particle_Size": {
+        "type": "micron",
+        "min": 15.56,
+        "max": 15.56,
+        "raw": "15.56"
+      }
+    },
+    "application_profiles": {
+      "CanContainerCoatings": {
+        "Available_as_Waterborne_Dispersion": true,
+        "Description": "HDPE/Amide wax/Aluminum oxide",
+        "Suggested_Use_Level": "0.5 - 1.5%",
+        "FDA_21CFR_175_300_Compliance": "Yes",
+        "Recommended_System_Type": [
+          "W",
+          "S",
+          "UV"
+        ],
+        "Scratch_and_Abrasion_Resistance": 3,
+        "Slip_and_Mobility": 3,
+        "Block_Resistance": 3,
+        "Heat_Resistance": 0,
+        "Moisture_Resistance": 0,
+        "Crown_Closure_Seal_Adhesion": 0,
+        "Meat_Release": 2,
+        "Gloss_Retention": 3,
+        "Matting_and_Gloss_Control": 0,
+        "Texture": 0,
+        "Soft_Touch": 1,
+        "Natural_Naturally_Derived": 0,
+        "PTFE_Alternative": 3
+      },
+      "EnergyCurableInks&Coatings": {
+        "Description": "HDPE/EBS/Aluminum oxide",
+        "Suggested_Use_Level": "0.5 - 1.5%",
+        "Scratch_and_Mar_Resistance": 3,
+        "Slip_and_Lubricity": 3,
+        "Block_Resistance": 2,
+        "Matting_and_Gloss_Control": 0,
+        "Gloss_Retention": 3,
+        "Clarity": 0,
+        "Soft_Touch_Silky_Feel": 0,
+        "Lubricity_and_Smooth_Feel": 1,
+        "Texture": 0,
+        "Increased_COF": 0,
+        "Tape_Release": 0,
+        "In_Can_Stability": 0,
+        "Natural_Naturally_Derived": 0,
+        "Recommended_System_Type": []
+      },
+      "IndustrialCoatings": {
+        "Available_as_Waterborne_Dispersion": true,
+        "Description": "HDPE/EBS/Aluminum oxide",
+        "Suggested_Use_Level": "0.5 - 1.5%",
+        "Recommended_System_Type": [
+          "W",
+          "S"
+        ],
+        "Scratch_and_Abrasion_Resistance": 3,
+        "Burnish_Resistance": 2,
+        "Metal_Mark_Resistance": 1,
+        "Apparent_Hardness": 2,
+        "Slip_and_Lubricity": 3,
+        "Block_Resistance": 3,
+        "Increased_COF": 0,
+        "Matting_and_Gloss_Control": 0,
+        "Texture": 0,
+        "Soft_Touch": 1,
+        "Heat_Resistance": 1,
+        "Early_Water_Resistance": 0,
+        "Gloss_Retention": 3,
+        "In_Can_Stability": 1,
+        "Natural_Naturally_Derived": 1,
+        "PTFE_Alternative": 3
+      },
+      "PowderCoatings": {
+        "Description": "HDPE/EBS/Aluminum oxide",
+        "Suggested_Use_Level": "0.5 - 1.0%",
+        "Scratch_and_Abrasion_Resistance": 3,
+        "Slip_and_Lubricity": 3,
+        "Improved_Extrusion_Flow": 1,
+        "Apparent_Hardness": 3,
+        "Block_Resistance": 2,
+        "Metal_Mark_Resistance": 0,
+        "Matting_and_Gloss_Control": 0,
+        "Anti_Gassing": 0,
+        "Texture_and_Structure": 0,
+        "Soft_Touch": 0,
+        "Sealant_Adhesion": 0,
+        "PTFE_Alternative": 3,
+        "Edge_Coverage": 0,
+        "Corrosion_Resistance": 0,
+        "Recommended_System_Type": []
+      },
+      "WoodCoatings": {
+        "Available_as_Waterborne_Dispersion": true,
+        "Description": "HDPE/Amide wax/Aluminum oxide",
+        "Suggested_Use_Level": "0.5 - 1.5%",
+        "Recommended_System_Type": [
+          "W",
+          "S"
+        ],
+        "Scratch_and_Mar_Resistance": 3,
+        "Lubricity_and_Smooth_Feel": 3,
+        "Soft_Touch": 2,
+        "Block_Resistance": 2,
+        "Matting_and_Gloss_Control": 0,
+        "Burnish_Resistance": 2,
+        "Texture": 0,
+        "Water_Repellency_beading": 3,
+        "Sanding_Efficiency": 3,
+        "Gloss_Retention": 2,
+        "Clarity": 3,
+        "PTFE_Alternative": 0,
+        "Natural_Naturally_Derived": 1
+      }
+    }
+  },
+  {
+    "product_name": "Superslip 6515AL-EZ",
+    "core_properties": {
+      "Melt_Point_C": "139 - 145",
+      "Density_g_cc_25C": "0.99",
+      "Mean_Particle_Size": {
+        "type": "micron",
+        "min": 3.5,
+        "max": 5.5,
+        "raw": "3.5 - 5.5"
+      },
+      "Max_Particle_Size": {
+        "type": "micron",
+        "min": 15.56,
+        "max": 15.56,
+        "raw": "15.56"
+      }
+    },
+    "application_profiles": {
+      "CanContainerCoatings": {
+        "Available_as_Waterborne_Dispersion": false,
+        "Description": "Surface treated HDPE/EBS/Aluminum oxide",
+        "Suggested_Use_Level": "0.5 - 1.5%",
+        "FDA_21CFR_175_300_Compliance": "Yes",
+        "Recommended_System_Type": [
+          "W"
+        ],
+        "Scratch_and_Abrasion_Resistance": 3,
+        "Slip_and_Mobility": 3,
+        "Block_Resistance": 3,
+        "Heat_Resistance": 0,
+        "Moisture_Resistance": 0,
+        "Crown_Closure_Seal_Adhesion": 0,
+        "Meat_Release": 2,
+        "Gloss_Retention": 3,
+        "Matting_and_Gloss_Control": 0,
+        "Texture": 0,
+        "Soft_Touch": 1,
+        "Natural_Naturally_Derived": 0,
+        "PTFE_Alternative": 3
+      },
+      "IndustrialCoatings": {
+        "Available_as_Waterborne_Dispersion": false,
+        "Description": "Surface treated HDPE/EBS/Aluminum oxide",
+        "Suggested_Use_Level": "0.5 - 1.5%",
+        "Recommended_System_Type": [
+          "W"
+        ],
+        "Scratch_and_Abrasion_Resistance": 3,
+        "Burnish_Resistance": 2,
+        "Metal_Mark_Resistance": 1,
+        "Apparent_Hardness": 2,
+        "Slip_and_Lubricity": 3,
+        "Block_Resistance": 3,
+        "Increased_COF": 0,
+        "Matting_and_Gloss_Control": 0,
+        "Texture": 0,
+        "Soft_Touch": 1,
+        "Heat_Resistance": 1,
+        "Early_Water_Resistance": 0,
+        "Gloss_Retention": 3,
+        "In_Can_Stability": 1,
+        "Natural_Naturally_Derived": 1,
+        "PTFE_Alternative": 3
+      },
+      "WoodCoatings": {
+        "Available_as_Waterborne_Dispersion": false,
+        "Description": "Surface treated HDPE/EBS/Aluminum oxide",
+        "Suggested_Use_Level": "0.5 - 1.5%",
+        "Recommended_System_Type": [
+          "w"
+        ],
+        "Scratch_and_Mar_Resistance": 3,
+        "Lubricity_and_Smooth_Feel": 3,
+        "Soft_Touch": 2,
+        "Block_Resistance": 2,
+        "Matting_and_Gloss_Control": 0,
+        "Burnish_Resistance": 2,
+        "Texture": 0,
+        "Water_Repellency_beading": 3,
+        "Sanding_Efficiency": 3,
+        "Gloss_Retention": 2,
+        "Clarity": 3,
+        "PTFE_Alternative": 0,
+        "Natural_Naturally_Derived": 1
+      }
+    }
+  },
+  {
+    "product_name": "MicroMatte 1213UVW",
+    "core_properties": {
+      "Melt_Point_C": "150 - 156",
+      "Density_g_cc_25C": "1.07",
+      "Mean_Particle_Size": {
+        "type": "micron",
+        "min": 5.0,
+        "max": 7.5,
+        "raw": "5.0 - 7.5"
+      },
+      "Max_Particle_Size": {
+        "type": "micron",
+        "min": 22.0,
+        "max": 22.0,
+        "raw": "22.00"
+      }
+    },
+    "application_profiles": {
+      "EnergyCurableInks&Coatings": {
+        "Description": "Densified modified polypropylene",
+        "Suggested_Use_Level": "1.0 - 3.0%",
+        "Scratch_and_Mar_Resistance": 1,
+        "Slip_and_Lubricity": 0,
+        "Block_Resistance": 2,
+        "Matting_and_Gloss_Control": 3,
+        "Gloss_Retention": 0,
+        "Clarity": 2,
+        "Soft_Touch_Silky_Feel": 0,
+        "Lubricity_and_Smooth_Feel": 1,
+        "Texture": 0,
+        "Increased_COF": 0,
+        "Tape_Release": 0,
+        "In_Can_Stability": 3,
+        "Natural_Naturally_Derived": 0,
+        "Recommended_System_Type": []
+      },
+      "IndustrialCoatings": {
+        "Available_as_Waterborne_Dispersion": true,
+        "Description": "Densified modified polypropylene",
+        "Suggested_Use_Level": "1.0 - 5.0%",
+        "Recommended_System_Type": [
+          "W",
+          "S"
+        ],
+        "Scratch_and_Abrasion_Resistance": 2,
+        "Burnish_Resistance": 3,
+        "Metal_Mark_Resistance": 1,
+        "Apparent_Hardness": 1,
+        "Slip_and_Lubricity": 1,
+        "Block_Resistance": 2,
+        "Increased_COF": 0,
+        "Matting_and_Gloss_Control": 2,
+        "Texture": 0,
+        "Soft_Touch": 0,
+        "Heat_Resistance": 1,
+        "Early_Water_Resistance": 0,
+        "Gloss_Retention": 2,
+        "In_Can_Stability": 0,
+        "Natural_Naturally_Derived": 0,
+        "PTFE_Alternative": 0
+      },
+      "WoodCoatings": {
+        "Available_as_Waterborne_Dispersion": true,
+        "Description": "Densified modified polypropylene",
+        "Suggested_Use_Level": "2.0 - 4.0%",
+        "Recommended_System_Type": [
+          "W",
+          "S"
+        ],
+        "Scratch_and_Mar_Resistance": 0,
+        "Lubricity_and_Smooth_Feel": 0,
+        "Soft_Touch": 0,
+        "Block_Resistance": 3,
+        "Matting_and_Gloss_Control": 3,
+        "Burnish_Resistance": 3,
+        "Texture": 0,
+        "Water_Repellency_beading": 0,
+        "Sanding_Efficiency": 0,
+        "Gloss_Retention": 0,
+        "Clarity": 0,
+        "PTFE_Alternative": 0,
+        "Natural_Naturally_Derived": 0
+      }
+    }
+  },
+  {
+    "product_name": "MicroMatte 2000",
+    "core_properties": {
+      "Melt_Point_C": "146 - 149",
+      "Density_g_cc_25C": "0.96",
+      "Mean_Particle_Size": {
+        "type": "micron",
+        "min": 6.0,
+        "max": 9.0,
+        "raw": "6.0 - 9.0"
+      },
+      "Max_Particle_Size": {
+        "type": "micron",
+        "min": 22.0,
+        "max": 22.0,
+        "raw": "22.00"
+      }
+    },
+    "application_profiles": {
+      "EnergyCurableInks&Coatings": {
+        "Description": "Modified polypropylene",
+        "Suggested_Use_Level": "1.0 - 3.0%",
+        "Scratch_and_Mar_Resistance": 1,
+        "Slip_and_Lubricity": 0,
+        "Block_Resistance": 2,
+        "Matting_and_Gloss_Control": 3,
+        "Gloss_Retention": 0,
+        "Clarity": 2,
+        "Soft_Touch_Silky_Feel": 0,
+        "Lubricity_and_Smooth_Feel": 1,
+        "Texture": 0,
+        "Increased_COF": 0,
+        "Tape_Release": 0,
+        "In_Can_Stability": 0,
+        "Natural_Naturally_Derived": 0,
+        "Recommended_System_Type": []
+      }
+    }
+  },
+  {
+    "product_name": "Micromide 520XF",
+    "core_properties": {
+      "Melt_Point_C": "141 - 146",
+      "Density_g_cc_25C": "0.97",
+      "Mean_Particle_Size": {
+        "type": "micron",
+        "min": 3.0,
+        "max": 5.0,
+        "raw": "3.0 - 5.0"
+      },
+      "Max_Particle_Size": {
+        "type": "micron",
+        "min": 15.56,
+        "max": 15.56,
+        "raw": "15.56"
+      }
+    },
+    "application_profiles": {
+      "EnergyCurableInks&Coatings": {
+        "Description": "Ethylene (bis)stearamide wax",
+        "Suggested_Use_Level": "1.0 - 2.0%",
+        "Scratch_and_Mar_Resistance": 1,
+        "Slip_and_Lubricity": 3,
+        "Block_Resistance": 3,
+        "Matting_and_Gloss_Control": 0,
+        "Gloss_Retention": 3,
+        "Clarity": 0,
+        "Soft_Touch_Silky_Feel": 0,
+        "Lubricity_and_Smooth_Feel": 0,
+        "Texture": 0,
+        "Increased_COF": 3,
+        "Tape_Release": 0,
+        "In_Can_Stability": 0,
+        "Natural_Naturally_Derived": 2,
+        "Recommended_System_Type": []
+      }
+    }
+  },
+  {
+    "product_name": "MicroTouch 875XF",
+    "core_properties": {
+      "Melt_Point_C": "141 - 145",
+      "Density_g_cc_25C": "1.03",
+      "Mean_Particle_Size": {
+        "type": "micron",
+        "min": 3.0,
+        "max": 9.0,
+        "raw": "3.0 - 9.0"
+      },
+      "Max_Particle_Size": {
+        "type": "micron",
+        "min": 31.0,
+        "max": 31.0,
+        "raw": "31.00"
+      }
+    },
+    "application_profiles": {
+      "EnergyCurableInks&Coatings": {
+        "Description": "Modified polyurethane",
+        "Suggested_Use_Level": "2.0 - 10.0%",
+        "Scratch_and_Mar_Resistance": 2,
+        "Slip_and_Lubricity": 2,
+        "Block_Resistance": 1,
+        "Matting_and_Gloss_Control": 3,
+        "Gloss_Retention": 0,
+        "Clarity": 0,
+        "Soft_Touch_Silky_Feel": 3,
+        "Lubricity_and_Smooth_Feel": 2,
+        "Texture": 1,
+        "Increased_COF": 1,
+        "Tape_Release": 0,
+        "In_Can_Stability": 0,
+        "Natural_Naturally_Derived": 2,
+        "Recommended_System_Type": []
+      }
+    }
+  },
+  {
+    "product_name": "MPP-123",
+    "core_properties": {
+      "Melt_Point_C": "110 - 113",
+      "Density_g_cc_25C": "0.93",
+      "Mean_Particle_Size": {
+        "type": "micron",
+        "min": 9.5,
+        "max": 12.5,
+        "raw": "9.5 - 12.5"
+      },
+      "Max_Particle_Size": {
+        "type": "micron",
+        "min": 31.0,
+        "max": 31.0,
+        "raw": "31.00"
+      }
+    },
+    "application_profiles": {
+      "EnergyCurableInks&Coatings": {
+        "Description": "Low density polyethylene",
+        "Suggested_Use_Level": "0.5 - 1.5%",
+        "Scratch_and_Mar_Resistance": 1,
+        "Slip_and_Lubricity": 1,
+        "Block_Resistance": 1,
+        "Matting_and_Gloss_Control": 1,
+        "Gloss_Retention": 0,
+        "Clarity": 0,
+        "Soft_Touch_Silky_Feel": 0,
+        "Lubricity_and_Smooth_Feel": 0,
+        "Texture": 0,
+        "Increased_COF": 2,
+        "Tape_Release": 1,
+        "In_Can_Stability": 1,
+        "Natural_Naturally_Derived": 0,
+        "Recommended_System_Type": []
+      },
+      "IndustrialFlooringCoatings": {
+        "Available_as_Waterborne_Dispersion": false,
+        "Description": "Low density polyethylene",
+        "Suggested_Use_Level": "1.0 - 2.0%",
+        "Recommended_System_Type": [
+          "W",
+          "S",
+          "UV"
+        ],
+        "Suitable_Floor_Type": {
+          "Wood": true,
+          "Concrete": true,
+          "Laminate": true
+        },
+        "Texture": 0,
+        "Non_Skid": 0,
+        "Matting_and_Gloss_Control": 0,
+        "Block_Resistance": 0,
+        "Abrasion_and_Scratch_Resistance": 2,
+        "Scuff_and_Heel_Mark_Resistance": 2,
+        "Resistance_to_Hot_Tire_Pick_up": 1,
+        "Water_Repellency_Beading": 0,
+        "Cleanability": 1,
+        "Soft_Touch": 0,
+        "Granite_Effect": 0,
+        "Film_Clarity": 0,
+        "In_Can_Stability": 0,
+        "PTFE_Alternative": 0,
+        "Natural_Naturally_Derived": 0
+      }
+    }
+  },
+  {
+    "product_name": "Polysik 750",
+    "core_properties": {
+      "Melt_Point_C": "96 - 109",
+      "Density_g_cc_25C": "0.94",
+      "Mean_Particle_Size": {
+        "type": "micron",
+        "min": 5.0,
+        "max": 7.0,
+        "raw": "5.0 - 7.0"
+      },
+      "Max_Particle_Size": {
+        "type": "micron",
+        "min": 22.0,
+        "max": 22.0,
+        "raw": "22.00"
+      }
+    },
+    "application_profiles": {
+      "EnergyCurableInks&Coatings": {
+        "Description": "Amide modified polyethylene",
+        "Suggested_Use_Level": "0.5 - 2.0%",
+        "Scratch_and_Mar_Resistance": 2,
+        "Slip_and_Lubricity": 3,
+        "Block_Resistance": 3,
+        "Matting_and_Gloss_Control": 0,
+        "Gloss_Retention": 0,
+        "Clarity": 0,
+        "Soft_Touch_Silky_Feel": 2,
+        "Lubricity_and_Smooth_Feel": 2,
+        "Texture": 0,
+        "Increased_COF": 0,
+        "Tape_Release": 0,
+        "In_Can_Stability": 0,
+        "Natural_Naturally_Derived": 0,
+        "Recommended_System_Type": []
+      }
+    }
+  },
+  {
+    "product_name": "SuperGlide 904",
+    "core_properties": {
+      "Melt_Point_C": "138 - 145",
+      "Density_g_cc_25C": "0.96",
+      "Mean_Particle_Size": {
+        "type": "micron",
+        "min": 4.0,
+        "max": 6.0,
+        "raw": "4.0 - 6.0"
+      },
+      "Max_Particle_Size": {
+        "type": "micron",
+        "min": 22.0,
+        "max": 22.0,
+        "raw": "22.00"
+      }
+    },
+    "application_profiles": {
+      "EnergyCurableInks&Coatings": {
+        "Description": "Synthetic wax/Ethylene bis(stearamide)",
+        "Suggested_Use_Level": "0.5 - 2.0%",
+        "Scratch_and_Mar_Resistance": 1,
+        "Slip_and_Lubricity": 3,
+        "Block_Resistance": 2,
+        "Matting_and_Gloss_Control": 0,
+        "Gloss_Retention": 0,
+        "Clarity": 0,
+        "Soft_Touch_Silky_Feel": 0,
+        "Lubricity_and_Smooth_Feel": 2,
+        "Texture": 0,
+        "Increased_COF": 0,
+        "Tape_Release": 2,
+        "In_Can_Stability": 0,
+        "Natural_Naturally_Derived": 2,
+        "Recommended_System_Type": []
+      },
+      "PowderCoatings": {
+        "Description": "Synthetic wax/Ethylene bis(stearamide)",
+        "Suggested_Use_Level": "0.5 - 3.0%",
+        "Scratch_and_Abrasion_Resistance": 0,
+        "Slip_and_Lubricity": 2,
+        "Improved_Extrusion_Flow": 0,
+        "Apparent_Hardness": 0,
+        "Block_Resistance": 0,
+        "Metal_Mark_Resistance": 0,
+        "Matting_and_Gloss_Control": 0,
+        "Anti_Gassing": 3,
+        "Texture_and_Structure": 0,
+        "Soft_Touch": 2,
+        "Sealant_Adhesion": 0,
+        "PTFE_Alternative": 2,
+        "Edge_Coverage": 0,
+        "Corrosion_Resistance": 0,
+        "Recommended_System_Type": []
+      },
+      "WoodCoatings": {
+        "Available_as_Waterborne_Dispersion": false,
+        "Description": "Synthetic wax/Ethylene bis(stearamide)",
+        "Suggested_Use_Level": "0.5 - 3.0%",
+        "Recommended_System_Type": [
+          "W",
+          "S"
+        ],
+        "Scratch_and_Mar_Resistance": 0,
+        "Lubricity_and_Smooth_Feel": 2,
+        "Soft_Touch": 2,
+        "Block_Resistance": 2,
+        "Matting_and_Gloss_Control": 0,
+        "Burnish_Resistance": 2,
+        "Texture": 0,
+        "Water_Repellency_beading": 2,
+        "Sanding_Efficiency": 2,
+        "Gloss_Retention": 0,
+        "Clarity": 2,
+        "PTFE_Alternative": 0,
+        "Natural_Naturally_Derived": 1
+      }
+    }
+  },
+  {
+    "product_name": "Superslip 6515",
+    "core_properties": {
+      "Melt_Point_C": "139 - 145",
+      "Density_g_cc_25C": "0.96",
+      "Mean_Particle_Size": {
+        "type": "micron",
+        "min": 6.0,
+        "max": 8.0,
+        "raw": "6.0 - 8.0"
+      },
+      "Max_Particle_Size": {
+        "type": "micron",
+        "min": 22.0,
+        "max": 22.0,
+        "raw": "22.00"
+      }
+    },
+    "application_profiles": {
+      "EnergyCurableInks&Coatings": {
+        "Description": "Polyethylene/Ethylene bis(stearamide)",
+        "Suggested_Use_Level": "1.0 - 2.0%",
+        "Scratch_and_Mar_Resistance": 1,
+        "Slip_and_Lubricity": 2,
+        "Block_Resistance": 2,
+        "Matting_and_Gloss_Control": 0,
+        "Gloss_Retention": 0,
+        "Clarity": 0,
+        "Soft_Touch_Silky_Feel": 0,
+        "Lubricity_and_Smooth_Feel": 2,
+        "Texture": 0,
+        "Increased_COF": 0,
+        "Tape_Release": 1,
+        "In_Can_Stability": 0,
+        "Natural_Naturally_Derived": 0,
+        "Recommended_System_Type": []
+      },
+      "WoodCoatings": {
+        "Available_as_Waterborne_Dispersion": false,
+        "Description": "Polyethylene/Ethylene bis(stearamide)",
+        "Suggested_Use_Level": "0.5 - 3.0%",
+        "Recommended_System_Type": [
+          "W",
+          "S"
+        ],
+        "Scratch_and_Mar_Resistance": 0,
+        "Lubricity_and_Smooth_Feel": 1,
+        "Soft_Touch": 0,
+        "Block_Resistance": 2,
+        "Matting_and_Gloss_Control": 0,
+        "Burnish_Resistance": 2,
+        "Texture": 0,
+        "Water_Repellency_beading": 3,
+        "Sanding_Efficiency": 0,
+        "Gloss_Retention": 0,
+        "Clarity": 3,
+        "PTFE_Alternative": 0,
+        "Natural_Naturally_Derived": 3
+      }
+    }
+  },
+  {
+    "product_name": "AquaPoly 250",
+    "core_properties": {
+      "Melt_Point_C": "117 - 123",
+      "Density_g_cc_25C": "0.97",
+      "Mean_Particle_Size": {
+        "type": "micron",
+        "min": 8.0,
+        "max": 10.0,
+        "raw": "8.0 - 10.0"
+      },
+      "Max_Particle_Size": {
+        "type": "micron",
+        "min": 31.0,
+        "max": 31.0,
+        "raw": "31.00"
+      }
+    },
+    "application_profiles": {
+      "IndustrialCoatings": {
+        "Available_as_Waterborne_Dispersion": true,
+        "Description": "Modified oxidized polyethylene",
+        "Suggested_Use_Level": "0.5 - 2.0%",
+        "Recommended_System_Type": [
+          "W"
+        ],
+        "Scratch_and_Abrasion_Resistance": 2,
+        "Burnish_Resistance": 1,
+        "Metal_Mark_Resistance": 2,
+        "Apparent_Hardness": 2,
+        "Slip_and_Lubricity": 2,
+        "Block_Resistance": 1,
+        "Increased_COF": 0,
+        "Matting_and_Gloss_Control": 0,
+        "Texture": 0,
+        "Soft_Touch": 0,
+        "Heat_Resistance": 0,
+        "Early_Water_Resistance": 0,
+        "Gloss_Retention": 0,
+        "In_Can_Stability": 0,
+        "Natural_Naturally_Derived": 0,
+        "PTFE_Alternative": 0
+      }
+    }
+  },
+  {
+    "product_name": "Micropro 440W",
+    "core_properties": {
+      "Melt_Point_C": "150 - 156",
+      "Density_g_cc_25C": "0.97",
+      "Mean_Particle_Size": {
+        "type": "micron",
+        "min": 7.0,
+        "max": 10.0,
+        "raw": "7.0 - 10.0"
+      },
+      "Max_Particle_Size": {
+        "type": "micron",
+        "min": 31.0,
+        "max": 31.0,
+        "raw": "31.00"
+      }
+    },
+    "application_profiles": {
+      "IndustrialCoatings": {
+        "Available_as_Waterborne_Dispersion": true,
+        "Description": "Modified polypropylene",
+        "Suggested_Use_Level": "1.0 - 5.0%",
+        "Recommended_System_Type": [
+          "W",
+          "S"
+        ],
+        "Scratch_and_Abrasion_Resistance": 2,
+        "Burnish_Resistance": 2,
+        "Metal_Mark_Resistance": 1,
+        "Apparent_Hardness": 1,
+        "Slip_and_Lubricity": 1,
+        "Block_Resistance": 2,
+        "Increased_COF": 0,
+        "Matting_and_Gloss_Control": 2,
+        "Texture": 0,
+        "Soft_Touch": 0,
+        "Heat_Resistance": 0,
+        "Early_Water_Resistance": 0,
+        "Gloss_Retention": 0,
+        "In_Can_Stability": 0,
+        "Natural_Naturally_Derived": 0,
+        "PTFE_Alternative": 0
+      }
+    }
+  },
+  {
+    "product_name": "MP-28AL",
+    "core_properties": {
+      "Melt_Point_C": "114 - 118",
+      "Density_g_cc_25C": "0.99",
+      "Mean_Particle_Size": {
+        "type": "micron",
+        "min": 6.0,
+        "max": 8.0,
+        "raw": "6.0 - 8.0"
+      },
+      "Max_Particle_Size": {
+        "type": "micron",
+        "min": 22.0,
+        "max": 22.0,
+        "raw": "22.00"
+      }
+    },
+    "application_profiles": {
+      "IndustrialCoatings": {
+        "Available_as_Waterborne_Dispersion": true,
+        "Description": "Synthetic wax/Aluminum oxide",
+        "Suggested_Use_Level": "1.0 - 3.0%",
+        "Recommended_System_Type": [
+          "W",
+          "S"
+        ],
+        "Scratch_and_Abrasion_Resistance": 3,
+        "Burnish_Resistance": 3,
+        "Metal_Mark_Resistance": 2,
+        "Apparent_Hardness": 3,
+        "Slip_and_Lubricity": 3,
+        "Block_Resistance": 1,
+        "Increased_COF": 0,
+        "Matting_and_Gloss_Control": 0,
+        "Texture": 0,
+        "Soft_Touch": 0,
+        "Heat_Resistance": 0,
+        "Early_Water_Resistance": 0,
+        "Gloss_Retention": 2,
+        "In_Can_Stability": 2,
+        "Natural_Naturally_Derived": 0,
+        "PTFE_Alternative": 3
+      },
+      "PowderCoatings": {
+        "Description": "Synthetic wax/Aluminum oxide",
+        "Suggested_Use_Level": "1.0 - 3.0%",
+        "Scratch_and_Abrasion_Resistance": 2,
+        "Slip_and_Lubricity": 2,
+        "Improved_Extrusion_Flow": 0,
+        "Apparent_Hardness": 2,
+        "Block_Resistance": 0,
+        "Metal_Mark_Resistance": 2,
+        "Matting_and_Gloss_Control": 0,
+        "Anti_Gassing": 1,
+        "Texture_and_Structure": 0,
+        "Soft_Touch": 0,
+        "Sealant_Adhesion": 0,
+        "PTFE_Alternative": 3,
+        "Edge_Coverage": 0,
+        "Corrosion_Resistance": 0,
+        "Recommended_System_Type": []
+      },
+      "WoodCoatings": {
+        "Available_as_Waterborne_Dispersion": true,
+        "Description": "Synthetic wax/Aluminum oxide",
+        "Suggested_Use_Level": "1.0 - 3.0%",
+        "Recommended_System_Type": [
+          "W",
+          "S"
+        ],
+        "Scratch_and_Mar_Resistance": 2,
+        "Lubricity_and_Smooth_Feel": 1,
+        "Soft_Touch": 0,
+        "Block_Resistance": 0,
+        "Matting_and_Gloss_Control": 0,
+        "Burnish_Resistance": 0,
+        "Texture": 0,
+        "Water_Repellency_beading": 3,
+        "Sanding_Efficiency": 0,
+        "Gloss_Retention": 2,
+        "Clarity": 0,
+        "PTFE_Alternative": 3,
+        "Natural_Naturally_Derived": 0
+      }
+    }
+  },
+  {
+    "product_name": "MPP-620VF",
+    "core_properties": {
+      "Melt_Point_C": "120 - 124",
+      "Density_g_cc_25C": "0.96",
+      "Mean_Particle_Size": {
+        "type": "micron",
+        "min": 5.0,
+        "max": 7.0,
+        "raw": "5.0 - 7.0"
+      },
+      "Max_Particle_Size": {
+        "type": "micron",
+        "min": 22.0,
+        "max": 22.0,
+        "raw": "22.00"
+      }
+    },
+    "application_profiles": {
+      "IndustrialCoatings": {
+        "Available_as_Waterborne_Dispersion": true,
+        "Description": "High density polyethylene",
+        "Suggested_Use_Level": "1.0 - 3.0%",
+        "Recommended_System_Type": [
+          "W",
+          "S"
+        ],
+        "Scratch_and_Abrasion_Resistance": 2,
+        "Burnish_Resistance": 2,
+        "Metal_Mark_Resistance": 2,
+        "Apparent_Hardness": 2,
+        "Slip_and_Lubricity": 3,
+        "Block_Resistance": 1,
+        "Increased_COF": 0,
+        "Matting_and_Gloss_Control": 0,
+        "Texture": 0,
+        "Soft_Touch": 0,
+        "Heat_Resistance": 0,
+        "Early_Water_Resistance": 0,
+        "Gloss_Retention": 1,
+        "In_Can_Stability": 0,
+        "Natural_Naturally_Derived": 0,
+        "PTFE_Alternative": 0
+      },
+      "PowderCoatings": {
+        "Description": "High density polyethylene",
+        "Suggested_Use_Level": "0.5 - 1.0%",
+        "Scratch_and_Abrasion_Resistance": 0,
+        "Slip_and_Lubricity": 0,
+        "Improved_Extrusion_Flow": 3,
+        "Apparent_Hardness": 3,
+        "Block_Resistance": 3,
+        "Metal_Mark_Resistance": 2,
+        "Matting_and_Gloss_Control": 0,
+        "Anti_Gassing": 3,
+        "Texture_and_Structure": 0,
+        "Soft_Touch": 0,
+        "Sealant_Adhesion": 0,
+        "PTFE_Alternative": 0,
+        "Edge_Coverage": 0,
+        "Corrosion_Resistance": 0,
+        "Recommended_System_Type": []
+      },
+      "WoodCoatings": {
+        "Available_as_Waterborne_Dispersion": true,
+        "Description": "High density polyethylene",
+        "Suggested_Use_Level": "0.5 - 1.5%",
+        "Recommended_System_Type": [
+          "W",
+          "S"
+        ],
+        "Scratch_and_Mar_Resistance": 2,
+        "Lubricity_and_Smooth_Feel": 0,
+        "Soft_Touch": 0,
+        "Block_Resistance": 0,
+        "Matting_and_Gloss_Control": 0,
+        "Burnish_Resistance": 0,
+        "Texture": 0,
+        "Water_Repellency_beading": 0,
+        "Sanding_Efficiency": 0,
+        "Gloss_Retention": 2,
+        "Clarity": 2,
+        "PTFE_Alternative": 0,
+        "Natural_Naturally_Derived": 0
+      }
+    }
+  },
+  {
+    "product_name": "NyloTex Series",
+    "core_properties": {
+      "Melt_Point_C": "257 - 267",
+      "Density_g_cc_25C": "1.14",
+      "Mean_Particle_Size": {
+        "type": "mesh",
+        "min": 50,
+        "max": 200,
+        "raw": "Wide range available (50 mesh - 200 mesh)"
+      },
+      "Max_Particle_Size": {
+        "type": "mesh",
+        "min": 50,
+        "max": 200,
+        "raw": "Wide range available (50 mesh - 200 mesh)"
+      }
+    },
+    "application_profiles": {
+      "IndustrialCoatings": {
+        "Available_as_Waterborne_Dispersion": false,
+        "Description": "Polyamide (Nylon 66)",
+        "Suggested_Use_Level": "4.0 - 6.0%",
+        "Recommended_System_Type": [
+          "W",
+          "S"
+        ],
+        "Scratch_and_Abrasion_Resistance": 3,
+        "Burnish_Resistance": 0,
+        "Metal_Mark_Resistance": 0,
+        "Apparent_Hardness": 0,
+        "Slip_and_Lubricity": 0,
+        "Block_Resistance": 2,
+        "Increased_COF": 2,
+        "Matting_and_Gloss_Control": 0,
+        "Texture": 3,
+        "Soft_Touch": 1,
+        "Heat_Resistance": 2,
+        "Early_Water_Resistance": 0,
+        "Gloss_Retention": 1,
+        "In_Can_Stability": 2,
+        "Natural_Naturally_Derived": 0,
+        "PTFE_Alternative": 0
+      },
+      "IndustrialFlooringCoatings": {
+        "Available_as_Waterborne_Dispersion": false,
+        "Description": "Polyamide (Nylon 66)",
+        "Suggested_Use_Level": "3.0 - 10.0%",
+        "Recommended_System_Type": [
+          "W",
+          "S"
+        ],
+        "Suitable_Floor_Type": {
+          "Wood": false,
+          "Concrete": true,
+          "Laminate": false
+        },
+        "Texture": 3,
+        "Non_Skid": 3,
+        "Matting_and_Gloss_Control": 0,
+        "Block_Resistance": 0,
+        "Abrasion_and_Scratch_Resistance": 3,
+        "Scuff_and_Heel_Mark_Resistance": 0,
+        "Resistance_to_Hot_Tire_Pick_up": 0,
+        "Water_Repellency_Beading": 0,
+        "Cleanability": 0,
+        "Soft_Touch": 0,
+        "Granite_Effect": 0,
+        "Film_Clarity": 0,
+        "In_Can_Stability": 0,
+        "PTFE_Alternative": 0,
+        "Natural_Naturally_Derived": 0
+      },
+      "PowderCoatings": {
+        "Description": "Polyamide (Nylon 66)",
+        "Suggested_Use_Level": "5.0 - 10.0%",
+        "Scratch_and_Abrasion_Resistance": 0,
+        "Slip_and_Lubricity": 0,
+        "Improved_Extrusion_Flow": 0,
+        "Apparent_Hardness": 0,
+        "Block_Resistance": 0,
+        "Metal_Mark_Resistance": 0,
+        "Matting_and_Gloss_Control": 0,
+        "Anti_Gassing": 0,
+        "Texture_and_Structure": 1,
+        "Soft_Touch": 0,
+        "Sealant_Adhesion": 0,
+        "PTFE_Alternative": 0,
+        "Edge_Coverage": 0,
+        "Corrosion_Resistance": 0,
+        "Recommended_System_Type": []
+      }
+    }
+  },
+  {
+    "product_name": "MicroMatte 1213 UVW",
+    "core_properties": {
+      "Melt_Point_C": "150 - 156",
+      "Density_g_cc_25C": "1.07",
+      "Mean_Particle_Size": {
+        "type": "micron",
+        "min": 5.0,
+        "max": 7.5,
+        "raw": "5.0 - 7.5"
+      },
+      "Max_Particle_Size": {
+        "type": "micron",
+        "min": 22.0,
+        "max": 22.0,
+        "raw": "22.00"
+      }
+    },
+    "application_profiles": {
+      "IndustrialFlooringCoatings": {
+        "Available_as_Waterborne_Dispersion": true,
+        "Description": "Densified modified polypropylene",
+        "Suggested_Use_Level": "2.0 - 5.0%",
+        "Recommended_System_Type": [
+          "W",
+          "UV"
+        ],
+        "Suitable_Floor_Type": {
+          "Wood": true,
+          "Concrete": false,
+          "Laminate": true
+        },
+        "Texture": 0,
+        "Non_Skid": 0,
+        "Matting_and_Gloss_Control": 2,
+        "Block_Resistance": 3,
+        "Abrasion_and_Scratch_Resistance": 2,
+        "Scuff_and_Heel_Mark_Resistance": 2,
+        "Resistance_to_Hot_Tire_Pick_up": 0,
+        "Water_Repellency_Beading": 1,
+        "Cleanability": 1,
+        "Soft_Touch": 1,
+        "Granite_Effect": 0,
+        "Film_Clarity": 2,
+        "In_Can_Stability": 2,
+        "PTFE_Alternative": 0,
+        "Natural_Naturally_Derived": 0
+      }
+    }
+  },
+  {
+    "product_name": "PropylMatte 500",
+    "core_properties": {
+      "Melt_Point_C": "142 - 148",
+      "Density_g_cc_25C": "0.90",
+      "Mean_Particle_Size": {
+        "type": "micron",
+        "min": 5.0,
+        "max": 8.0,
+        "raw": "5.0 - 8.0"
+      },
+      "Max_Particle_Size": {
+        "type": "micron",
+        "min": 22.0,
+        "max": 22.0,
+        "raw": "22.00"
+      }
+    },
+    "application_profiles": {
+      "IndustrialFlooringCoatings": {
+        "Available_as_Waterborne_Dispersion": false,
+        "Description": "Polypropylene",
+        "Suggested_Use_Level": "2.0 - 5.0%",
+        "Recommended_System_Type": [
+          "S",
+          "UV"
+        ],
+        "Suitable_Floor_Type": {
+          "Wood": true,
+          "Concrete": false,
+          "Laminate": true
+        },
+        "Texture": 0,
+        "Non_Skid": 2,
+        "Matting_and_Gloss_Control": 0,
+        "Block_Resistance": 1,
+        "Abrasion_and_Scratch_Resistance": 2,
+        "Scuff_and_Heel_Mark_Resistance": 2,
+        "Resistance_to_Hot_Tire_Pick_up": 0,
+        "Water_Repellency_Beading": 0,
+        "Cleanability": 2,
+        "Soft_Touch": 1,
+        "Granite_Effect": 2,
+        "Film_Clarity": 0,
+        "In_Can_Stability": 0,
+        "PTFE_Alternative": 0,
+        "Natural_Naturally_Derived": 0
+      }
+    }
+  },
+  {
+    "product_name": "GraphShield 730",
+    "core_properties": {
+      "Melt_Point_C": "108 - 113",
+      "Density_g_cc_25C": "1.24",
+      "Mean_Particle_Size": {
+        "type": "micron",
+        "min": 8.0,
+        "max": 12.0,
+        "raw": "8.0 - 12.0"
+      },
+      "Max_Particle_Size": {
+        "type": "micron",
+        "min": 31.0,
+        "max": 31.0,
+        "raw": "31.00"
+      }
+    },
+    "application_profiles": {
+      "PowderCoatings": {
+        "Description": "Synthetic wax/Graphene",
+        "Suggested_Use_Level": "1.0 - 3.0%",
+        "Scratch_and_Abrasion_Resistance": 0,
+        "Slip_and_Lubricity": 0,
+        "Improved_Extrusion_Flow": 0,
+        "Apparent_Hardness": 0,
+        "Block_Resistance": 0,
+        "Metal_Mark_Resistance": 0,
+        "Matting_and_Gloss_Control": 0,
+        "Anti_Gassing": 0,
+        "Texture_and_Structure": 0,
+        "Soft_Touch": 0,
+        "Sealant_Adhesion": 0,
+        "PTFE_Alternative": 0,
+        "Edge_Coverage": 0,
+        "Corrosion_Resistance": 3,
+        "Recommended_System_Type": []
+      }
+    }
+  },
+  {
+    "product_name": "MicroTex 950",
+    "core_properties": {
+      "Melt_Point_C": "-",
+      "Density_g_cc_25C": "1.22",
+      "Mean_Particle_Size": {
+        "type": "micron",
+        "min": null,
+        "max": null,
+        "raw": "N/A"
+      },
+      "Max_Particle_Size": {
+        "type": "micron",
+        "min": 74.0,
+        "max": 74.0,
+        "raw": "74.00"
+      }
+    },
+    "application_profiles": {
+      "PowderCoatings": {
+        "Description": "Modified polyolefin",
+        "Suggested_Use_Level": "4.0 - 6.0%",
+        "Scratch_and_Abrasion_Resistance": 0,
+        "Slip_and_Lubricity": 0,
+        "Improved_Extrusion_Flow": 0,
+        "Apparent_Hardness": 0,
+        "Block_Resistance": 0,
+        "Metal_Mark_Resistance": 0,
+        "Matting_and_Gloss_Control": 3,
+        "Anti_Gassing": 0,
+        "Texture_and_Structure": 3,
+        "Soft_Touch": 0,
+        "Sealant_Adhesion": 0,
+        "PTFE_Alternative": 0,
+        "Edge_Coverage": 0,
+        "Corrosion_Resistance": 0,
+        "Recommended_System_Type": []
+      }
+    }
+  },
+  {
+    "product_name": "MicroTex 975",
+    "core_properties": {
+      "Melt_Point_C": "-",
+      "Density_g_cc_25C": "2.13",
+      "Mean_Particle_Size": {
+        "type": "micron",
+        "min": null,
+        "max": null,
+        "raw": "N/A"
+      },
+      "Max_Particle_Size": {
+        "type": "micron",
+        "min": 74.0,
+        "max": 74.0,
+        "raw": "74.00"
+      }
+    },
+    "application_profiles": {
+      "PowderCoatings": {
+        "Description": "Modified polyolefin",
+        "Suggested_Use_Level": "4.0 - 6.0%",
+        "Scratch_and_Abrasion_Resistance": 0,
+        "Slip_and_Lubricity": 0,
+        "Improved_Extrusion_Flow": 0,
+        "Apparent_Hardness": 0,
+        "Block_Resistance": 0,
+        "Metal_Mark_Resistance": 0,
+        "Matting_and_Gloss_Control": 3,
+        "Anti_Gassing": 0,
+        "Texture_and_Structure": 3,
+        "Soft_Touch": 0,
+        "Sealant_Adhesion": 0,
+        "PTFE_Alternative": 3,
+        "Edge_Coverage": 0,
+        "Corrosion_Resistance": 0,
+        "Recommended_System_Type": []
+      }
+    }
+  },
+  {
+    "product_name": "MicroTouch 800VF",
+    "core_properties": {
+      "Melt_Point_C": "-",
+      "Density_g_cc_25C": "1.05",
+      "Mean_Particle_Size": {
+        "type": "micron",
+        "min": 11.0,
+        "max": 15.0,
+        "raw": "11.0 - 15.0"
+      },
+      "Max_Particle_Size": {
+        "type": "micron",
+        "min": 60.0,
+        "max": 60.0,
+        "raw": "60.00"
+      }
+    },
+    "application_profiles": {
+      "PowderCoatings": {
+        "Description": "Aliphatic polyurethane",
+        "Suggested_Use_Level": "1.0 - 10.0%",
+        "Scratch_and_Abrasion_Resistance": 0,
+        "Slip_and_Lubricity": 0,
+        "Improved_Extrusion_Flow": 0,
+        "Apparent_Hardness": 0,
+        "Block_Resistance": 0,
+        "Metal_Mark_Resistance": 0,
+        "Matting_and_Gloss_Control": 3,
+        "Anti_Gassing": 0,
+        "Texture_and_Structure": 1,
+        "Soft_Touch": 3,
+        "Sealant_Adhesion": 0,
+        "PTFE_Alternative": 0,
+        "Edge_Coverage": 0,
+        "Corrosion_Resistance": 0,
+        "Recommended_System_Type": []
+      }
+    }
+  },
+  {
+    "product_name": "MP-22VF",
+    "core_properties": {
+      "Melt_Point_C": "110 - 115",
+      "Density_g_cc_25C": "0.93",
+      "Mean_Particle_Size": {
+        "type": "micron",
+        "min": 6.0,
+        "max": 8.0,
+        "raw": "6.0 - 8.0"
+      },
+      "Max_Particle_Size": {
+        "type": "micron",
+        "min": 22.0,
+        "max": 22.0,
+        "raw": "22.00"
+      }
+    },
+    "application_profiles": {
+      "PowderCoatings": {
+        "Description": "Synthetic wax",
+        "Suggested_Use_Level": "1.0 - 2.0%",
+        "Scratch_and_Abrasion_Resistance": 1,
+        "Slip_and_Lubricity": 0,
+        "Improved_Extrusion_Flow": 1,
+        "Apparent_Hardness": 0,
+        "Block_Resistance": 0,
+        "Metal_Mark_Resistance": 0,
+        "Matting_and_Gloss_Control": 0,
+        "Anti_Gassing": 2,
+        "Texture_and_Structure": 0,
+        "Soft_Touch": 0,
+        "Sealant_Adhesion": 0,
+        "PTFE_Alternative": 0,
+        "Edge_Coverage": 0,
+        "Corrosion_Resistance": 0,
+        "Recommended_System_Type": []
+      }
+    }
+  },
+  {
+    "product_name": "MPP-230F",
+    "core_properties": {
+      "Melt_Point_C": "110 - 118",
+      "Density_g_cc_25C": "0.94",
+      "Mean_Particle_Size": {
+        "type": "micron",
+        "min": 10.0,
+        "max": 12.0,
+        "raw": "10.0 - 12.0"
+      },
+      "Max_Particle_Size": {
+        "type": "micron",
+        "min": 31.0,
+        "max": 31.0,
+        "raw": "31.00"
+      }
+    },
+    "application_profiles": {
+      "PowderCoatings": {
+        "Description": "High density polyethylene",
+        "Suggested_Use_Level": "1.0 - 3.0%",
+        "Scratch_and_Abrasion_Resistance": 1,
+        "Slip_and_Lubricity": 0,
+        "Improved_Extrusion_Flow": 2,
+        "Apparent_Hardness": 0,
+        "Block_Resistance": 0,
+        "Metal_Mark_Resistance": 0,
+        "Matting_and_Gloss_Control": 0,
+        "Anti_Gassing": 3,
+        "Texture_and_Structure": 0,
+        "Soft_Touch": 0,
+        "Sealant_Adhesion": 0,
+        "PTFE_Alternative": 0,
+        "Edge_Coverage": 0,
+        "Corrosion_Resistance": 0,
+        "Recommended_System_Type": []
+      }
+    }
+  },
+  {
+    "product_name": "MPP-611",
+    "core_properties": {
+      "Melt_Point_C": "110 - 116",
+      "Density_g_cc_25C": "0.96",
+      "Mean_Particle_Size": {
+        "type": "micron",
+        "min": 5.0,
+        "max": 8.0,
+        "raw": "5.0 - 8.0"
+      },
+      "Max_Particle_Size": {
+        "type": "micron",
+        "min": 22.0,
+        "max": 22.0,
+        "raw": "22.00"
+      }
+    },
+    "application_profiles": {
+      "PowderCoatings": {
+        "Description": "High density polyethylene",
+        "Suggested_Use_Level": "1.0 - 3.0%",
+        "Scratch_and_Abrasion_Resistance": 0,
+        "Slip_and_Lubricity": 0,
+        "Improved_Extrusion_Flow": 0,
+        "Apparent_Hardness": 2,
+        "Block_Resistance": 2,
+        "Metal_Mark_Resistance": 0,
+        "Matting_and_Gloss_Control": 0,
+        "Anti_Gassing": 0,
+        "Texture_and_Structure": 0,
+        "Soft_Touch": 0,
+        "Sealant_Adhesion": 0,
+        "PTFE_Alternative": 3,
+        "Edge_Coverage": 0,
+        "Corrosion_Resistance": 0,
+        "Recommended_System_Type": []
+      }
+    }
+  },
+  {
+    "product_name": "PropylMatte 450",
+    "core_properties": {
+      "Melt_Point_C": "142 - 148",
+      "Density_g_cc_25C": "0.90",
+      "Mean_Particle_Size": {
+        "type": "micron",
+        "min": 8.0,
+        "max": 12.0,
+        "raw": "8.0 - 12.0"
+      },
+      "Max_Particle_Size": {
+        "type": "micron",
+        "min": 31.0,
+        "max": 31.0,
+        "raw": "31.00"
+      }
+    },
+    "application_profiles": {
+      "PowderCoatings": {
+        "Description": "Polypropylene",
+        "Suggested_Use_Level": "2.0 - 5.0%",
+        "Scratch_and_Abrasion_Resistance": 0,
+        "Slip_and_Lubricity": 0,
+        "Improved_Extrusion_Flow": 0,
+        "Apparent_Hardness": 0,
+        "Block_Resistance": 2,
+        "Metal_Mark_Resistance": 2,
+        "Matting_and_Gloss_Control": 3,
+        "Anti_Gassing": 3,
+        "Texture_and_Structure": 0,
+        "Soft_Touch": 3,
+        "Sealant_Adhesion": 0,
+        "PTFE_Alternative": 0,
+        "Edge_Coverage": 0,
+        "Corrosion_Resistance": 0,
+        "Recommended_System_Type": []
+      }
+    }
+  },
+  {
+    "product_name": "AquaPoly 511",
+    "core_properties": {
+      "Melt_Point_C": "117 - 123",
+      "Density_g_cc_25C": "0.97",
+      "Mean_Particle_Size": {
+        "type": "micron",
+        "min": 6.0,
+        "max": 8.0,
+        "raw": "6.0 - 8.0"
+      },
+      "Max_Particle_Size": {
+        "type": "micron",
+        "min": 22.0,
+        "max": 22.0,
+        "raw": "22.00"
+      }
+    },
+    "application_profiles": {
+      "WoodCoatings": {
+        "Available_as_Waterborne_Dispersion": false,
+        "Description": "Modified oxidized polyethylene",
+        "Suggested_Use_Level": "0.5 - 2.0%",
+        "Recommended_System_Type": [
+          "W",
+          "S"
+        ],
+        "Scratch_and_Mar_Resistance": 2,
+        "Lubricity_and_Smooth_Feel": 2,
+        "Soft_Touch": 0,
+        "Block_Resistance": 2,
+        "Matting_and_Gloss_Control": 0,
+        "Burnish_Resistance": 2,
+        "Texture": 0,
+        "Water_Repellency_beading": 0,
+        "Sanding_Efficiency": 0,
+        "Gloss_Retention": 2,
+        "Clarity": 0,
+        "PTFE_Alternative": 3,
+        "Natural_Naturally_Derived": 0
+      }
+    }
+  },
+  {
+    "product_name": "AquaSuperslip 6550",
+    "core_properties": {
+      "Melt_Point_C": "124 - 135",
+      "Density_g_cc_25C": "0.97",
+      "Mean_Particle_Size": {
+        "type": "micron",
+        "min": 6.0,
+        "max": 7.5,
+        "raw": "6.0 - 7.5"
+      },
+      "Max_Particle_Size": {
+        "type": "micron",
+        "min": 22.0,
+        "max": 22.0,
+        "raw": "22.00"
+      }
+    },
+    "application_profiles": {
+      "WoodCoatings": {
+        "Available_as_Waterborne_Dispersion": true,
+        "Description": "Modified oxidized polyethylene/Amide",
+        "Suggested_Use_Level": "0.5 - 2.0%",
+        "Recommended_System_Type": [
+          "W"
+        ],
+        "Scratch_and_Mar_Resistance": 3,
+        "Lubricity_and_Smooth_Feel": 3,
+        "Soft_Touch": 0,
+        "Block_Resistance": 3,
+        "Matting_and_Gloss_Control": 0,
+        "Burnish_Resistance": 0,
+        "Texture": 0,
+        "Water_Repellency_beading": 0,
+        "Sanding_Efficiency": 2,
+        "Gloss_Retention": 0,
+        "Clarity": 0,
+        "PTFE_Alternative": 3,
+        "Natural_Naturally_Derived": 0
+      }
+    }
+  },
+  {
+    "product_name": "MicroTouch 800XF",
+    "core_properties": {
+      "Melt_Point_C": "N/A",
+      "Density_g_cc_25C": "1.05",
+      "Mean_Particle_Size": {
+        "type": "micron",
+        "min": 6.0,
+        "max": 9.0,
+        "raw": "6.0 - 9.0"
+      },
+      "Max_Particle_Size": {
+        "type": "micron",
+        "min": 31.0,
+        "max": 31.0,
+        "raw": "31.00"
+      }
+    },
+    "application_profiles": {
+      "WoodCoatings": {
+        "Available_as_Waterborne_Dispersion": false,
+        "Description": "Aliphatic polyurethane",
+        "Suggested_Use_Level": "1.0 - 10.0%",
+        "Recommended_System_Type": [
+          "W",
+          "S"
+        ],
+        "Scratch_and_Mar_Resistance": 3,
+        "Lubricity_and_Smooth_Feel": 0,
+        "Soft_Touch": 3,
+        "Block_Resistance": 0,
+        "Matting_and_Gloss_Control": 3,
+        "Burnish_Resistance": 0,
+        "Texture": 1,
+        "Water_Repellency_beading": 0,
+        "Sanding_Efficiency": 0,
+        "Gloss_Retention": 0,
+        "Clarity": 0,
+        "PTFE_Alternative": 0,
+        "Natural_Naturally_Derived": 0
+      }
+    }
+  },
+  {
+    "product_name": "MicroTouch 850XF",
+    "core_properties": {
+      "Melt_Point_C": "N/A",
+      "Density_g_cc_25C": "1.02",
+      "Mean_Particle_Size": {
+        "type": "micron",
+        "min": 5.0,
+        "max": 9.0,
+        "raw": "5.0 - 9.0"
+      },
+      "Max_Particle_Size": {
+        "type": "micron",
+        "min": 31.0,
+        "max": 31.0,
+        "raw": "31.00"
+      }
+    },
+    "application_profiles": {
+      "WoodCoatings": {
+        "Available_as_Waterborne_Dispersion": false,
+        "Description": "Modified aliphatic polyurethane",
+        "Suggested_Use_Level": "1.0 - 10.0%",
+        "Recommended_System_Type": [
+          "W",
+          "S"
+        ],
+        "Scratch_and_Mar_Resistance": 3,
+        "Lubricity_and_Smooth_Feel": 0,
+        "Soft_Touch": 3,
+        "Block_Resistance": 0,
+        "Matting_and_Gloss_Control": 3,
+        "Burnish_Resistance": 0,
+        "Texture": 1,
+        "Water_Repellency_beading": 0,
+        "Sanding_Efficiency": 0,
+        "Gloss_Retention": 0,
+        "Clarity": 0,
+        "PTFE_Alternative": 0,
+        "Natural_Naturally_Derived": 0
+      }
+    }
+  },
+  {
+    "product_name": "Superslip 6530",
+    "core_properties": {
+      "Melt_Point_C": "124 - 135",
+      "Density_g_cc_25C": "0.97",
+      "Mean_Particle_Size": {
+        "type": "micron",
+        "min": 6.0,
+        "max": 7.5,
+        "raw": "6.0 - 7.5"
+      },
+      "Max_Particle_Size": {
+        "type": "micron",
+        "min": 22.0,
+        "max": 22.0,
+        "raw": "22.00"
+      }
+    },
+    "application_profiles": {
+      "WoodCoatings": {
+        "Available_as_Waterborne_Dispersion": false,
+        "Description": "Polyethylene/Ethylene bis(stearamide)",
+        "Suggested_Use_Level": "0.5 - 3.0%",
+        "Recommended_System_Type": [
+          "W",
+          "S"
+        ],
+        "Scratch_and_Mar_Resistance": 0,
+        "Lubricity_and_Smooth_Feel": 2,
+        "Soft_Touch": 0,
+        "Block_Resistance": 2,
+        "Matting_and_Gloss_Control": 0,
+        "Burnish_Resistance": 2,
+        "Texture": 0,
+        "Water_Repellency_beading": 3,
+        "Sanding_Efficiency": 0,
+        "Gloss_Retention": 0,
+        "Clarity": 3,
+        "PTFE_Alternative": 0,
+        "Natural_Naturally_Derived": 3
+      }
+    }
+  }
+]
