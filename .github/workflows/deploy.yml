@@ -3,7 +3,7 @@ name: Deploy GitHub Pages
 on:
   # 當 main 分支有變更（push）時自動觸發
   push:
-    branches: ["master"]
+    branches: ["main"]
   # 允許在 GitHub 網頁介面上手動點擊觸發（方便測試）
   workflow_dispatch:
 
