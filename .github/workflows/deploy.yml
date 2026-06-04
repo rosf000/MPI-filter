@@ -1,0 +1,44 @@
+name: Deploy GitHub Pages
+
+on:
+  # 當 main 分支有變更（push）時自動觸發
+  push:
+    branches: ["main"]
+  # 允許在 GitHub 網頁介面上手動點擊觸發（方便測試）
+  workflow_dispatch:
+
+# 設定權限，允許此 Action 寫入並部署到 GitHub Pages
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# 避免多個部署同時執行時發生衝突（會自動取消舊的、執行新的）
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+
+      # 核心步驟：將你「子資料夾」裡面的所有檔案打包準備上傳
+      # 💡 請將 path 欄位修改成你實際存放 test.html 與 json 的子資料夾路徑
+      # 例如：如果是放在 .github/workflows/my-app，就寫 .github/workflows/my-app
+      - name: Upload Artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: '.'
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
