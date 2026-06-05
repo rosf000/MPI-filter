@@ -12,7 +12,6 @@
     <link rel="apple-touch-icon" href="icon-192.png">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
     <style>
-        /* CSS 保持原樣，因為寫得很標準且使用了效能較好的 transition */
         :root {
             --primary: #2563eb;
             --primary-hover: #1d4ed8;
@@ -197,9 +196,9 @@
             matchRate: "🎯 匹配度",
             powerScore: "🌟 綜合評分",
             emptyMarketTitle: "歡迎使用智慧型導航篩選器 👋",
-            emptyMarketDesc: "請先從左側選單指定您的「應用市場」，系統將自動偵測並僅顯示該領域存在的規格與效能滑桿。",
+            emptyMarketDesc: "請先從左側選單指定您的「應用市場」，系統將自動偵測並僅顯示該領域存在的規格與效能滑桿。您也可以直接在此搜尋所有產品 (包含中英文描述)。",
             emptyResultTitle: "沒有符合目前設定的產品 😢",
-            emptyResultDesc: "您的硬性條件 (系統/劑型/特殊要求) 可能太嚴格了，嘗試放寬一些限制。",
+            emptyResultDesc: "找不到相符結果，請嘗試變更關鍵字或放寬條件限制。",
             coreProps: "物理屬性規格",
             meltPoint: "熔點",
             density: "密度",
@@ -235,9 +234,9 @@
             matchRate: "🎯 Match Rate",
             powerScore: "🌟 Power Score",
             emptyMarketTitle: "Welcome to MPI Smart Filter 👋",
-            emptyMarketDesc: "Select an application market from the menu. The system will dynamically generate filters based ONLY on available products.",
+            emptyMarketDesc: "Select an application market from the menu to see dynamic filters, or simply type to search across all products and descriptions.",
             emptyResultTitle: "No Products Matched 😢",
-            emptyResultDesc: "Try relaxing your hard filters (System type / Special requirements).",
+            emptyResultDesc: "Try relaxing your hard filters or changing your keywords.",
             coreProps: "Core Physical Properties",
             meltPoint: "Melt Point",
             density: "Density",
@@ -284,14 +283,13 @@
         perfReq: {}
     };
 
-    // 效能優化：防抖函數 (Debounce) 用於搜尋輸入
     let searchTimeout;
     function debouncedSearch(val) {
         clearTimeout(searchTimeout);
         searchTimeout = setTimeout(() => {
             state.search = val;
             renderGrid();
-        }, 300); // 延遲 300ms 等待使用者停止打字
+        }, 300);
     }
 
     async function init() {
@@ -356,7 +354,6 @@
         renderGrid();
     }
 
-    // 效能優化：分離「拖曳時更新數字UI」與「放開時更新過濾器」
     function updateSliderValUI(key, val) {
         document.getElementById('val-' + key).innerText = val;
         state.perfReq[key] = parseInt(val);
@@ -376,7 +373,6 @@
         state.reqPtfe = reqPtfeNode ? reqPtfeNode.checked : false;
         state.reqNatural = reqNaturalNode ? reqNaturalNode.checked : false;
 
-        // 確保效能狀態同步
         Object.keys(state.perfReq).forEach(key => {
             const slider = document.getElementById('perf-' + key);
             if (slider) state.perfReq[key] = parseInt(slider.value);
@@ -398,7 +394,6 @@
 
         if(clearMarket) buildSmartSidebar();
         else {
-            // 重置滑桿UI
             Object.keys(state.perfReq).forEach(key => {
                 const slider = document.getElementById('perf-' + key);
                 const valDisp = document.getElementById('val-' + key);
@@ -409,7 +404,6 @@
         }
     }
 
-    // 效能優化：一次性寫入 DOM，取代迴圈內 += innerHTML
     function buildSmartSidebar() {
         const dynFilters = document.getElementById('dynamic-filters');
         if (!state.market) { dynFilters.style.display = 'none'; return; }
@@ -419,7 +413,6 @@
         let hasW = false, hasS = false, hasUV = false, hasDisp = false;
         let hasFDA = false, hasPTFE = false, hasNatural = false;
 
-        // 掃描當前市場
         for (let i = 0; i < rawData.length; i++) {
             const prof = rawData[i].en.application_profiles[state.market];
             if (!prof) continue;
@@ -441,7 +434,6 @@
             });
         }
 
-        // 1. 系統過濾器 UI 狀態更新
         const sysWCheck = document.getElementById('sys-W');
         document.getElementById('lbl-sys-w').style.display = hasW ? 'flex' : 'none';
         if(!hasW) { state.sysW = false; sysWCheck.checked = false; }
@@ -460,7 +452,6 @@
 
         document.getElementById('system-filter-group').style.display = (hasW || hasS || hasUV || hasDisp) ? 'flex' : 'none';
 
-        // 2. 特殊要求 UI 批次生成
         const specContainer = document.getElementById('special-filters-container');
         const specList = document.getElementById('special-filters-list');
 
@@ -477,13 +468,11 @@
             state.reqFda = false; state.reqPtfe = false; state.reqNatural = false;
         }
 
-        // 3. 效能滑桿 UI 批次生成
         const sliderContainer = document.getElementById('perf-sliders-container');
         const newPerfReq = {};
 
         const slidersHtml = Array.from(validPerfs).map(key => {
             newPerfReq[key] = state.perfReq[key] || 0;
-            // 注意此處：oninput 僅更新數字，onchange 才重新算分，減少卡頓
             return `
                 <div class="slider-group">
                     <div class="slider-header">
@@ -501,16 +490,15 @@
         state.perfReq = newPerfReq;
     }
 
-    // 效能優化：合併「過濾器檢驗」與「分數計算」為單一迴圈，並使用 String Builder 渲染 DOM
     function renderGrid() {
         const grid = document.getElementById('product-grid');
-        if (!state.market) {
+        const term = state.search ? state.search.toLowerCase().trim() : '';
+
+        if (!state.market && !term) {
             grid.innerHTML = `<div class="empty-state"><h3>${t('emptyMarketTitle')}</h3><p>${t('emptyMarketDesc')}</p></div>`;
             return;
         }
 
-        // 預先計算外層變數，避免在迴圈內不斷宣告
-        const term = state.search ? state.search.toLowerCase() : '';
         const selectedSys = [];
         if(state.sysW) selectedSys.push("W");
         if(state.sysS) selectedSys.push("S");
@@ -520,81 +508,123 @@
 
         let filteredData = [];
 
-        // 單次遍歷：同時處理 Hard Filters 與 Scoring
         for (let i = 0; i < rawData.length; i++) {
             const item = rawData[i];
-            const prof = item.en.application_profiles[state.market];
-            if (!prof) continue;
+            let activeProfEn = null;
+            let matchedMarketKey = null;
 
-            // --- 1. 硬性條件過濾 ---
-            if (term) {
-                const matchName = item.product_name.toLowerCase().includes(term);
-                const matchDesc = (prof.Description || '').toLowerCase().includes(term);
+            // ===== 模式一：全域搜尋 (未選擇市場) =====
+            if (!state.market) {
+                let matchName = item.product_name.toLowerCase().includes(term);
+                let matchDesc = false;
+
+                // 同時提取英文與中文的配置物件
+                const allProfsEn = item.en.application_profiles || {};
+                const allProfsZh = (item.zh && item.zh.應用領域配置) || {};
+
+                // 遍歷所有領域去比對中英描述
+                for (const mKey in allProfsEn) {
+                    const descEn = (allProfsEn[mKey].Description || '').toLowerCase();
+                    const marketZh = i18n.zh.markets[mKey];
+                    const descZh = (allProfsZh[marketZh] && allProfsZh[marketZh].描述 ? allProfsZh[marketZh].描述 : '').toLowerCase();
+
+                    if (descEn.includes(term) || descZh.includes(term)) {
+                        matchDesc = true;
+                        matchedMarketKey = mKey; // 優先使用匹配到描述的市場配置來渲染卡片
+                        break;
+                    }
+                }
+
                 if (!matchName && !matchDesc) continue;
+
+                if (!matchedMarketKey && Object.keys(allProfsEn).length > 0) {
+                    matchedMarketKey = Object.keys(allProfsEn)[0];
+                }
+
+                activeProfEn = allProfsEn[matchedMarketKey] || {};
+            }
+            // ===== 模式二：特定市場過濾 =====
+            else {
+                activeProfEn = item.en.application_profiles[state.market];
+                if (!activeProfEn) continue;
+                matchedMarketKey = state.market;
+
+                if (term) {
+                    const matchName = item.product_name.toLowerCase().includes(term);
+                    const marketZh = i18n.zh.markets[state.market];
+                    const descEn = (activeProfEn.Description || '').toLowerCase();
+                    const activeProfZh = (item.zh && item.zh.應用領域配置 && item.zh.應用領域配置[marketZh]) || {};
+                    const descZh = (activeProfZh.描述 || '').toLowerCase();
+
+                    // 中英描述只要任一符合即可
+                    const matchDesc = descEn.includes(term) || descZh.includes(term);
+                    if (!matchName && !matchDesc) continue;
+                }
+
+                if (sysActive) {
+                    const prodSys = activeProfEn.Recommended_System_Type || [];
+                    if (!selectedSys.some(s => prodSys.includes(s))) continue;
+                }
+
+                if (state.dispOnly && activeProfEn.Available_as_Waterborne_Dispersion !== true) continue;
+                if (state.reqFda && activeProfEn.FDA_21CFR_175_300_Compliance !== "Yes") continue;
+                if (state.reqPtfe && (activeProfEn.PTFE_Alternative || 0) === 0) continue;
+                if (state.reqNatural && (activeProfEn.Natural_Naturally_Derived || 0) === 0) continue;
             }
 
-            if (sysActive) {
-                const prodSys = prof.Recommended_System_Type || [];
-                if (!selectedSys.some(s => prodSys.includes(s))) continue;
-            }
-
-            if (state.dispOnly && prof.Available_as_Waterborne_Dispersion !== true) continue;
-            if (state.reqFda && prof.FDA_21CFR_175_300_Compliance !== "Yes") continue;
-            if (state.reqPtfe && (prof.PTFE_Alternative || 0) === 0) continue;
-            if (state.reqNatural && (prof.Natural_Naturally_Derived || 0) === 0) continue;
-
-            // --- 2. 分數計算 ---
+            // --- 分數計算 ---
             let userSum = 0, matchSum = 0, extraBonus = 0;
 
-            for (let j = 0; j < perfKeys.length; j++) {
-                const key = perfKeys[j];
-                const u = state.perfReq[key];
-                if (u === 0) continue;
+            if (state.market) {
+                for (let j = 0; j < perfKeys.length; j++) {
+                    const key = perfKeys[j];
+                    const u = state.perfReq[key];
+                    if (u === 0) continue;
 
-                const p = prof[key] || 0;
-                userSum += u;
-                if (p >= u) {
-                    matchSum += u;
-                    extraBonus += (p - u) * 4;
-                } else {
-                    matchSum += p;
+                    const p = activeProfEn[key] || 0;
+                    userSum += u;
+                    if (p >= u) {
+                        matchSum += u;
+                        extraBonus += (p - u) * 4;
+                    } else {
+                        matchSum += p;
+                    }
                 }
             }
 
-            if (userSum > 0) {
+            if (userSum > 0 && state.market) {
                 let matchRate = (matchSum / userSum) * 100;
                 item.computedScore = Math.min(100, Math.round(matchRate + extraBonus));
                 item.scoreType = "match";
             } else {
                 let totalTraitsVal = 0;
-                const keys = Object.keys(prof);
+                const keys = Object.keys(activeProfEn);
                 for(let k=0; k < keys.length; k++){
-                    if(typeof prof[keys[k]] === 'number') totalTraitsVal += prof[keys[k]];
+                    if(typeof activeProfEn[keys[k]] === 'number') totalTraitsVal += activeProfEn[keys[k]];
                 }
-                item.computedScore = Math.min(99, Math.round(50 + totalTraitsVal * 1.5 + (prof.FDA_21CFR_175_300_Compliance === "Yes" ? 3 : 0)));
+                item.computedScore = Math.min(99, Math.round(50 + totalTraitsVal * 1.5 + (activeProfEn.FDA_21CFR_175_300_Compliance === "Yes" ? 3 : 0)));
                 item.scoreType = "power";
             }
 
+            item.renderMarketKey = matchedMarketKey;
             filteredData.push(item);
         }
 
-        // --- 3. 排序與渲染 ---
         if (filteredData.length === 0) {
             grid.innerHTML = `<div class="empty-state"><h3>${t('emptyResultTitle')}</h3><p>${t('emptyResultDesc')}</p></div>`;
             return;
         }
 
-        // 分數排序
         filteredData.sort((a, b) => b.computedScore - a.computedScore);
 
-        const marketZh = i18n.zh.markets[state.market];
-
-        // 批次產生 HTML 字串，只操作一次 DOM
         const htmlOutput = filteredData.map(item => {
+            const mKey = item.renderMarketKey;
+            const marketZh = i18n.zh.markets[mKey];
             const dispNode = item[state.lang];
-            const dispCore = state.lang === 'en' ? dispNode.core_properties : dispNode.核心特性;
-            const dispProf = state.lang === 'en' ? dispNode.application_profiles[state.market] : dispNode.應用領域配置[marketZh];
-            const enProf = item.en.application_profiles[state.market];
+
+            const dispCore = state.lang === 'en' ? dispNode.core_properties : (dispNode.核心特性 || {});
+            const dispProf = (state.lang === 'en' ? dispNode.application_profiles[mKey] : (dispNode.應用領域配置 || {})[marketZh]) || {};
+            const enProf = item.en.application_profiles[mKey] || {};
 
             const topTraits = Object.keys(enProf)
                 .filter(k => enProf[k] === 3 && k !== 'PTFE_Alternative' && k !== 'Natural_Naturally_Derived')
@@ -605,10 +635,11 @@
             const badgesHTML = sysRaw.map(s => `<span class="badge badge-${s}">${s}</span>`).join('');
             const dispBadge = enProf.Available_as_Waterborne_Dispersion ? `<span class="badge badge-special">Dispersion</span>` : '';
 
+            const marketTag = !state.market && mKey ? `<span class="badge" style="background:#64748b; opacity:0.8;">${t('markets')[mKey] || mKey}</span>` : '';
+
             const badgeClass = item.scoreType === "match" ? "match" : "power";
             const badgeLabel = item.scoreType === "match" ? `${t('matchRate')}: ${item.computedScore}%` : `${t('powerScore')}: ${item.computedScore}`;
 
-            // 安全取值避免報錯
             const meltPoint = dispCore['Melt_Point_C'] || dispCore['熔點_度C'] || '-';
             const density = dispCore['Density_g_cc_25C'] || dispCore['密度_g_cc_25度C'] || '-';
             const meanPsObj = dispCore['Mean_Particle_Size'] || dispCore['平均粒徑'] || {};
@@ -637,7 +668,7 @@
                     <div class="card-header">
                         <h3 class="product-title">${item.product_name}</h3>
                     </div>
-                    <div class="badges">${badgesHTML}${dispBadge}</div>
+                    <div class="badges">${marketTag}${badgesHTML}${dispBadge}</div>
                     <div class="card-desc">${desc}</div>
 
                     <div class="props-box">
