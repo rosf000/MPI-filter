@@ -131,7 +131,10 @@
                 <label class="lang-label label-en" for="lang-en">EN</label>
             </div>
         </div>
-        <input type="text" id="search-input" class="search-box" placeholder="Search..." oninput="debouncedSearch(this.value)">
+        <form action="javascript:void(0);" onsubmit="document.getElementById('search-input').blur();" style="display: contents;">
+            <input type="search" id="search-input" class="search-box" placeholder="Search..." oninput="debouncedSearch(this.value)">
+        </form>
+
     </nav>
 
     <div id="sidebar-overlay" class="sidebar-overlay" onclick="toggleSidebar(false)"></div>
