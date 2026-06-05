@@ -3,846 +3,668 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MPI智慧塗料篩選器</title>
+    <title>MPI 智慧塗料篩選器</title>
     <link rel="manifest" href="manifest.json">
     <meta name="theme-color" media="(prefers-color-scheme: light)" content="#2980b9">
     <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#1a252f">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <link rel="apple-touch-icon" href="icon-192.png">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
     <style>
-        :root { --primary: #2980b9; --bg: #f0f2f5; --card-bg: #ffffff; --border: #e1e8ed; --sidebar-width: 340px; }
-
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; padding: 0; background-color: var(--bg); color: #333; }
-        ::-webkit-scrollbar { width: 6px; height: 6px; }
-        ::-webkit-scrollbar-track { background: transparent; }
-        ::-webkit-scrollbar-thumb { background: #bdc3c7; border-radius: 10px; }
-        ::-webkit-scrollbar-thumb:hover { background: #95a5a6; }
-
-        .top-navbar { background: var(--card-bg); padding: 15px 20px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); display: flex; justify-content: space-between; align-items: center; z-index: 100; position: relative; gap: 15px; }
-        .nav-left { display: flex; align-items: center; gap: 15px; flex-wrap: wrap; }
-        .top-navbar h2 { margin: 0; color: #2c3e50; font-size: 1.3em; }
-
-        .toggle-filter-btn { background: var(--primary); color: white; border: none; padding: 8px 16px; border-radius: 20px; font-weight: bold; font-size: 0.9em; cursor: pointer; display: flex; align-items: center; gap: 5px; transition: 0.2s; }
-        .toggle-filter-btn:hover { background: #226f9c; }
-
-        .search-box { padding: 8px 15px; border: 1px solid var(--border); border-radius: 20px; width: 100%; max-width: 250px; outline: none; transition: 0.3s; font-size: 0.9em; }
-        .search-box:focus { border-color: var(--primary); box-shadow: 0 0 5px rgba(41,128,185,0.3); }
-
-        .layout-container { display: flex; padding: 15px; gap: 15px; max-width: 1600px; margin: 0 auto; width: 100%; box-sizing: border-box; position: relative; height: calc(100vh - 70px); }
-
-        .sidebar { background: var(--card-bg); border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.03); display: flex; flex-direction: column; border: 1px solid var(--border); width: var(--sidebar-width); flex-shrink: 0; transition: transform 0.3s ease, margin-left 0.3s ease, opacity 0.3s ease; position: relative; }
-        .sidebar.collapsed { transform: translateX(-110%); margin-left: calc(-1 * var(--sidebar-width) - 15px); opacity: 0; pointer-events: none; }
-
-        .main-content { background: var(--card-bg); border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.03); display: flex; flex-direction: column; border: 1px solid var(--border); flex: 1; transition: all 0.3s ease; overflow: hidden; position: relative; }
-
-        .sidebar-header { padding: 15px 20px; border-bottom: 1px solid var(--border); background: #fafbfc; display: flex; justify-content: space-between; align-items: center; border-radius: 12px 12px 0 0; }
-        .sidebar-header h4 { margin: 0; color: #2c3e50; }
-        .close-sidebar-btn { background: none; border: none; font-size: 1.2em; color: #7f8c8d; cursor: pointer; display: none; }
-
-        .sidebar-content { padding: 20px; overflow-y: auto; flex: 1; }
-
-        .main-header { padding: 15px 20px; border-bottom: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; background: #fafbfc; flex-wrap: wrap; gap: 10px; border-radius: 12px 12px 0 0;}
-        .main-header-left { display: flex; align-items: center; gap: 15px; }
-        .main-header h3 { margin: 0; color: #2c3e50; font-size: 1.1em; }
-        .result-count { background: var(--primary); color: white; padding: 3px 10px; border-radius: 20px; font-size: 0.85em; font-weight: bold; }
-
-        .sort-select { padding: 6px 12px; border: 1px solid var(--border); border-radius: 8px; font-size: 0.85em; color: #2c3e50; outline: none; background: #fff; cursor: pointer; }
-
-        .products-scroll-area { padding: 20px; overflow-y: auto; flex: 1; scroll-behavior: smooth; }
-        .sidebar-overlay { position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: rgba(0,0,0,0.4); z-index: 990; display: none; opacity: 0; transition: opacity 0.3s ease; }
-
-        .mobile-footer { display: none; position: sticky; bottom: 0; background: var(--card-bg); padding: 15px; border-top: 1px solid var(--border); z-index: 10; box-shadow: 0 -2px 10px rgba(0,0,0,0.05); }
-        .mobile-view-btn { width: 100%; background: var(--primary); color: white; border: none; padding: 12px; border-radius: 8px; font-weight: bold; font-size: 1.05em; cursor: pointer; }
-
-        .reset-btn { width: 100%; background: #fff; color: #e74c3c; border: 1px solid #e74c3c; padding: 10px; border-radius: 8px; font-weight: bold; font-size: 0.9em; cursor: pointer; margin-top: 20px; transition: 0.2s; display: none; }
-        .reset-btn:hover { background: #e74c3c; color: white; }
-
-        .back-to-top { position: absolute; bottom: 25px; right: 25px; background: var(--primary); color: white; width: 45px; height: 45px; border-radius: 50%; display: flex; justify-content: center; align-items: center; cursor: pointer; border: none; font-size: 1.2em; box-shadow: 0 4px 10px rgba(0,0,0,0.2); opacity: 0; pointer-events: none; transition: 0.3s; z-index: 50; }
-        .back-to-top.visible { opacity: 1; pointer-events: auto; }
-        .back-to-top:hover { background: #226f9c; transform: translateY(-3px); }
-
-        /* UX優化 2: 浮動提示 Toast 樣式 */
-        .toast { position: fixed; bottom: -60px; left: 50%; transform: translateX(-50%); background: #2c3e50; color: #fff; padding: 12px 24px; border-radius: 30px; font-size: 0.95em; box-shadow: 0 5px 15px rgba(0,0,0,0.2); transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55); z-index: 9999; opacity: 0; font-weight: bold; display: flex; align-items: center; gap: 8px; }
-        .toast.show { bottom: 30px; opacity: 1; }
-
-        @media (min-width: 769px) {
-            body { height: 100vh; overflow: hidden; display: flex; flex-direction: column; }
-            .products-scroll-area { padding: 25px 30px; }
+        /* CSS 保持原樣，因為寫得很標準且使用了效能較好的 transition */
+        :root {
+            --primary: #2563eb;
+            --primary-hover: #1d4ed8;
+            --accent: #f59e0b;
+            --bg-color: #f8fafc;
+            --surface: #ffffff;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --border-color: #e2e8f0;
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.1);
+            --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.1);
+            --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.1);
+            --radius-md: 12px;
+            --radius-lg: 16px;
         }
+
+        * { box-sizing: border-box; }
+        body { margin: 0; font-family: 'Noto Sans TC', sans-serif; background-color: var(--bg-color); color: var(--text-main); -webkit-tap-highlight-color: transparent; }
+
+        .navbar { background: var(--surface); padding: 15px 30px; display: flex; justify-content: space-between; align-items: center; box-shadow: var(--shadow-sm); position: sticky; top: 0; z-index: 100; }
+        .navbar h2 { margin: 0; font-size: 1.3rem; color: var(--text-main); display: flex; align-items: center; gap: 10px; }
+        .nav-right { display: flex; align-items: center; gap: 15px; }
+        .search-box { padding: 10px 16px; border: 1px solid var(--border-color); border-radius: 20px; outline: none; width: 220px; font-size: 0.9rem; transition: 0.2s; }
+        .search-box:focus { border-color: var(--primary); box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2); }
+
+        .lang-switch-container { display: flex; background: #e2e8f0; border-radius: 20px; padding: 4px; position: relative; width: 110px; }
+        .lang-switch-container input { display: none; }
+        .lang-label { flex: 1; text-align: center; z-index: 2; font-size: 0.85rem; font-weight: 700; color: var(--text-muted); cursor: pointer; padding: 2px 0; transition: 0.3s; }
+        .lang-slider { position: absolute; top: 4px; left: 4px; width: calc(50% - 4px); height: calc(100% - 8px); background: var(--surface); border-radius: 16px; box-shadow: var(--shadow-sm); transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1); z-index: 1; }
+        #lang-zh:checked ~ .lang-slider { transform: translateX(0); }
+        #lang-en:checked ~ .lang-slider { transform: translateX(100%); }
+        #lang-zh:checked ~ .label-zh { color: var(--primary); }
+        #lang-en:checked ~ .label-en { color: var(--primary); }
+
+        .layout { display: flex; max-width: 1600px; margin: 0 auto; height: calc(100vh - 70px); position: relative; }
+
+        .sidebar { width: 320px; background: var(--surface); border-right: 1px solid var(--border-color); padding: 25px; overflow-y: auto; flex-shrink: 0; display: flex; flex-direction: column; gap: 22px; transition: transform 0.3s ease, opacity 0.3s ease; }
+        .sidebar-overlay { display: none; position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: rgba(30, 41, 59, 0.5); backdrop-filter: blur(4px); z-index: 998; opacity: 0; transition: opacity 0.3s ease; }
+
+        .filter-group { display: flex; flex-direction: column; gap: 10px; }
+        .filter-title { font-weight: 700; font-size: 1rem; color: var(--text-main); margin-bottom: 3px; padding-bottom: 5px; border-bottom: 2px solid #f1f5f9; }
+        select { padding: 10px; border-radius: 8px; border: 1px solid var(--border-color); font-size: 0.9rem; outline: none; background: var(--surface); cursor: pointer; font-family: inherit; width: 100%; }
+
+        .checkbox-label { display: flex; align-items: center; gap: 8px; font-size: 0.9rem; cursor: pointer; color: var(--text-main); }
+        .checkbox-label input { width: 18px; height: 18px; accent-color: var(--primary); cursor: pointer; }
+
+        .slider-group { display: flex; flex-direction: column; gap: 4px; margin-bottom: 10px; }
+        .slider-header { display: flex; justify-content: space-between; font-size: 0.85rem; color: var(--text-muted); font-weight: 500;}
+        .slider-header span.val { color: var(--primary); font-weight: 700; background: #eff6ff; padding: 1px 6px; border-radius: 4px; }
+        input[type="range"] { width: 100%; accent-color: var(--primary); cursor: pointer; height: 6px; border-radius: 3px; background: #e2e8f0; }
+
+        .reset-btn { background: #fee2e2; color: #dc2626; border: none; padding: 12px; border-radius: 8px; font-weight: 700; cursor: pointer; transition: 0.2s; margin-top: 15px; font-size: 0.9rem; width: 100%; }
+        .reset-btn:hover { background: #fecaca; }
+
+        .floating-trigger-btn { display: none; position: fixed; bottom: 25px; right: 25px; background: var(--primary); color: white; border: none; padding: 14px 22px; border-radius: 30px; font-weight: 700; font-size: 0.95rem; box-shadow: var(--shadow-lg); z-index: 997; cursor: pointer; align-items: center; gap: 8px; transition: transform 0.2s; }
+        .floating-trigger-btn:active { transform: scale(0.95); }
+
+        .main-content { flex: 1; padding: 25px; overflow-y: auto; background: var(--bg-color); }
+        .product-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px; }
+
+        .product-card { background: var(--surface); border-radius: var(--radius-md); padding: 20px; box-shadow: var(--shadow-sm); border: 1px solid var(--border-color); transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); display: flex; flex-direction: column; position: relative; overflow: hidden; }
+        .product-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); border-color: #cbd5e1; }
+
+        .score-badge { position: absolute; top: 15px; right: 15px; color: white; font-weight: 700; font-size: 0.75rem; padding: 4px 10px; border-radius: 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.15); display: flex; align-items: center; gap: 4px; }
+        .score-badge.match { background: linear-gradient(135deg, #10b981, #059669); }
+        .score-badge.power { background: linear-gradient(135deg, #6366f1, #4f46e5); }
+
+        .card-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 10px; padding-right: 95px; }
+        .product-title { margin: 0; font-size: 1.2rem; color: #0f172a; font-weight: 700; }
+        .badges { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 12px; }
+        .badge { padding: 3px 7px; border-radius: 6px; font-size: 0.7rem; font-weight: 700; color: white; }
+        .badge-W { background: #0ea5e9; }
+        .badge-S { background: #f59e0b; }
+        .badge-UV { background: #8b5cf6; }
+        .badge-special { background: #10b981; }
+
+        .card-desc { font-size: 0.88rem; color: var(--text-muted); margin-bottom: 15px; line-height: 1.5; flex: 1; }
+
+        .props-box { background: #f8fafc; border-radius: 8px; padding: 12px; font-size: 0.82rem; color: var(--text-main); margin-bottom: 15px; border: 1px solid #f1f5f9; }
+        .prop-row { display: flex; justify-content: space-between; margin-bottom: 5px; }
+        .prop-row:last-child { margin-bottom: 0; }
+        .prop-val { font-weight: 700; color: #334155; }
+
+        .perf-box { border-top: 1px solid var(--border-color); padding-top: 12px; }
+        .perf-title { font-size: 0.78rem; font-weight: 700; color: var(--text-muted); margin-bottom: 6px; text-transform: uppercase; letter-spacing: 0.5px;}
+        .perf-item { display: flex; justify-content: space-between; align-items: center; font-size: 0.82rem; margin-bottom: 4px; }
+        .perf-stars { color: #f59e0b; font-size: 0.9rem; letter-spacing: 1px;}
+
+        .empty-state { grid-column: 1 / -1; text-align: center; padding: 50px 20px; color: var(--text-muted); }
+        .empty-state h3 { font-size: 1.3rem; color: var(--text-main); margin-bottom: 8px; }
 
         @media (max-width: 768px) {
-            .layout-container { height: auto; display: block; padding: 15px; }
-            .top-navbar { flex-direction: column; align-items: stretch; padding: 12px 15px; }
-            .search-box { max-width: 100%; margin-top: 10px; }
-            .sidebar { position: fixed; top: 0; left: 0; height: 100vh; width: 85vw; max-width: 320px; z-index: 1000; border-radius: 0; transform: translateX(-100%); margin-left: 0 !important; opacity: 1 !important; pointer-events: auto !important; box-shadow: 5px 0 15px rgba(0,0,0,0.1); }
-            .sidebar.active { transform: translateX(0); }
-            .close-sidebar-btn { display: block; }
-            .mobile-footer { display: block; }
-            body.sidebar-open { overflow: hidden; }
-            .back-to-top { bottom: 15px; right: 15px; }
-            .toast.show { bottom: 80px; /* 避開手機版底部署懸浮按鈕 */ }
+            .navbar { padding: 12px 15px; flex-wrap: wrap; gap: 10px; }
+            .navbar h2 { font-size: 1.1rem; }
+            .search-box { width: 100%; order: 3; margin-top: 5px; }
+            .layout { height: calc(100vh - 120px); flex-direction: column; }
+
+            .sidebar { position: fixed; top: 0; left: 0; height: 100vh; width: 300px; z-index: 999; transform: translateX(-100%); opacity: 0; box-shadow: var(--shadow-lg); border-right: none; }
+            .sidebar.active { transform: translateX(0); opacity: 1; }
+            .sidebar-overlay.active { display: block; opacity: 1; }
+            .floating-trigger-btn { display: flex; }
+            .main-content { padding: 15px; }
+            .product-grid { grid-template-columns: 1fr; }
         }
-
-        .filter-group label { display: block; margin-bottom: 8px; font-weight: bold; color: #2c3e50; font-size: 0.95em; }
-        select { width: 100%; padding: 10px; border: 1px solid var(--border); border-radius: 8px; font-size: 1em; outline: none; background: #fff; cursor: pointer; }
-        .filter-section-title { font-weight: bold; color: #2c3e50; font-size: 0.9em; margin: 20px 0 10px 0; display: block; border-left: 3px solid var(--primary); padding-left: 8px; }
-        .checkbox-group { display: flex; flex-direction: column; gap: 8px; }
-        .checkbox-label { display: flex; align-items: center; font-size: 0.9em; cursor: pointer; color: #555; }
-        .checkbox-label input { margin-right: 8px; cursor: pointer; accent-color: var(--primary); width: 16px; height: 16px; }
-
-        .physical-filters { display: flex; flex-direction: column; gap: 12px; margin-top: 10px; }
-        .phys-slider-item { background: #fdfdfd; padding: 12px; border-radius: 8px; border: 1px solid #f0f0f0; box-sizing: border-box; }
-        .phys-slider-item label { font-size: 0.85em; color: #555; display: flex; align-items: center; gap: 8px; font-weight: 600; cursor: pointer; margin-bottom: 0; }
-        .phys-slider-item label input[type="checkbox"] { width: 16px; height: 16px; accent-color: var(--primary); cursor: pointer; margin: 0; }
-        .phys-slider-item label .val-badge { font-weight: bold; color: var(--primary); background: #e8f4fd; padding: 3px 8px; border-radius: 12px; font-size: 0.9em; min-width: 80px; text-align: center; margin-left: auto; }
-
-        .dual-slider-container { position: relative; height: 30px; display: flex; align-items: center; margin: 15px 5px 5px 5px; }
-        .dual-slider-track { position: absolute; width: 100%; height: 6px; background: #e1e8ed; border-radius: 4px; z-index: 1; }
-        .dual-slider-fill { position: absolute; height: 100%; background: var(--primary); border-radius: 4px; z-index: 2; left: 0%; width: 100%; pointer-events: none; }
-        .dual-slider-input { position: absolute; width: 100%; -webkit-appearance: none; appearance: none; background: none; pointer-events: none; outline: none; margin: 0; z-index: 3; }
-        .dual-slider-input::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 18px; height: 18px; border-radius: 50%; background: #fff; border: 2px solid var(--primary); cursor: pointer; pointer-events: auto; box-shadow: 0 1px 4px rgba(0,0,0,0.2); transition: transform 0.1s; }
-        .dual-slider-input::-webkit-slider-thumb:hover { transform: scale(1.15); }
-        .dual-slider-input::-webkit-slider-thumb:active { transform: scale(1.25); background: #e8f4fd; }
-        .dual-slider-input::-moz-range-thumb { width: 14px; height: 14px; border-radius: 50%; background: #fff; border: 2px solid var(--primary); cursor: pointer; pointer-events: auto; box-shadow: 0 1px 4px rgba(0,0,0,0.2); transition: transform 0.1s; }
-        .dual-slider-input::-moz-range-thumb:hover { transform: scale(1.15); }
-        .dual-slider-input::-moz-range-thumb:active { transform: scale(1.25); background: #e8f4fd; }
-
-        .slider-item { background: #fdfdfd; padding: 12px; border-radius: 8px; border: 1px solid #f0f0f0; margin-bottom: 12px; box-sizing: border-box; }
-        .slider-item label { font-size: 0.85em; color: #555; display: flex; align-items: center; gap: 8px; font-weight: 600; cursor: pointer; margin-bottom: 0; }
-        .slider-item label input[type="checkbox"] { width: 16px; height: 16px; accent-color: var(--primary); cursor: pointer; margin: 0; }
-        .slider-item label .val-badge { font-weight: bold; color: var(--primary); background: #e8f4fd; padding: 2px 8px; border-radius: 12px; font-size: 0.9em; min-width: 20px; text-align: center; margin-left: auto; }
-        .metric-slider-wrap { margin-top: 15px; margin-bottom: 5px; }
-        .metric-slider { width: 100%; accent-color: var(--primary); outline: none; }
-
-        /* 卡片佈局 & UX優化 4: 絲滑載入動畫 */
-        @keyframes fadeUp {
-            from { opacity: 0; transform: translateY(15px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        .product-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(290px, 1fr)); gap: 15px; }
-        .product-card { animation: fadeUp 0.4s ease-out forwards; border: 1px solid var(--border); padding: 18px; border-radius: 10px; background: #fff; transition: 0.3s; display: flex; flex-direction: column; box-sizing: border-box; position: relative; }
-        .product-card:hover { box-shadow: 0 6px 20px rgba(0,0,0,0.08); transform: translateY(-3px); border-color: #bdc3c7; }
-
-        .product-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 12px; border-bottom: 1px solid #f0f0f0; padding-bottom: 10px; }
-        .product-title { margin: 0; color: #2c3e50; font-size: 1.15em; font-weight: bold; line-height: 1.3;}
-
-        .copy-btn { background: #f0f2f5; border: none; padding: 5px 8px; border-radius: 6px; cursor: pointer; font-size: 0.9em; transition: 0.2s; color: #555; }
-        .copy-btn:hover { background: #e1e8ed; color: var(--primary); }
-
-        .badge-container { margin-bottom: 12px; display: flex; flex-wrap: wrap; gap: 5px; }
-        .badge { color: white; padding: 3px 8px; border-radius: 6px; font-size: 0.75em; font-weight: bold; }
-        .badge-W { background: #3498db; } .badge-S { background: #e67e22; } .badge-UV { background: #9b59b6; } .badge-dispersion { background: #16a085; } .badge-special { background: #e74c3c; }
-
-        .info-row { display: flex; justify-content: space-between; margin-bottom: 8px; font-size: 0.85em; color: #666; line-height: 1.4; align-items: flex-start; }
-        .info-row span:first-child { color: #888; flex-shrink: 0; margin-right: 15px; font-weight: 500;}
-        .info-row span.highlight { color: #2c3e50; font-weight: 600; text-align: right; }
-        .dim-text { color: #bdc3c7 !important; font-weight: normal !important; }
-
-        .active-filter-hint { background: #fff3cd; border-left: 3px solid #f39c12; padding: 6px 10px; border-radius: 4px; font-size: 0.8em; margin-bottom: 10px; color: #d35400; font-weight: bold; display: flex; justify-content: space-between;}
-        .mark-highlight { background-color: #ffeaa7; padding: 0 3px; border-radius: 3px; color: #d35400; font-weight: bold; }
-
-        .empty-state { grid-column: 1/-1; text-align: center; padding: 50px 20px; background: #fff; border-radius: 12px; border: 1px dashed var(--border); }
-        .empty-state-icon { font-size: 3.5em; margin-bottom: 15px; display: inline-block; }
-        .empty-state h4 { margin: 0 0 10px 0; color: #2c3e50; font-size: 1.2em; }
-        .empty-state p { margin: 0 0 20px 0; color: #7f8c8d; font-size: 0.9em; }
-        .empty-state button { background: var(--primary); color: white; border: none; padding: 10px 20px; border-radius: 20px; font-weight: bold; cursor: pointer; transition: 0.2s; }
-        .empty-state button:hover { background: #226f9c; }
-
     </style>
 </head>
 <body>
 
-    <div class="top-navbar">
-        <div class="nav-left">
-            <button class="toggle-filter-btn" id="toggle-filter-btn">⚙️ 篩選面板</button>
-            <h2>MPI智慧塗料篩選器</h2>
-        </div>
-        <input type="search" id="search-input" class="search-box" placeholder="🔍 搜尋型號或描述 (例如: wax)...">
-    </div>
-
-    <!-- UX優化 2: 全域浮動提示 Toast -->
-    <div id="toast" class="toast">✅ <span id="toast-msg"></span></div>
-
-    <div class="sidebar-overlay" id="sidebar-overlay"></div>
-
-    <div class="layout-container">
-        <div class="sidebar" id="sidebar-panel">
-            <div class="sidebar-header">
-                <h4>🎛️ 篩選條件</h4>
-                <button class="close-sidebar-btn" id="close-sidebar-btn">✕</button>
-            </div>
-
-            <div class="sidebar-content">
-                <div class="filter-group" style="margin-bottom: 0;">
-                    <label for="market-select">📍 應用市場 (Market)</label>
-                    <select id="market-select">
-                        <option value="">-- 請選擇市場 --</option>
-                        <option value="ArchitecturalCoatings">建築塗料 (Architectural)</option>
-                        <option value="CanContainerCoatings">罐頭塗料 (Can & Container)</option>
-                        <option value="WoodCoatings">木器塗料 (Wood)</option>
-                        <option value="IndustrialCoatings">工業塗料 (Industrial)</option>
-                        <option value="IndustrialFlooringCoatings">地坪塗料 (Flooring)</option>
-                        <option value="PowderCoatings">粉體塗料 (Powder)</option>
-                        <option value="EnergyCurableInks&Coatings">光固化塗料 (Energy Curable)</option>
-                    </select>
-                </div>
-
-                <div id="advanced-filters" style="display: none;">
-
-                    <span class="filter-section-title">⚙️ 系統與劑型</span>
-                    <div class="checkbox-group">
-                        <label class="checkbox-label" id="label-W"><input type="checkbox" class="sys-filter" value="W"> 水性 (Waterborne)</label>
-                        <label class="checkbox-label" id="label-S"><input type="checkbox" class="sys-filter" value="S"> 溶劑型 (Solventborne)</label>
-                        <label class="checkbox-label" id="label-UV"><input type="checkbox" class="sys-filter" value="UV"> 光固化 (Energy Curable)</label>
-                        <label class="checkbox-label" style="margin-top: 5px; color: #16a085; font-weight: bold;"><input type="checkbox" id="dispersion-filter"> 僅顯示 水性分散體</label>
-                    </div>
-
-                    <div id="dynamic-special-filters"></div>
-
-                    <span class="filter-section-title">🔬 核心物理性質 (勾選啟用)</span>
-                    <div class="physical-filters">
-                        <div class="phys-slider-item">
-                            <label><input type="checkbox" id="cb-melt"><span>熔點 (°C)</span><span id="disp-melt" class="val-badge" style="display:none;">50 ~ 250+</span></label>
-                            <div class="dual-slider-container" id="wrap-melt" style="display:none;">
-                                <div class="dual-slider-track"><div class="dual-slider-fill" id="track-fill-melt"></div></div>
-                                <input type="range" id="melt-min" min="50" max="250" step="any" value="50" class="dual-slider-input" style="z-index: 4;">
-                                <input type="range" id="melt-max" min="50" max="250" step="any" value="250" class="dual-slider-input" style="z-index: 3;">
-                            </div>
-                        </div>
-
-                        <div class="phys-slider-item">
-                            <label><input type="checkbox" id="cb-ps"><span>平均粒徑 (μm)</span><span id="disp-ps" class="val-badge" style="display:none;">0.0 ~ 50.0+</span></label>
-                            <div class="dual-slider-container" id="wrap-ps" style="display:none;">
-                                <div class="dual-slider-track"><div class="dual-slider-fill" id="track-fill-ps"></div></div>
-                                <input type="range" id="ps-min" min="0" max="50" step="any" value="0" class="dual-slider-input" style="z-index: 4;">
-                                <input type="range" id="ps-max" min="0" max="50" step="any" value="50" class="dual-slider-input" style="z-index: 3;">
-                            </div>
-                        </div>
-
-                        <div class="phys-slider-item">
-                            <label><input type="checkbox" id="cb-density"><span>密度 (g/cc)</span><span id="disp-density" class="val-badge" style="display:none;">0.80 ~ 2.20</span></label>
-                            <div class="dual-slider-container" id="wrap-density" style="display:none;">
-                                <div class="dual-slider-track"><div class="dual-slider-fill" id="track-fill-density"></div></div>
-                                <input type="range" id="density-min" min="0.8" max="2.2" step="any" value="0.8" class="dual-slider-input" style="z-index: 4;">
-                                <input type="range" id="density-max" min="0.8" max="2.2" step="any" value="2.2" class="dual-slider-input" style="z-index: 3;">
-                            </div>
-                        </div>
-                    </div>
-
-                    <div id="dynamic-object-filters"></div>
-                    <span class="filter-section-title" id="slider-title" style="display:none;">📊 效能需求 (勾選啟用)</span>
-                    <div id="slider-container"></div>
-
-                    <button id="reset-btn" class="reset-btn">🗑️ 清除篩選條件</button>
-                </div>
-
-                <div id="empty-sidebar-msg" style="color: #95a5a6; font-size: 0.9em; text-align: center; padding: 20px 0;">
-                    請先選擇應用市場，系統將為您準備最佳的篩選條件。
-                </div>
-            </div>
-
-            <div class="mobile-footer" id="mobile-footer">
-                <button class="mobile-view-btn" id="mobile-view-btn">查看 <span id="mobile-count-text">0</span> 筆結果</button>
+    <nav class="navbar">
+        <h2 id="ui-title">🔬 MPI smart filter</h2>
+        <div class="nav-right">
+            <div class="lang-switch-container">
+                <input type="radio" name="lang" id="lang-zh" value="zh" checked onchange="switchLanguage('zh')">
+                <input type="radio" name="lang" id="lang-en" value="en" onchange="switchLanguage('en')">
+                <div class="lang-slider"></div>
+                <label class="lang-label label-zh" for="lang-zh">中文</label>
+                <label class="lang-label label-en" for="lang-en">EN</label>
             </div>
         </div>
+        <input type="text" id="search-input" class="search-box" placeholder="Search..." oninput="debouncedSearch(this.value)">
+    </nav>
 
-        <div class="main-content">
-            <div class="main-header">
-                <div class="main-header-left">
-                    <h3>📋 篩選結果</h3>
-                    <div class="result-count"><span id="product-count">0</span> 產品</div>
-                </div>
-                <select id="sort-select" class="sort-select" style="display: none; width: auto;">
-                    <option value="default">推薦排序</option>
-                    <option value="name_asc">產品名稱 (A-Z)</option>
-                    <option value="ps_asc">平均粒徑 (小 ➔ 大)</option>
-                    <option value="ps_desc">平均粒徑 (大 ➔ 小)</option>
-                    <option value="melt_desc">熔點 (高 ➔ 低)</option>
-                    <option value="density_asc">密度 (低 ➔ 高)</option>
-                </select>
+    <div id="sidebar-overlay" class="sidebar-overlay" onclick="toggleSidebar(false)"></div>
+
+    <button id="floating-trigger-btn" class="floating-trigger-btn" onclick="toggleSidebar(true)">
+        ⚙️ <span id="ui-floating-text">設定篩選條件</span>
+    </button>
+
+    <div class="layout">
+        <aside id="sidebar" class="sidebar">
+            <div class="filter-group">
+                <div class="filter-title" id="ui-market">📍 應用市場 / Market</div>
+                <select id="market-select" onchange="changeMarket(this.value)"></select>
             </div>
 
-            <div class="products-scroll-area" id="scroll-area">
-                <div id="product-list" class="product-grid">
-                    <div class="empty-state">
-                        <span class="empty-state-icon">👋</span>
-                        <h4>歡迎使用MPI智慧塗料篩選器</h4>
-                        <p>請先從左側選擇您的「應用市場」，開始探索產品！</p>
-                    </div>
+            <div id="dynamic-filters" style="display: none; flex-direction: column; gap: 22px;">
+                <div class="filter-group" id="system-filter-group">
+                    <div class="filter-title" id="ui-system">⚙️ 系統與劑型</div>
+                    <label class="checkbox-label" id="lbl-sys-w"><input type="checkbox" id="sys-W" onchange="updateFilters()"> <span id="ui-sys-w">水性 (W)</span></label>
+                    <label class="checkbox-label" id="lbl-sys-s"><input type="checkbox" id="sys-S" onchange="updateFilters()"> <span id="ui-sys-s">溶劑型 (S)</span></label>
+                    <label class="checkbox-label" id="lbl-sys-uv"><input type="checkbox" id="sys-UV" onchange="updateFilters()"> <span id="ui-sys-uv">光固化 (UV)</span></label>
+                    <label class="checkbox-label" id="lbl-sys-disp" style="margin-top: 3px; color: #059669; font-weight: bold;">
+                        <input type="checkbox" id="sys-disp" onchange="updateFilters()"> <span id="ui-sys-disp">僅顯示分散體</span>
+                    </label>
                 </div>
-            </div>
 
-            <button id="back-to-top" class="back-to-top" title="回到頂部">↑</button>
-        </div>
+                <div class="filter-group" id="special-filters-container" style="display: none;">
+                    <div class="filter-title" id="ui-special">🌟 特殊要求</div>
+                    <div id="special-filters-list" style="display: flex; flex-direction: column; gap: 10px;"></div>
+                </div>
+
+                <div class="filter-group">
+                    <div class="filter-title" id="ui-perf">📊 效能喜好 (拉高以配對)</div>
+                    <div id="perf-sliders-container"></div>
+                </div>
+
+                <button class="reset-btn" id="ui-reset" onclick="resetFilters()">🗑️ 清除篩選條件</button>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <div id="product-grid" class="product-grid"></div>
+        </main>
     </div>
 
 <script>
-let productData = [];
-const marketSelect = document.getElementById('market-select');
-const searchInput = document.getElementById('search-input');
-const sortSelect = document.getElementById('sort-select');
-const resetBtn = document.getElementById('reset-btn');
-const advancedFilters = document.getElementById('advanced-filters');
-const dynamicObjectFilters = document.getElementById('dynamic-object-filters');
-const dynamicSpecialFilters = document.getElementById('dynamic-special-filters');
-const sliderContainer = document.getElementById('slider-container');
-const emptySidebarMsg = document.getElementById('empty-sidebar-msg');
-const sliderTitle = document.getElementById('slider-title');
-const productList = document.getElementById('product-list');
-const productCount = document.getElementById('product-count');
-const mobileCountText = document.getElementById('mobile-count-text');
-const scrollArea = document.getElementById('scroll-area');
-const backToTopBtn = document.getElementById('back-to-top');
-
-const toggleFilterBtn = document.getElementById('toggle-filter-btn');
-const sidebarPanel = document.getElementById('sidebar-panel');
-const closeSidebarBtn = document.getElementById('close-sidebar-btn');
-const sidebarOverlay = document.getElementById('sidebar-overlay');
-const mobileViewBtn = document.getElementById('mobile-view-btn');
-
-let currentSliderFilters = {};
-const physConfig = { melt: { decimals: 0 }, ps: { decimals: 1 }, density: { decimals: 2 } };
-
-// UX優化 1: 搜尋防抖 (Debounce)
-let searchTimeout;
-
-// 回到頂部按鈕邏輯
-scrollArea.addEventListener('scroll', () => {
-    if (scrollArea.scrollTop > 300) backToTopBtn.classList.add('visible');
-    else backToTopBtn.classList.remove('visible');
-});
-backToTopBtn.addEventListener('click', () => scrollArea.scrollTo({ top: 0, behavior: 'smooth' }));
-
-// 側邊欄開關
-toggleFilterBtn.addEventListener('click', () => {
-    if (window.innerWidth <= 768) {
-        sidebarPanel.classList.add('active');
-        sidebarOverlay.style.display = 'block';
-        setTimeout(() => sidebarOverlay.style.opacity = '1', 10);
-        document.body.classList.add('sidebar-open');
-    } else {
-        sidebarPanel.classList.toggle('collapsed');
-    }
-});
-
-function closeMobileSidebar() {
-    sidebarPanel.classList.remove('active');
-    sidebarOverlay.style.opacity = '0';
-    document.body.classList.remove('sidebar-open');
-    setTimeout(() => sidebarOverlay.style.display = 'none', 300);
-}
-
-closeSidebarBtn.addEventListener('click', closeMobileSidebar);
-sidebarOverlay.addEventListener('click', closeMobileSidebar);
-mobileViewBtn.addEventListener('click', closeMobileSidebar);
-
-// UX優化 2: 浮動提示 Toast 功能
-function showToast(message) {
-    const toast = document.getElementById('toast');
-    document.getElementById('toast-msg').innerText = message;
-    toast.classList.add('show');
-    setTimeout(() => toast.classList.remove('show'), 2000);
-}
-
-window.copyToClipboard = function(text, btn) {
-    navigator.clipboard.writeText(text).then(() => {
-        btn.innerHTML = '✅';
-        btn.style.color = '#27ae60';
-        showToast(`已複製：${text}`);
-        setTimeout(() => { btn.innerHTML = '📋'; btn.style.color = '#555'; }, 1500);
-    });
-};
-
-fetch('./MPI_Product_Database_2026.json')
-    .then(r => r.json())
-    .then(data => { productData = data; })
-    .catch(e => { productList.innerHTML = `<p style="color: #e74c3c;">資料庫載入失敗，請確認檔案路徑。</p>`; });
-
-marketSelect.addEventListener('change', handleMarketChange);
-sortSelect.addEventListener('change', renderProducts);
-
-// 掛載搜尋防抖
-searchInput.addEventListener('input', () => {
-    clearTimeout(searchTimeout);
-    searchTimeout = setTimeout(renderProducts, 250);
-});
-
-// 一鍵重置
-resetBtn.addEventListener('click', () => {
-    // 1. 清空搜尋與排序
-    searchInput.value = '';
-    sortSelect.value = 'default';
-
-    // 2. 清空所有 Checkbox
-    document.querySelectorAll('.sidebar-content input[type="checkbox"]').forEach(cb => cb.checked = false);
-
-    // 3. 重置物理拉桿
-    ['melt', 'ps', 'density'].forEach(type => {
-        const minEl = document.getElementById(`${type}-min`), maxEl = document.getElementById(`${type}-max`);
-        minEl.value = minEl.min; maxEl.value = maxEl.max;
-        document.getElementById(`wrap-${type}`).style.display = 'none';
-        document.getElementById(`disp-${type}`).style.display = 'none';
-        updateDualSliderVisuals(type);
-    });
-
-    // 4. 重置效能拉桿
-    document.querySelectorAll('.metric-slider').forEach(slider => {
-        slider.value = 0;
-        const metric = slider.dataset.metric;
-        document.getElementById(`val-${metric}`).innerText = '0';
-        currentSliderFilters[metric] = 0;
-        document.getElementById(`wrap-${metric}`).style.display = 'none';
-        document.getElementById(`val-${metric}`).style.display = 'none';
-    });
-
-    // 主動呼叫計數器更新，讓按鈕上的「已套用 X 項」完美歸零
-    updateActiveFilterCount();
-
-    // 重新渲染產品清單
-    renderProducts();
-
-    // 讓左側篩選面板、右側產品列表都「平滑滑動」回到最上方
-    document.querySelector('.sidebar-content').scrollTo({ top: 0, behavior: 'smooth' });
-    document.getElementById('scroll-area').scrollTo({ top: 0, behavior: 'smooth' });
-});
-
-// UX優化 3: 監聽所有表單變化以更新「計數器」
-document.querySelector('.sidebar-content').addEventListener('change', updateActiveFilterCount);
-
-// UX優化 3: 監聽所有表單變化以更新「計數器」
-function updateActiveFilterCount() {
-    // 🚀 修正：直接計算側邊欄中「所有被勾選」的 checkbox 數量，不再遺漏任何動態生成的條件
-    let count = document.querySelectorAll('.sidebar-content input[type="checkbox"]:checked').length;
-
-    if (count > 0) {
-        resetBtn.innerHTML = `🗑️ 清除篩選條件 (已套用 ${count} 項)`;
-        resetBtn.style.borderColor = '#c0392b';
-        resetBtn.style.color = '#c0392b';
-    } else {
-        resetBtn.innerHTML = `🗑️ 清除篩選條件`;
-        resetBtn.style.borderColor = '#e74c3c';
-        resetBtn.style.color = '#e74c3c';
-    }
-}
-
-document.querySelectorAll('.sys-filter, #dispersion-filter').forEach(el => el.addEventListener('change', renderProducts));
-
-['melt', 'ps', 'density'].forEach(type => {
-    const cb = document.getElementById(`cb-${type}`), wrap = document.getElementById(`wrap-${type}`);
-    const disp = document.getElementById(`disp-${type}`), minEl = document.getElementById(`${type}-min`), maxEl = document.getElementById(`${type}-max`);
-    updateDualSliderVisuals(type);
-
-    cb.addEventListener('change', (e) => {
-        wrap.style.display = e.target.checked ? 'flex' : 'none';
-        disp.style.display = e.target.checked ? 'inline-block' : 'none';
-        renderProducts();
-    });
-    minEl.addEventListener('input', (e) => handlePhysSlider(type, true));
-    maxEl.addEventListener('input', (e) => handlePhysSlider(type, false));
-});
-
-function updateDualSliderVisuals(type) {
-    const minEl = document.getElementById(`${type}-min`), maxEl = document.getElementById(`${type}-max`);
-    const fillEl = document.getElementById(`track-fill-${type}`);
-    let minVal = parseFloat(minEl.value), maxVal = parseFloat(maxEl.value);
-    const minLimit = parseFloat(minEl.min), maxLimit = parseFloat(maxEl.max);
-
-    fillEl.style.left = `${((minVal - minLimit) / (maxLimit - minLimit)) * 100}%`;
-    fillEl.style.width = `${((maxVal - minVal) / (maxLimit - minLimit)) * 100}%`;
-
-    let dispMin = minVal.toFixed(physConfig[type].decimals), dispMax = maxVal.toFixed(physConfig[type].decimals);
-    if (type === 'ps') { if (maxVal >= 50) dispMax = '50.0+'; if (minVal >= 50) dispMin = '50.0+'; }
-    if (type === 'melt') { if (maxVal >= 250) dispMax = '250+'; if (minVal >= 250) dispMin = '250+'; }
-    document.getElementById(`disp-${type}`).innerText = `${dispMin} ~ ${dispMax}`;
-}
-
-function handlePhysSlider(type, isMin) {
-    const minEl = document.getElementById(`${type}-min`), maxEl = document.getElementById(`${type}-max`);
-    if (parseFloat(minEl.value) > parseFloat(maxEl.value)) { if (isMin) minEl.value = maxEl.value; else maxEl.value = minEl.value; }
-    minEl.style.zIndex = isMin ? "4" : "3"; maxEl.style.zIndex = isMin ? "3" : "4";
-    updateDualSliderVisuals(type);
-    renderProducts();
-}
-
-function handleMarketChange(e) {
-    const selectedMarket = e.target.value;
-    currentSliderFilters = {};
-
-    if (selectedMarket) {
-        advancedFilters.style.display = 'block';
-        resetBtn.style.display = 'block';
-        sortSelect.style.display = 'inline-block';
-        emptySidebarMsg.style.display = 'none';
-        sliderTitle.style.display = 'block';
-
-        updateSystemCheckboxStatus(selectedMarket);
-        generateSpecialFilters(selectedMarket);
-        generateDynamicObjectFilters(selectedMarket);
-        generateSliders(selectedMarket);
-    } else {
-        advancedFilters.style.display = 'none';
-        resetBtn.style.display = 'none';
-        sortSelect.style.display = 'none';
-        emptySidebarMsg.style.display = 'block';
-        sliderTitle.style.display = 'none';
-    }
-    updateActiveFilterCount();
-    renderProducts();
-}
-
-function updateSystemCheckboxStatus(market) {
-    let supportedSystems = new Set();
-    productData.forEach(p => {
-        const profile = p.application_profiles[market];
-        if (profile && profile.Recommended_System_Type) profile.Recommended_System_Type.forEach(sys => supportedSystems.add(sys));
-    });
-    document.querySelectorAll('.sys-filter').forEach(cb => {
-        const label = document.getElementById(`label-${cb.value}`);
-        cb.disabled = !supportedSystems.has(cb.value);
-        cb.checked = cb.disabled ? false : cb.checked;
-        label.classList.toggle('disabled', cb.disabled);
-    });
-}
-
-function generateSpecialFilters(market) {
-    dynamicSpecialFilters.innerHTML = '';
-    let hasFDA = false, hasIE = new Set(), hasNatural = false, hasPtfeAlt = false;
-
-    productData.forEach(p => {
-        const profile = p.application_profiles[market];
-        if (profile) {
-            if (profile.FDA_21CFR_175_300_Compliance) hasFDA = true;
-            if (profile.Interior_Exterior) profile.Interior_Exterior.split(',').forEach(v => hasIE.add(v.trim()));
-            if (profile.Natural_Naturally_Derived > 0) hasNatural = true;
-            if (profile.PTFE_Alternative > 0) hasPtfeAlt = true;
+    const i18n = {
+        zh: {
+            title: "🔬 MPI 智慧塗料篩選器",
+            search: "搜尋產品名稱或關鍵字...",
+            market: "📍 應用市場",
+            marketSelect: "--- 請選擇應用市場 ---",
+            system: "⚙️ 系統與劑型",
+            sysW: "水性 (W)",
+            sysS: "溶劑型 (S)",
+            sysUV: "光固化 (UV/EB)",
+            sysDisp: "💧 僅顯示水性分散體",
+            special: "🌟 特殊要求",
+            perf: "📊 效能喜好",
+            reset: "🗑️ 清除所有條件",
+            floatingText: "變更篩選",
+            matchRate: "🎯 匹配度",
+            powerScore: "🌟 綜合評分",
+            emptyMarketTitle: "歡迎使用智慧型導航篩選器 👋",
+            emptyMarketDesc: "請先從左側選單指定您的「應用市場」，系統將自動偵測並僅顯示該領域存在的規格與效能滑桿。",
+            emptyResultTitle: "沒有符合目前設定的產品 😢",
+            emptyResultDesc: "您的硬性條件 (系統/劑型/特殊要求) 可能太嚴格了，嘗試放寬一些限制。",
+            coreProps: "物理屬性規格",
+            meltPoint: "熔點",
+            density: "密度",
+            meanPs: "平均粒徑",
+            topPerf: "👑 卓越滿分特性",
+            fda: "✅ 符合 FDA 175.300",
+            ptfe: "🚫 PTFE 替代方案",
+            natural: "🍃 天然成分衍生",
+            markets: {
+                "ArchitecturalCoatings": "建築塗料",
+                "CanContainerCoatings": "罐頭與容器塗料",
+                "WoodCoatings": "木器塗料",
+                "IndustrialCoatings": "工業塗料",
+                "IndustrialFlooringCoatings": "工業地坪塗料",
+                "PowderCoatings": "粉末塗料",
+                "EnergyCurableInks&Coatings": "能量固化油墨與塗料"
+            }
+        },
+        en: {
+            title: "🔬 MPI smart filter",
+            search: "Search product name or keywords...",
+            market: "📍 Application Market",
+            marketSelect: "--- Select Application Market ---",
+            system: "⚙️ System Type",
+            sysW: "Waterborne (W)",
+            sysS: "Solventborne (S)",
+            sysUV: "UV / EB Curable",
+            sysDisp: "💧 Dispersion Form Only",
+            special: "🌟 Special Requirements",
+            perf: "📊 Performance Preferences",
+            reset: "🗑️ Reset Filters",
+            floatingText: "Filters",
+            matchRate: "🎯 Match Rate",
+            powerScore: "🌟 Power Score",
+            emptyMarketTitle: "Welcome to MPI Smart Filter 👋",
+            emptyMarketDesc: "Select an application market from the menu. The system will dynamically generate filters based ONLY on available products.",
+            emptyResultTitle: "No Products Matched 😢",
+            emptyResultDesc: "Try relaxing your hard filters (System type / Special requirements).",
+            coreProps: "Core Physical Properties",
+            meltPoint: "Melt Point",
+            density: "Density",
+            meanPs: "Mean PS",
+            topPerf: "👑 Top Achievements",
+            fda: "✅ FDA 175.300 Compliant",
+            ptfe: "🚫 PTFE Alternative",
+            natural: "🍃 Natural / Derived",
+            markets: {
+                "ArchitecturalCoatings": "Architectural Coatings",
+                "CanContainerCoatings": "Can & Container Coatings",
+                "WoodCoatings": "Wood Coatings",
+                "IndustrialCoatings": "Industrial Coatings",
+                "IndustrialFlooringCoatings": "Industrial Flooring Coatings",
+                "PowderCoatings": "Powder Coatings",
+                "EnergyCurableInks&Coatings": "Energy Curable Inks & Coatings"
+            }
         }
-    });
+    };
 
-    let html = '';
-    if (hasNatural || hasPtfeAlt) {
-        html += `<span class="filter-section-title">🌱 綠色永續與特殊替代</span><div class="checkbox-group">`;
-        if (hasNatural) html += `<label class="checkbox-label" style="color: #27ae60; font-weight: bold;"><input type="checkbox" id="cb-natural"> 🍃 僅顯示 天然來源</label>`;
-        if (hasPtfeAlt) html += `<label class="checkbox-label" style="color: #8e44ad; font-weight: bold;"><input type="checkbox" id="cb-ptfe-alt"> 🚫 僅顯示 PTFE 替代品</label>`;
-        html += `</div>`;
-    }
-    if (hasFDA) html += `<span class="filter-section-title">🛡️ 法規與安全</span><div class="checkbox-group"><label class="checkbox-label"><input type="checkbox" id="fda-filter" value="Yes"> 要求 FDA 175.300 認證</label></div>`;
-    if (hasIE.size > 0) {
-        html += `<span class="filter-section-title">🏠 適用環境</span><div class="checkbox-group">`;
-        if (hasIE.has('I')) html += `<label class="checkbox-label"><input type="checkbox" class="ie-filter" value="I"> 室內 (Interior)</label>`;
-        if (hasIE.has('E')) html += `<label class="checkbox-label"><input type="checkbox" class="ie-filter" value="E"> 室外 (Exterior)</label>`;
-        html += `</div>`;
-    }
-    dynamicSpecialFilters.innerHTML = html;
-    dynamicSpecialFilters.querySelectorAll('input[type="checkbox"]').forEach(cb => cb.addEventListener('change', renderProducts));
-}
+    const perfDictZh = {
+        "Burnish_Resistance": "抗拋光性", "Matting_and_Gloss_Control": "消光與光澤控制", "Block_Resistance": "抗回黏性",
+        "Resistance_to_Dirt_Pick_Up": "抗沾污性", "Cleanability": "易潔性", "Water_Repellency_Beading": "疏水性 (水珠)",
+        "Water_Repellency_beading": "疏水性 (水珠)", "Moisture_and_Stain_Resistance": "防潮與抗污性",
+        "Scratch_and_Mar_Resistance": "抗刮與耐磨擦", "Scratch_and_Abrasion_Resistance": "抗刮與耐磨性", "Texture": "表面紋理",
+        "Lubricity_and_Smooth_Feel": "潤滑與流暢觸感", "Soft_Touch": "觸感柔化度", "Heel_Mark_Resistance": "抗黑跟印性",
+        "Anti_Skid": "表面防滑性", "Film_Clarity": "漆膜透明度", "In_Can_Stability": "包裝罐內穩定度",
+        "Slip_and_Mobility": "滑爽性與流動移動力", "Heat_Resistance": "耐熱阻抗性", "Moisture_Resistance": "耐水氣防潮性",
+        "Crown_Closure_Seal_Adhesion": "皇冠蓋密合附著力", "Meat_Release": "肉類脫模性", "Gloss_Retention": "光澤保持率",
+        "Slip_and_Lubricity": "滑性與潤滑感", "Clarity": "高透明清晰度", "Soft_Touch_Silky_Feel": "絲滑柔感質地",
+        "Increased_COF": "提高摩擦係數(COF)", "Tape_Release": "膠帶離型脫膜度", "Metal_Mark_Resistance": "抗金屬劃痕性能",
+        "Apparent_Hardness": "表觀硬度特性", "Early_Water_Resistance": "初期耐水耐候性", "Non_Skid": "防滑阻力",
+        "Abrasion_and_Scratch_Resistance": "耐磨與抗刮擦性", "Scuff_and_Heel_Mark_Resistance": "抗擦傷與黑鞋印性",
+        "Resistance_to_Hot_Tire_Pick_up": "抗熱輪胎沾黏阻力", "Granite_Effect": "花崗岩紋理質地", "Improved_Extrusion_Flow": "優化擠出加工流動",
+        "Anti_Gassing": "抗針孔防排氣性", "Texture_and_Structure": "結構與立體紋理", "Sealant_Adhesion": "密封膠抓著力",
+        "Edge_Coverage": "塗層邊緣覆蓋力", "Corrosion_Resistance": "高防腐蝕保護力"
+    };
 
-function generateDynamicObjectFilters(market) {
-    dynamicObjectFilters.innerHTML = '';
-    let objectFields = {};
-    productData.forEach(p => {
-        const profile = p.application_profiles[market];
-        if (profile) {
-            Object.keys(profile).forEach(key => {
-                if (profile[key] && typeof profile[key] === 'object' && !Array.isArray(profile[key])) {
-                    if (!objectFields[key]) objectFields[key] = new Set();
-                    Object.keys(profile[key]).forEach(subKey => { if (profile[key][subKey] === true) objectFields[key].add(subKey); });
+    let rawData = [];
+    let state = {
+        lang: 'zh', market: '', search: '',
+        sysW: false, sysS: false, sysUV: false, dispOnly: false,
+        reqFda: false, reqPtfe: false, reqNatural: false,
+        perfReq: {}
+    };
+
+    // 效能優化：防抖函數 (Debounce) 用於搜尋輸入
+    let searchTimeout;
+    function debouncedSearch(val) {
+        clearTimeout(searchTimeout);
+        searchTimeout = setTimeout(() => {
+            state.search = val;
+            renderGrid();
+        }, 300); // 延遲 300ms 等待使用者停止打字
+    }
+
+    async function init() {
+        try {
+            const res = await fetch('MPI_Product_Database_merge.json');
+            rawData = await res.json();
+            populateMarketSelect();
+            updateStaticUI();
+            renderGrid();
+        } catch (e) {
+            console.error(e);
+            document.getElementById('product-grid').innerHTML = `<div class="empty-state"><h3>⚠️ 無法讀取資料源</h3><p>請確認資料庫 json 檔案完整且透過伺服器環境執行。</p></div>`;
+        }
+    }
+
+    function toggleSidebar(open) {
+        const sidebar = document.getElementById('sidebar');
+        const overlay = document.getElementById('sidebar-overlay');
+        if (open) { sidebar.classList.add('active'); overlay.classList.add('active'); }
+        else { sidebar.classList.remove('active'); overlay.classList.remove('active'); }
+    }
+
+    function switchLanguage(lang) {
+        state.lang = lang;
+        document.documentElement.lang = lang === 'zh' ? 'zh-TW' : 'en';
+        updateStaticUI();
+        populateMarketSelect();
+        buildSmartSidebar();
+        renderGrid();
+    }
+
+    function t(key) { return i18n[state.lang][key]; }
+    function getPerfName(key) { return state.lang === 'zh' ? (perfDictZh[key] || key.replace(/_/g, ' ')) : key.replace(/_/g, ' '); }
+
+    function updateStaticUI() {
+        document.getElementById('ui-title').innerText = t('title');
+        document.getElementById('search-input').placeholder = t('search');
+        document.getElementById('ui-market').innerText = t('market');
+        document.getElementById('ui-system').innerText = t('system');
+        document.getElementById('ui-sys-w').innerText = t('sysW');
+        document.getElementById('ui-sys-s').innerText = t('sysS');
+        document.getElementById('ui-sys-uv').innerText = t('sysUV');
+        document.getElementById('ui-sys-disp').innerText = t('sysDisp');
+        document.getElementById('ui-special').innerText = t('special');
+        document.getElementById('ui-perf').innerText = t('perf');
+        document.getElementById('ui-reset').innerText = t('reset');
+        document.getElementById('ui-floating-text').innerText = t('floatingText');
+    }
+
+    function populateMarketSelect() {
+        const select = document.getElementById('market-select');
+        select.innerHTML = `<option value="">${t('marketSelect')}</option>` +
+            Object.keys(i18n.en.markets).map(mKey =>
+                `<option value="${mKey}" ${state.market === mKey ? 'selected' : ''}>${t('markets')[mKey]}</option>`
+            ).join('');
+    }
+
+    function changeMarket(marketKey) {
+        state.market = marketKey;
+        resetFilters(false);
+        buildSmartSidebar();
+        renderGrid();
+    }
+
+    // 效能優化：分離「拖曳時更新數字UI」與「放開時更新過濾器」
+    function updateSliderValUI(key, val) {
+        document.getElementById('val-' + key).innerText = val;
+        state.perfReq[key] = parseInt(val);
+    }
+
+    function updateFilters() {
+        state.sysW = document.getElementById('sys-W').checked;
+        state.sysS = document.getElementById('sys-S').checked;
+        state.sysUV = document.getElementById('sys-UV').checked;
+        state.dispOnly = document.getElementById('sys-disp').checked;
+
+        const reqFdaNode = document.getElementById('req-fda');
+        const reqPtfeNode = document.getElementById('req-ptfe');
+        const reqNaturalNode = document.getElementById('req-natural');
+
+        state.reqFda = reqFdaNode ? reqFdaNode.checked : false;
+        state.reqPtfe = reqPtfeNode ? reqPtfeNode.checked : false;
+        state.reqNatural = reqNaturalNode ? reqNaturalNode.checked : false;
+
+        // 確保效能狀態同步
+        Object.keys(state.perfReq).forEach(key => {
+            const slider = document.getElementById('perf-' + key);
+            if (slider) state.perfReq[key] = parseInt(slider.value);
+        });
+
+        renderGrid();
+    }
+
+    function resetFilters(clearMarket = true) {
+        if (clearMarket) { state.market = ''; document.getElementById('market-select').value = ''; }
+        state.search = ''; document.getElementById('search-input').value = '';
+        state.sysW = false; document.getElementById('sys-W').checked = false;
+        state.sysS = false; document.getElementById('sys-S').checked = false;
+        state.sysUV = false; document.getElementById('sys-UV').checked = false;
+        state.dispOnly = false; document.getElementById('sys-disp').checked = false;
+        state.reqFda = false; state.reqPtfe = false; state.reqNatural = false;
+
+        Object.keys(state.perfReq).forEach(k => state.perfReq[k] = 0);
+
+        if(clearMarket) buildSmartSidebar();
+        else {
+            // 重置滑桿UI
+            Object.keys(state.perfReq).forEach(key => {
+                const slider = document.getElementById('perf-' + key);
+                const valDisp = document.getElementById('val-' + key);
+                if (slider) slider.value = 0;
+                if (valDisp) valDisp.innerText = "0";
+            });
+            updateFilters();
+        }
+    }
+
+    // 效能優化：一次性寫入 DOM，取代迴圈內 += innerHTML
+    function buildSmartSidebar() {
+        const dynFilters = document.getElementById('dynamic-filters');
+        if (!state.market) { dynFilters.style.display = 'none'; return; }
+        dynFilters.style.display = 'flex';
+
+        let validPerfs = new Set();
+        let hasW = false, hasS = false, hasUV = false, hasDisp = false;
+        let hasFDA = false, hasPTFE = false, hasNatural = false;
+
+        // 掃描當前市場
+        for (let i = 0; i < rawData.length; i++) {
+            const prof = rawData[i].en.application_profiles[state.market];
+            if (!prof) continue;
+
+            const sys = prof.Recommended_System_Type || [];
+            if (!hasW && sys.includes("W")) hasW = true;
+            if (!hasS && sys.includes("S")) hasS = true;
+            if (!hasUV && sys.includes("UV")) hasUV = true;
+            if (!hasDisp && prof.Available_as_Waterborne_Dispersion === true) hasDisp = true;
+
+            if (!hasFDA && prof.FDA_21CFR_175_300_Compliance === "Yes") hasFDA = true;
+            if (!hasPTFE && prof.PTFE_Alternative > 0) hasPTFE = true;
+            if (!hasNatural && prof.Natural_Naturally_Derived > 0) hasNatural = true;
+
+            Object.keys(prof).forEach(key => {
+                if (typeof prof[key] === 'number' && prof[key] > 0 && key !== 'PTFE_Alternative' && key !== 'Natural_Naturally_Derived') {
+                    validPerfs.add(key);
                 }
             });
         }
-    });
 
-    for (const field in objectFields) {
-        if (objectFields[field].size > 0) {
-            let html = `<span class="filter-section-title">🏢 ${formatMetricName(field)} 需求</span><div class="checkbox-group">`;
-            objectFields[field].forEach(subKey => { html += `<label class="checkbox-label"><input type="checkbox" class="obj-filter" data-field="${field}" value="${subKey}"> ${subKey}</label>`; });
-            html += `</div>`;
-            dynamicObjectFilters.innerHTML += html;
+        // 1. 系統過濾器 UI 狀態更新
+        const sysWCheck = document.getElementById('sys-W');
+        document.getElementById('lbl-sys-w').style.display = hasW ? 'flex' : 'none';
+        if(!hasW) { state.sysW = false; sysWCheck.checked = false; }
+
+        const sysSCheck = document.getElementById('sys-S');
+        document.getElementById('lbl-sys-s').style.display = hasS ? 'flex' : 'none';
+        if(!hasS) { state.sysS = false; sysSCheck.checked = false; }
+
+        const sysUVCheck = document.getElementById('sys-UV');
+        document.getElementById('lbl-sys-uv').style.display = hasUV ? 'flex' : 'none';
+        if(!hasUV) { state.sysUV = false; sysUVCheck.checked = false; }
+
+        const sysDispCheck = document.getElementById('sys-disp');
+        document.getElementById('lbl-sys-disp').style.display = hasDisp ? 'flex' : 'none';
+        if(!hasDisp) { state.dispOnly = false; sysDispCheck.checked = false; }
+
+        document.getElementById('system-filter-group').style.display = (hasW || hasS || hasUV || hasDisp) ? 'flex' : 'none';
+
+        // 2. 特殊要求 UI 批次生成
+        const specContainer = document.getElementById('special-filters-container');
+        const specList = document.getElementById('special-filters-list');
+
+        if (hasFDA || hasPTFE || hasNatural) {
+            specContainer.style.display = 'flex';
+            let specHtmlArray = [];
+            if (hasFDA) specHtmlArray.push(`<label class="checkbox-label"><input type="checkbox" id="req-fda" ${state.reqFda?'checked':''} onchange="updateFilters()"> <span>${t('fda')}</span></label>`);
+            if (hasPTFE) specHtmlArray.push(`<label class="checkbox-label"><input type="checkbox" id="req-ptfe" ${state.reqPtfe?'checked':''} onchange="updateFilters()"> <span>${t('ptfe')}</span></label>`);
+            if (hasNatural) specHtmlArray.push(`<label class="checkbox-label"><input type="checkbox" id="req-natural" ${state.reqNatural?'checked':''} onchange="updateFilters()"> <span>${t('natural')}</span></label>`);
+            specList.innerHTML = specHtmlArray.join('');
+        } else {
+            specContainer.style.display = 'none';
+            specList.innerHTML = '';
+            state.reqFda = false; state.reqPtfe = false; state.reqNatural = false;
         }
-    }
-    document.querySelectorAll('.obj-filter').forEach(cb => cb.addEventListener('change', renderProducts));
-}
 
-function generateSliders(market) {
-    sliderContainer.innerHTML = '';
-    let availableMetrics = new Set();
-    productData.forEach(p => {
-        const profile = p.application_profiles[market];
-        if (profile) Object.keys(profile).forEach(key => { if (typeof profile[key] === 'number') availableMetrics.add(key); });
-    });
+        // 3. 效能滑桿 UI 批次生成
+        const sliderContainer = document.getElementById('perf-sliders-container');
+        const newPerfReq = {};
 
-    let meaningfulMetrics = [];
-    availableMetrics.forEach(metric => {
-        if (Math.max(...productData.map(p => p.application_profiles[market]?.[metric] || 0)) > 0) meaningfulMetrics.push(metric);
-    });
-
-    if (meaningfulMetrics.length > 0) {
-        let html = '';
-        meaningfulMetrics.sort().forEach(metric => {
-            currentSliderFilters[metric] = 0;
-            html += `
-                <div class="slider-item">
-                    <label>
-                        <input type="checkbox" class="cb-perf" data-metric="${metric}">
-                        <span>${formatMetricName(metric)}</span>
-                        <span id="val-${metric}" class="val-badge" style="display:none;">0</span>
-                    </label>
-                    <div id="wrap-${metric}" class="metric-slider-wrap" style="display:none;">
-                        <input type="range" min="0" max="3" value="0" data-metric="${metric}" class="metric-slider">
+        const slidersHtml = Array.from(validPerfs).map(key => {
+            newPerfReq[key] = state.perfReq[key] || 0;
+            // 注意此處：oninput 僅更新數字，onchange 才重新算分，減少卡頓
+            return `
+                <div class="slider-group">
+                    <div class="slider-header">
+                        <span>${getPerfName(key)}</span>
+                        <span class="val" id="val-${key}">${newPerfReq[key]}</span>
                     </div>
+                    <input type="range" id="perf-${key}" min="0" max="3" step="1" value="${newPerfReq[key]}"
+                        oninput="updateSliderValUI('${key}', this.value)"
+                        onchange="updateFilters()">
                 </div>
             `;
-        });
-        sliderContainer.innerHTML = html;
+        }).join('');
 
-        document.querySelectorAll('.cb-perf').forEach(cb => {
-            cb.addEventListener('change', (e) => {
-                const metric = e.target.dataset.metric;
-                document.getElementById(`wrap-${metric}`).style.display = e.target.checked ? 'block' : 'none';
-                document.getElementById(`val-${metric}`).style.display = e.target.checked ? 'inline-block' : 'none';
-                renderProducts();
-            });
-        });
-
-        document.querySelectorAll('.metric-slider').forEach(slider => {
-            slider.addEventListener('input', (e) => {
-                const metric = e.target.dataset.metric;
-                document.getElementById(`val-${metric}`).innerText = e.target.value;
-                currentSliderFilters[metric] = parseInt(e.target.value);
-                renderProducts();
-            });
-        });
-    } else {
-         sliderContainer.innerHTML = '<p style="color: #7f8c8d; font-size: 0.85em;">此市場目前無數值指標。</p>';
-    }
-}
-
-function formatMetricName(key) { return key.replace(/_/g, ' '); }
-
-function highlight(text, term) {
-    if (!text || text === 'N/A' || text === '-') return `<span class="dim-text">N/A</span>`;
-    if (!term) return text;
-    const regex = new RegExp(`(${term.replace(/[.*+?^${}()|[\\]\\\\]/g, '\\$&')})`, 'gi');
-    return text.toString().replace(regex, '<mark class="mark-highlight">$1</mark>');
-}
-
-function formatValue(text) {
-    if (!text || text === 'N/A' || text === '-') return `<span class="dim-text">N/A</span>`;
-    return text;
-}
-
-function getSortablePS(psObj) {
-    if (!psObj || psObj.min === null) return Infinity;
-    if (psObj.type === 'micron' || psObj.type === 'sub-micron') return (parseFloat(psObj.min) + parseFloat(psObj.max)) / 2;
-    if (psObj.type === 'mesh') {
-        const meshToUm = (m) => ({10:2000, 12:1680, 14:1410, 16:1190, 18:1000, 20:841, 25:707, 30:595, 35:500, 40:400, 45:354, 50:297, 60:250, 70:210, 80:177, 100:149, 120:125, 140:105, 170:88, 200:74, 230:63, 270:53, 325:44, 400:37, 500:25, 635:20}[m] || (14900 / m));
-        return (meshToUm(parseFloat(psObj.min)) + meshToUm(parseFloat(psObj.max))) / 2;
-    }
-    return Infinity;
-}
-
-function getSortableMelt(str) {
-    if (!str || str === '-' || str === 'N/A') return -Infinity;
-    if (str.includes('>')) return parseFloat(str.replace('>', '')) + 10;
-    if (str.includes('-')) return (parseFloat(str.split('-')[0]) + parseFloat(str.split('-')[1])) / 2;
-    return parseFloat(str);
-}
-
-function renderProducts() {
-    const selectedMarket = marketSelect.value;
-    const rawSearchTerm = searchInput.value.trim();
-    const searchTerm = rawSearchTerm.toLowerCase();
-
-    if (!selectedMarket) {
-        productList.innerHTML = `
-            <div class="empty-state">
-                <span class="empty-state-icon">👋</span>
-                <h4>歡迎使用MPI智慧塗料篩選器</h4>
-                <p>請先從左側選擇您的「應用市場」，開始探索產品！</p>
-            </div>
-        `;
-        productCount.innerText = "0";
-        mobileCountText.innerText = "0";
-        return;
+        sliderContainer.innerHTML = slidersHtml;
+        state.perfReq = newPerfReq;
     }
 
-    const checkedSystems = Array.from(document.querySelectorAll('.sys-filter:checked')).map(cb => cb.value);
-    const requiresDispersion = document.getElementById('dispersion-filter').checked;
-
-    const elNatural = document.getElementById('cb-natural'), reqNatural = elNatural ? elNatural.checked : false;
-    const elPtfe = document.getElementById('cb-ptfe-alt'), reqPtfeAlt = elPtfe ? elPtfe.checked : false;
-    const fdaElement = document.getElementById('fda-filter'), requiresFDA = fdaElement && fdaElement.checked;
-    const checkedIE = Array.from(document.querySelectorAll('.ie-filter:checked')).map(cb => cb.value);
-
-    let activeObjFilters = {};
-    document.querySelectorAll('.obj-filter:checked').forEach(cb => {
-        const field = cb.dataset.field;
-        if (!activeObjFilters[field]) activeObjFilters[field] = [];
-        activeObjFilters[field].push(cb.value);
-    });
-
-    const dMin = parseFloat(document.getElementById('density-min').value), dMax = parseFloat(document.getElementById('density-max').value), dLimitMax = parseFloat(document.getElementById('density-max').max);
-    const mMin = parseFloat(document.getElementById('melt-min').value), mMax = parseFloat(document.getElementById('melt-max').value), mLimitMax = parseFloat(document.getElementById('melt-max').max);
-    const pMin = parseFloat(document.getElementById('ps-min').value), pMax = parseFloat(document.getElementById('ps-max').value), pLimitMax = parseFloat(document.getElementById('ps-max').max);
-
-    const cbDensity = document.getElementById('cb-density').checked, cbMelt = document.getElementById('cb-melt').checked, cbPs = document.getElementById('cb-ps').checked;
-
-    let filteredProducts = productData.filter(product => {
-        const profile = product.application_profiles[selectedMarket];
-        const core = product.core_properties;
-        if (!profile) return false;
-
-        if (searchTerm && !product.product_name.toLowerCase().includes(searchTerm) && !(profile.Description || "").toLowerCase().includes(searchTerm)) return false;
-
-        if (checkedSystems.length > 0 && !checkedSystems.some(sys => (profile.Recommended_System_Type || []).includes(sys))) return false;
-        if (requiresDispersion && profile.Available_as_Waterborne_Dispersion !== true) return false;
-        if (requiresFDA && profile.FDA_21CFR_175_300_Compliance !== 'Yes') return false;
-        if (reqNatural && (!profile.Natural_Naturally_Derived || profile.Natural_Naturally_Derived <= 0)) return false;
-        if (reqPtfeAlt && (!profile.PTFE_Alternative || profile.PTFE_Alternative <= 0)) return false;
-        if (checkedIE.length > 0 && (!profile.Interior_Exterior || !checkedIE.some(val => profile.Interior_Exterior.includes(val)))) return false;
-
-        for (const field in activeObjFilters) {
-            if (activeObjFilters[field].length > 0 && !activeObjFilters[field].every(subKey => profile[field] && profile[field][subKey] === true)) return false;
+    // 效能優化：合併「過濾器檢驗」與「分數計算」為單一迴圈，並使用 String Builder 渲染 DOM
+    function renderGrid() {
+        const grid = document.getElementById('product-grid');
+        if (!state.market) {
+            grid.innerHTML = `<div class="empty-state"><h3>${t('emptyMarketTitle')}</h3><p>${t('emptyMarketDesc')}</p></div>`;
+            return;
         }
 
-        if (cbDensity) {
-            let pDensity = parseFloat(core.Density_g_cc_25C);
-            if (isNaN(pDensity) || pDensity < dMin || pDensity > dMax) return false;
-        }
+        // 預先計算外層變數，避免在迴圈內不斷宣告
+        const term = state.search ? state.search.toLowerCase() : '';
+        const selectedSys = [];
+        if(state.sysW) selectedSys.push("W");
+        if(state.sysS) selectedSys.push("S");
+        if(state.sysUV) selectedSys.push("UV");
+        const sysActive = selectedSys.length > 0;
+        const perfKeys = Object.keys(state.perfReq);
 
-        if (cbMelt) {
-            let str = core.Melt_Point_C;
-            if (!str || str === '-' || str === 'N/A') return false;
-            let pMeltMin, pMeltMax;
-            if (str.includes('>')) { pMeltMin = parseFloat(str.replace('>', '')); pMeltMax = Infinity; }
-            else if (str.includes('-')) { const parts = str.split('-'); pMeltMin = parseFloat(parts[0]); pMeltMax = parseFloat(parts[1]); }
-            else { pMeltMin = pMeltMax = parseFloat(str); }
+        let filteredData = [];
 
-            let actMax = (mMax >= mLimitMax) ? Infinity : mMax;
-            let actMin = (mMin >= mLimitMax) ? Infinity : mMin;
-            if (pMeltMax < actMin || pMeltMin > actMax) return false;
-        }
+        // 單次遍歷：同時處理 Hard Filters 與 Scoring
+        for (let i = 0; i < rawData.length; i++) {
+            const item = rawData[i];
+            const prof = item.en.application_profiles[state.market];
+            if (!prof) continue;
 
-        if (cbPs) {
-            let psObj = core.Mean_Particle_Size;
-            if (!psObj || psObj.min === null || psObj.max === null) return false;
-            let pPsMin, pPsMax;
-            if (psObj.type === 'micron' || psObj.type === 'sub-micron') { pPsMin = parseFloat(psObj.min); pPsMax = parseFloat(psObj.max); }
-            else if (psObj.type === 'mesh') {
-                const meshToUm = (m) => ({10:2000, 12:1680, 14:1410, 16:1190, 18:1000, 20:841, 25:707, 30:595, 35:500, 40:400, 45:354, 50:297, 60:250, 70:210, 80:177, 100:149, 120:125, 140:105, 170:88, 200:74, 230:63, 270:53, 325:44, 400:37, 500:25, 635:20}[m] || (14900 / m));
-                pPsMax = meshToUm(parseFloat(psObj.min)); pPsMin = meshToUm(parseFloat(psObj.max));
-            } else return false;
-
-            if (isNaN(pPsMin) || isNaN(pPsMax)) return false;
-            let actMax = (pMax >= pLimitMax) ? Infinity : pMax;
-            let actMin = (pMin >= pLimitMax) ? Infinity : pMin;
-            if (pPsMax < actMin || pPsMin > actMax) return false;
-        }
-
-        for (const metric in currentSliderFilters) {
-            const cbPerf = document.querySelector(`.cb-perf[data-metric="${metric}"]`);
-            if (cbPerf && cbPerf.checked && (profile[metric] || 0) < currentSliderFilters[metric]) return false;
-        }
-
-        return true;
-    });
-
-    const sortVal = sortSelect.value;
-    if (sortVal !== 'default') {
-        filteredProducts.sort((a, b) => {
-            if (sortVal === 'name_asc') return a.product_name.localeCompare(b.product_name);
-            if (sortVal === 'ps_asc') return getSortablePS(a.core_properties.Mean_Particle_Size) - getSortablePS(b.core_properties.Mean_Particle_Size);
-            if (sortVal === 'ps_desc') return getSortablePS(b.core_properties.Mean_Particle_Size) - getSortablePS(a.core_properties.Mean_Particle_Size);
-            if (sortVal === 'melt_desc') return getSortableMelt(b.core_properties.Melt_Point_C) - getSortableMelt(a.core_properties.Melt_Point_C);
-            if (sortVal === 'density_asc') {
-                let da = parseFloat(a.core_properties.Density_g_cc_25C) || Infinity;
-                let db = parseFloat(b.core_properties.Density_g_cc_25C) || Infinity;
-                return da - db;
+            // --- 1. 硬性條件過濾 ---
+            if (term) {
+                const matchName = item.product_name.toLowerCase().includes(term);
+                const matchDesc = (prof.Description || '').toLowerCase().includes(term);
+                if (!matchName && !matchDesc) continue;
             }
-            return 0;
-        });
-    }
 
-    productCount.innerText = filteredProducts.length;
-    mobileCountText.innerText = filteredProducts.length;
-
-    if (filteredProducts.length === 0) {
-        productList.innerHTML = `
-            <div class="empty-state">
-                <span class="empty-state-icon">📭</span>
-                <h4>找不到符合的產品</h4>
-                <p>您設定的條件太嚴格了，試著放寬一些選項吧！</p>
-                <button onclick="document.getElementById('reset-btn').click()">🗑️ 清除所有篩選條件</button>
-            </div>
-        `;
-        return;
-    }
-
-    let html = '';
-    filteredProducts.forEach(product => {
-        const profile = product.application_profiles[selectedMarket];
-        const core = product.core_properties;
-
-        let systemTags = '';
-        if(profile.Recommended_System_Type && Array.isArray(profile.Recommended_System_Type)) {
-             profile.Recommended_System_Type.forEach(sys => { systemTags += `<span class="badge badge-${sys}">${sys}</span>`; });
-        }
-        if(profile.Available_as_Waterborne_Dispersion) systemTags += `<span class="badge badge-dispersion">Dispersion</span>`;
-        if(profile.FDA_21CFR_175_300_Compliance === 'Yes') systemTags += `<span class="badge badge-special">FDA</span>`;
-        if (profile.Natural_Naturally_Derived > 0) systemTags += `<span class="badge" style="background-color: #27ae60;">🍃 天然來源</span>`;
-        if (profile.PTFE_Alternative > 0) systemTags += `<span class="badge" style="background-color: #8e44ad;">🚫 PTFE 替代</span>`;
-
-        let specialInfoHtml = '';
-        if (profile.Interior_Exterior) {
-            specialInfoHtml += `<div class="info-row"><span>適用環境</span><span class="highlight">${profile.Interior_Exterior.replace('I', '室內').replace('E', '室外')}</span></div>`;
-        }
-        Object.keys(profile).forEach(key => {
-            if (profile[key] && typeof profile[key] === 'object' && !Array.isArray(profile[key])) {
-                let trueKeys = Object.keys(profile[key]).filter(subKey => profile[key][subKey] === true);
-                if (trueKeys.length > 0) specialInfoHtml += `<div class="info-row"><span>${formatMetricName(key)}</span><span class="highlight">${trueKeys.join(', ')}</span></div>`;
+            if (sysActive) {
+                const prodSys = prof.Recommended_System_Type || [];
+                if (!selectedSys.some(s => prodSys.includes(s))) continue;
             }
-        });
 
-        let topFeatures = [];
-        Object.keys(profile).forEach(metricKey => {
-            if (typeof profile[metricKey] === 'number' && profile[metricKey] === 3 && metricKey !== 'Natural_Naturally_Derived' && metricKey !== 'PTFE_Alternative') {
-                topFeatures.push(formatMetricName(metricKey));
+            if (state.dispOnly && prof.Available_as_Waterborne_Dispersion !== true) continue;
+            if (state.reqFda && prof.FDA_21CFR_175_300_Compliance !== "Yes") continue;
+            if (state.reqPtfe && (prof.PTFE_Alternative || 0) === 0) continue;
+            if (state.reqNatural && (prof.Natural_Naturally_Derived || 0) === 0) continue;
+
+            // --- 2. 分數計算 ---
+            let userSum = 0, matchSum = 0, extraBonus = 0;
+
+            for (let j = 0; j < perfKeys.length; j++) {
+                const key = perfKeys[j];
+                const u = state.perfReq[key];
+                if (u === 0) continue;
+
+                const p = prof[key] || 0;
+                userSum += u;
+                if (p >= u) {
+                    matchSum += u;
+                    extraBonus += (p - u) * 4;
+                } else {
+                    matchSum += p;
+                }
             }
-        });
 
-        let topFeaturesHtml = topFeatures.length > 0 ? `<div style="margin-top: 12px; padding-top: 12px; border-top: 1px dashed #e1e8ed;"><div style="font-size: 0.8em; color: #888; margin-bottom: 6px;">👑 卓越效能 (滿分項目)：</div><div style="font-size: 0.85em; color: #d35400; font-weight: bold; line-height: 1.6;">✓ ${topFeatures.join('<br>✓ ')}</div></div>` : '';
-
-        let activeFiltersHtml = '';
-        for (const metric in currentSliderFilters) {
-            const cbPerf = document.querySelector(`.cb-perf[data-metric="${metric}"]`);
-            if (cbPerf && cbPerf.checked) {
-                activeFiltersHtml += `<div class="active-filter-hint"><span>🔍 篩選條件：${formatMetricName(metric)}</span><span>達到 ${profile[metric] || 0} 分</span></div>`;
+            if (userSum > 0) {
+                let matchRate = (matchSum / userSum) * 100;
+                item.computedScore = Math.min(100, Math.round(matchRate + extraBonus));
+                item.scoreType = "match";
+            } else {
+                let totalTraitsVal = 0;
+                const keys = Object.keys(prof);
+                for(let k=0; k < keys.length; k++){
+                    if(typeof prof[keys[k]] === 'number') totalTraitsVal += prof[keys[k]];
+                }
+                item.computedScore = Math.min(99, Math.round(50 + totalTraitsVal * 1.5 + (prof.FDA_21CFR_175_300_Compliance === "Yes" ? 3 : 0)));
+                item.scoreType = "power";
             }
+
+            filteredData.push(item);
         }
 
-        let maxParticleStr = core.Max_Particle_Size && core.Max_Particle_Size.raw ? core.Max_Particle_Size.raw : 'N/A';
+        // --- 3. 排序與渲染 ---
+        if (filteredData.length === 0) {
+            grid.innerHTML = `<div class="empty-state"><h3>${t('emptyResultTitle')}</h3><p>${t('emptyResultDesc')}</p></div>`;
+            return;
+        }
 
-        html += `
-            <div class="product-card">
-                <div class="product-header">
-                    <h4 class="product-title">${highlight(product.product_name, rawSearchTerm)}</h4>
-                    <button class="copy-btn" onclick="copyToClipboard('${product.product_name}', this)" title="複製型號">📋</button>
+        // 分數排序
+        filteredData.sort((a, b) => b.computedScore - a.computedScore);
+
+        const marketZh = i18n.zh.markets[state.market];
+
+        // 批次產生 HTML 字串，只操作一次 DOM
+        const htmlOutput = filteredData.map(item => {
+            const dispNode = item[state.lang];
+            const dispCore = state.lang === 'en' ? dispNode.core_properties : dispNode.核心特性;
+            const dispProf = state.lang === 'en' ? dispNode.application_profiles[state.market] : dispNode.應用領域配置[marketZh];
+            const enProf = item.en.application_profiles[state.market];
+
+            const topTraits = Object.keys(enProf)
+                .filter(k => enProf[k] === 3 && k !== 'PTFE_Alternative' && k !== 'Natural_Naturally_Derived')
+                .slice(0, 3)
+                .map(k => getPerfName(k));
+
+            const sysRaw = enProf.Recommended_System_Type || [];
+            const badgesHTML = sysRaw.map(s => `<span class="badge badge-${s}">${s}</span>`).join('');
+            const dispBadge = enProf.Available_as_Waterborne_Dispersion ? `<span class="badge badge-special">Dispersion</span>` : '';
+
+            const badgeClass = item.scoreType === "match" ? "match" : "power";
+            const badgeLabel = item.scoreType === "match" ? `${t('matchRate')}: ${item.computedScore}%` : `${t('powerScore')}: ${item.computedScore}`;
+
+            // 安全取值避免報錯
+            const meltPoint = dispCore['Melt_Point_C'] || dispCore['熔點_度C'] || '-';
+            const density = dispCore['Density_g_cc_25C'] || dispCore['密度_g_cc_25度C'] || '-';
+            const meanPsObj = dispCore['Mean_Particle_Size'] || dispCore['平均粒徑'] || {};
+            const meanPs = meanPsObj.raw || meanPsObj.原始描述 || '-';
+            const desc = dispProf['Description'] || dispProf['描述'] || '';
+
+            let perfBoxHtml = '';
+            if (topTraits.length > 0) {
+                const traitsHtml = topTraits.map(trt => `
+                    <div class="perf-item">
+                        <span>${trt}</span>
+                        <span class="perf-stars">★★★</span>
+                    </div>
+                `).join('');
+                perfBoxHtml = `
+                    <div class="perf-box">
+                        <div class="perf-title">${t('topPerf')}</div>
+                        ${traitsHtml}
+                    </div>
+                `;
+            }
+
+            return `
+                <div class="product-card">
+                    <div class="score-badge ${badgeClass}">${badgeLabel}</div>
+                    <div class="card-header">
+                        <h3 class="product-title">${item.product_name}</h3>
+                    </div>
+                    <div class="badges">${badgesHTML}${dispBadge}</div>
+                    <div class="card-desc">${desc}</div>
+
+                    <div class="props-box">
+                        <div style="font-weight: 700; margin-bottom: 6px; color: var(--text-muted); border-bottom: 1px solid #e2e8f0; padding-bottom: 3px;">${t('coreProps')}</div>
+                        <div class="prop-row">
+                            <span>${t('meltPoint')}</span>
+                            <span class="prop-val">${meltPoint}</span>
+                        </div>
+                        <div class="prop-row">
+                            <span>${t('density')}</span>
+                            <span class="prop-val">${density}</span>
+                        </div>
+                        <div class="prop-row">
+                            <span>${t('meanPs')}</span>
+                            <span class="prop-val">${meanPs}</span>
+                        </div>
+                    </div>
+                    ${perfBoxHtml}
                 </div>
-                <div class="badge-container">${systemTags}</div>
-                ${activeFiltersHtml}
-                <div class="info-row"><span>材質描述</span><span class="highlight">${highlight(profile.Description, rawSearchTerm)}</span></div>
-                <div class="info-row"><span>平均粒徑 (Mean)</span><span class="highlight">${formatValue(core.Mean_Particle_Size ? core.Mean_Particle_Size.raw : 'N/A')}</span></div>
-                <div class="info-row"><span>最大粒徑 (Max)</span><span class="highlight" style="color: #c0392b;">${formatValue(maxParticleStr)}</span></div>
-                <div class="info-row"><span>密度 (g/cc)</span><span class="highlight">${formatValue(core.Density_g_cc_25C)}</span></div>
-                <div class="info-row"><span>熔點 (°C)</span><span class="highlight">${formatValue(core.Melt_Point_C)}</span></div>
-                <div class="info-row"><span>建議添加量</span><span class="highlight">${formatValue(profile.Suggested_Use_Level)}</span></div>
-                ${specialInfoHtml}
-                ${topFeaturesHtml}
-            </div>
-        `;
-    });
-    productList.innerHTML = html;
-}
+            `;
+        }).join('');
+
+        grid.innerHTML = htmlOutput;
+    }
+
+    init();
 </script>
+
 </body>
 </html>
