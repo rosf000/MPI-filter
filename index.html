@@ -206,6 +206,7 @@
             meltPoint: "熔點",
             density: "密度",
             meanPs: "平均粒徑",
+            maxPs: "最大粒徑",
             topPerf: "👑 卓越滿分特性",
             fda: "✅ 符合 FDA 175.300",
             ptfe: "🚫 PTFE 替代方案",
@@ -244,6 +245,7 @@
             meltPoint: "Melt Point",
             density: "Density",
             meanPs: "Mean PS",
+            maxPs: "Max PS",
             topPerf: "👑 Top Achievements",
             fda: "✅ FDA 175.300 Compliant",
             ptfe: "🚫 PTFE Alternative",
@@ -647,6 +649,8 @@
             const density = dispCore['Density_g_cc_25C'] || dispCore['密度_g_cc_25度C'] || '-';
             const meanPsObj = dispCore['Mean_Particle_Size'] || dispCore['平均粒徑'] || {};
             const meanPs = meanPsObj.raw || meanPsObj.原始描述 || '-';
+            const maxPsObj = dispCore['Max_Particle_Size'] || dispCore['最大粒徑'] || {};
+            const maxPs = maxPsObj.raw || maxPsObj.原始描述 || '-';
             const desc = dispProf['Description'] || dispProf['描述'] || '';
 
             let perfBoxHtml = '';
@@ -688,7 +692,11 @@
                             <span>${t('meanPs')}</span>
                             <span class="prop-val">${meanPs}</span>
                         </div>
-                    </div>
+                        <div class="prop-row">
+                            <span>${t('maxPs')}</span>
+                            <span class="prop-val">${maxPs}</span>
+                        </div>
+                        </div>
                     ${perfBoxHtml}
                 </div>
             `;
