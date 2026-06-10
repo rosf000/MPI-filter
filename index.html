@@ -48,20 +48,17 @@
 
         .layout { display: flex; max-width: 1600px; margin: 0 auto; height: calc(100vh - 70px); position: relative; }
 
-        .sidebar { width: 320px; background: var(--surface); border-right: 1px solid var(--border-color); padding: 25px; overflow-y: auto; flex-shrink: 0; display: flex; flex-direction: column; gap: 22px; transition: transform 0.3s ease, opacity 0.3s ease; }
+        .sidebar { width: 340px; background: var(--surface); border-right: 1px solid var(--border-color); padding: 25px; overflow-y: auto; flex-shrink: 0; display: flex; flex-direction: column; gap: 22px; transition: transform 0.3s ease, opacity 0.3s ease; }
         .sidebar-overlay { display: none; position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: rgba(30, 41, 59, 0.5); backdrop-filter: blur(4px); z-index: 998; opacity: 0; transition: opacity 0.3s ease; }
 
         .filter-group { display: flex; flex-direction: column; gap: 10px; }
         .filter-title { font-weight: 700; font-size: 1rem; color: var(--text-main); margin-bottom: 3px; padding-bottom: 5px; border-bottom: 2px solid #f1f5f9; }
+        .priority-item { margin-bottom: 12px; }
+        .priority-item label { display: block; font-size: 0.8rem; color: var(--text-muted); margin-bottom: 4px; font-weight: 500; }
         select { padding: 10px; border-radius: 8px; border: 1px solid var(--border-color); font-size: 0.9rem; outline: none; background: var(--surface); cursor: pointer; font-family: inherit; width: 100%; }
 
         .checkbox-label { display: flex; align-items: center; gap: 8px; font-size: 0.9rem; cursor: pointer; color: var(--text-main); }
         .checkbox-label input { width: 18px; height: 18px; accent-color: var(--primary); cursor: pointer; }
-
-        .slider-group { display: flex; flex-direction: column; gap: 4px; margin-bottom: 10px; }
-        .slider-header { display: flex; justify-content: space-between; font-size: 0.85rem; color: var(--text-muted); font-weight: 500;}
-        .slider-header span.val { color: var(--primary); font-weight: 700; background: #eff6ff; padding: 1px 6px; border-radius: 4px; }
-        input[type="range"] { width: 100%; accent-color: var(--primary); cursor: pointer; height: 6px; border-radius: 3px; background: #e2e8f0; }
 
         .reset-btn { background: #fee2e2; color: #dc2626; border: none; padding: 12px; border-radius: 8px; font-weight: 700; cursor: pointer; transition: 0.2s; margin-top: 15px; font-size: 0.9rem; width: 100%; }
         .reset-btn:hover { background: #fecaca; }
@@ -121,7 +118,7 @@
 <body>
 
     <nav class="navbar">
-        <h2 id="ui-title">🔬 MPI smart filter</h2>
+        <h2 id="ui-title">🔬 MPI 智慧塗料篩選器</h2>
         <div class="nav-right">
             <div class="lang-switch-container">
                 <input type="radio" name="lang" id="lang-zh" value="zh" checked onchange="switchLanguage('zh')">
@@ -134,7 +131,6 @@
         <form action="javascript:void(0);" onsubmit="document.getElementById('search-input').blur();" style="display: contents;">
             <input type="search" id="search-input" class="search-box" placeholder="Search..." oninput="debouncedSearch(this.value)">
         </form>
-
     </nav>
 
     <div id="sidebar-overlay" class="sidebar-overlay" onclick="toggleSidebar(false)"></div>
@@ -161,14 +157,30 @@
                     </label>
                 </div>
 
-                <div class="filter-group" id="special-filters-container" style="display: none;">
-                    <div class="filter-title" id="ui-special">🌟 特殊要求</div>
-                    <div id="special-filters-list" style="display: flex; flex-direction: column; gap: 10px;"></div>
+                <div class="filter-group">
+                    <div class="filter-title" id="ui-category">🧱 基材/ Material Class</div>
+                    <select id="category-select" onchange="updateFilters()"></select>
                 </div>
 
                 <div class="filter-group">
-                    <div class="filter-title" id="ui-perf">📊 效能喜好 (拉高以配對)</div>
-                    <div id="perf-sliders-container"></div>
+                    <div class="filter-title" id="ui-priority">🎯 功能優先順位</div>
+                    <div class="priority-item">
+                        <label id="lbl-p1">主要功能</label>
+                        <select id="perf-p1" onchange="updateFilters()"></select>
+                    </div>
+                    <div class="priority-item">
+                        <label id="lbl-p2">次要功能</label>
+                        <select id="perf-p2" onchange="updateFilters()"></select>
+                    </div>
+                    <div class="priority-item">
+                        <label id="lbl-p3">最終功能</label>
+                        <select id="perf-p3" onchange="updateFilters()"></select>
+                    </div>
+                </div>
+
+                <div class="filter-group" id="special-filters-container" style="display: none;">
+                    <div class="filter-title" id="ui-special">🌟 特殊要求</div>
+                    <div id="special-filters-list" style="display: flex; flex-direction: column; gap: 10px;"></div>
                 </div>
 
                 <button class="reset-btn" id="ui-reset" onclick="resetFilters()">🗑️ 清除篩選條件</button>
@@ -192,14 +204,20 @@
             sysS: "溶劑型 (S)",
             sysUV: "光固化 (UV/EB)",
             sysDisp: "💧 僅顯示水性分散體",
+            category: "🧱 基材",
+            categorySelect: "--- 請選擇基材類別 ---",
+            priority: "🎯 功能優先順位",
+            p1: "主要功能",
+            p2: "次要功能",
+            p3: "最終功能",
+            none: "--- 請選擇功能 ---",
             special: "🌟 特殊要求",
-            perf: "📊 效能喜好",
             reset: "🗑️ 清除所有條件",
             floatingText: "變更篩選",
             matchRate: "🎯 匹配度",
             powerScore: "🌟 綜合評分",
             emptyMarketTitle: "歡迎使用智慧型導航篩選器 👋",
-            emptyMarketDesc: "請先從左側選單指定您的「應用市場」，系統將自動偵測並僅顯示該領域存在的規格與效能滑桿。您也可以直接在此搜尋所有產品 (包含中英文描述)。",
+            emptyMarketDesc: "請先從左側選單指定您的「應用市場」，系統將依序啟動劑型、基材及三大功能優先度篩選機制。",
             emptyResultTitle: "沒有符合目前設定的產品 😢",
             emptyResultDesc: "找不到相符結果，請嘗試變更關鍵字或放寬條件限制。",
             coreProps: "物理屬性規格",
@@ -207,6 +225,7 @@
             density: "密度",
             meanPs: "平均粒徑",
             maxPs: "最大粒徑",
+            suggestedUse: "建議使用量",
             topPerf: "👑 卓越滿分特性",
             fda: "✅ 符合 FDA 175.300",
             ptfe: "🚫 PTFE 替代方案",
@@ -219,6 +238,15 @@
                 "IndustrialFlooringCoatings": "工業地坪塗料",
                 "PowderCoatings": "粉末塗料",
                 "EnergyCurableInks&Coatings": "能量固化油墨與塗料"
+            },
+            categories: {
+                "PE": "聚乙烯系列 (PE)",
+                "PP": "聚丙烯系列 (PP)",
+                "SyntheticWax": "合成蠟 (Synthetic Wax)",
+                "NaturalWax": "天然蠟與生物基材料",
+                "PUAcrylic": "聚氨酯與壓克力",
+                "AmideSpecial": "醯胺與特殊聚合物",
+                "Inorganic": "無機複合添加材料"
             }
         },
         en: {
@@ -231,14 +259,20 @@
             sysS: "Solventborne (S)",
             sysUV: "UV / EB Curable",
             sysDisp: "💧 Dispersion Form Only",
+            category: "🧱 Material Class",
+            categorySelect: "--- Select Material Class ---",
+            priority: "🎯 Performance Priorities",
+            p1: "1st Priority",
+            p2: "2nd Priority",
+            p3: "3rd Priority",
+            none: "--- Select Performance ---",
             special: "🌟 Special Requirements",
-            perf: "📊 Performance Preferences",
             reset: "🗑️ Reset Filters",
             floatingText: "Filters",
             matchRate: "🎯 Match Rate",
             powerScore: "🌟 Power Score",
             emptyMarketTitle: "Welcome to MPI Smart Filter 👋",
-            emptyMarketDesc: "Select an application market from the menu to see dynamic filters, or simply type to search across all products and descriptions.",
+            emptyMarketDesc: "Select an application market to begin our sequential filtering flow (Market > System > Material > Priorities > Special).",
             emptyResultTitle: "No Products Matched 😢",
             emptyResultDesc: "Try relaxing your hard filters or changing your keywords.",
             coreProps: "Core Physical Properties",
@@ -246,6 +280,7 @@
             density: "Density",
             meanPs: "Mean PS",
             maxPs: "Max PS",
+            suggestedUse: "Suggested Use Level",
             topPerf: "👑 Top Achievements",
             fda: "✅ FDA 175.300 Compliant",
             ptfe: "🚫 PTFE Alternative",
@@ -258,6 +293,15 @@
                 "IndustrialFlooringCoatings": "Industrial Flooring Coatings",
                 "PowderCoatings": "Powder Coatings",
                 "EnergyCurableInks&Coatings": "Energy Curable Inks & Coatings"
+            },
+            categories: {
+                "PE": "Polyethylene Series (PE)",
+                "PP": "Polypropylene Series (PP)",
+                "SyntheticWax": "Synthetic Wax",
+                "NaturalWax": "Natural Wax & Bio-based",
+                "PUAcrylic": "Polyurethane & Acrylic",
+                "AmideSpecial": "Amide & Special Polymers",
+                "Inorganic": "Inorganic Composites"
             }
         }
     };
@@ -284,8 +328,9 @@
     let state = {
         lang: 'zh', market: '', search: '',
         sysW: false, sysS: false, sysUV: false, dispOnly: false,
-        reqFda: false, reqPtfe: false, reqNatural: false,
-        perfReq: {}
+        category: '',
+        p1: '', p2: '', p3: '',
+        reqFda: false, reqPtfe: false, reqNatural: false
     };
 
     let searchTimeout;
@@ -338,8 +383,12 @@
         document.getElementById('ui-sys-s').innerText = t('sysS');
         document.getElementById('ui-sys-uv').innerText = t('sysUV');
         document.getElementById('ui-sys-disp').innerText = t('sysDisp');
+        document.getElementById('ui-category').innerText = t('category');
+        document.getElementById('ui-priority').innerText = t('priority');
+        document.getElementById('lbl-p1').innerText = t('p1');
+        document.getElementById('lbl-p2').innerText = t('p2');
+        document.getElementById('lbl-p3').innerText = t('p3');
         document.getElementById('ui-special').innerText = t('special');
-        document.getElementById('ui-perf').innerText = t('perf');
         document.getElementById('ui-reset').innerText = t('reset');
         document.getElementById('ui-floating-text').innerText = t('floatingText');
     }
@@ -359,9 +408,37 @@
         renderGrid();
     }
 
-    function updateSliderValUI(key, val) {
-        document.getElementById('val-' + key).innerText = val;
-        state.perfReq[key] = parseInt(val);
+    // 升級版：支援跨市場彙整與多重標籤的分類演算法
+    function getProductCategories(item, marketKey) {
+        let descToScan = (item.product_name || '').toLowerCase() + " ";
+
+        // 如果有指定市場，掃描該市場描述；若無，則彙整該產品在「所有市場」的中英文描述
+        if (marketKey) {
+            const prof = item.en.application_profiles[marketKey] || {};
+            const profZh = (item.zh && item.zh.應用領域配置 && item.zh.應用領域配置[i18n.zh.markets[marketKey]]) || {};
+            descToScan += (prof.Description || '').toLowerCase() + " " + (profZh.描述 || '').toLowerCase() + " ";
+        } else {
+            const allProfsEn = item.en.application_profiles || {};
+            const allProfsZh = (item.zh && item.zh.應用領域配置) || {};
+            for (const k in allProfsEn) { descToScan += (allProfsEn[k].Description || '').toLowerCase() + " "; }
+            for (const k in allProfsZh) { descToScan += (allProfsZh[k].描述 || '').toLowerCase() + " "; }
+        }
+
+        let categories = new Set();
+
+        // 獨立的正則表達式檢測，允許多重標籤
+        if (/polyethylene|hdpe|ldpe|聚乙烯|\bpe\b/i.test(descToScan)) { categories.add('PE'); }
+        if (/polypropylene|聚丙烯|\bpp\b/i.test(descToScan)) { categories.add('PP'); }
+        if (/polyurethane|acrylic|聚氨酯|壓克力|\bpu\b/i.test(descToScan)) { categories.add('PUAcrylic'); }
+        if (/amide|ebs|nylon|polyamide|polyolefin|ptfe|fluoropolymer|醯胺|尼龍|聚烯烴|聚四氟乙烯/i.test(descToScan)) { categories.add('AmideSpecial'); }
+        if (/rice bran|carnauba|cellulose|biopolymer|phbv|米糠|棕櫚|植物|天然|生物/i.test(descToScan)) { categories.add('NaturalWax'); }
+        if (/aluminum oxide|ceramic|graphene|氧化鋁|陶瓷|石墨烯/i.test(descToScan)) { categories.add('Inorganic'); }
+        if (/synthetic|fischer-tropsch|ft wax|合成/i.test(descToScan)) { categories.add('SyntheticWax'); }
+
+        // 如果上述關鍵字都沒中，給予預設標籤
+        if (categories.size === 0) { categories.add('SyntheticWax'); }
+
+        return Array.from(categories);
     }
 
     function updateFilters() {
@@ -370,6 +447,11 @@
         state.sysUV = document.getElementById('sys-UV').checked;
         state.dispOnly = document.getElementById('sys-disp').checked;
 
+        state.category = document.getElementById('category-select').value;
+        state.p1 = document.getElementById('perf-p1').value;
+        state.p2 = document.getElementById('perf-p2').value;
+        state.p3 = document.getElementById('perf-p3').value;
+
         const reqFdaNode = document.getElementById('req-fda');
         const reqPtfeNode = document.getElementById('req-ptfe');
         const reqNaturalNode = document.getElementById('req-natural');
@@ -377,11 +459,6 @@
         state.reqFda = reqFdaNode ? reqFdaNode.checked : false;
         state.reqPtfe = reqPtfeNode ? reqPtfeNode.checked : false;
         state.reqNatural = reqNaturalNode ? reqNaturalNode.checked : false;
-
-        Object.keys(state.perfReq).forEach(key => {
-            const slider = document.getElementById('perf-' + key);
-            if (slider) state.perfReq[key] = parseInt(slider.value);
-        });
 
         renderGrid();
     }
@@ -393,18 +470,16 @@
         state.sysS = false; document.getElementById('sys-S').checked = false;
         state.sysUV = false; document.getElementById('sys-UV').checked = false;
         state.dispOnly = false; document.getElementById('sys-disp').checked = false;
+        state.category = '';
+        state.p1 = ''; state.p2 = ''; state.p3 = '';
         state.reqFda = false; state.reqPtfe = false; state.reqNatural = false;
-
-        Object.keys(state.perfReq).forEach(k => state.perfReq[k] = 0);
 
         if(clearMarket) buildSmartSidebar();
         else {
-            Object.keys(state.perfReq).forEach(key => {
-                const slider = document.getElementById('perf-' + key);
-                const valDisp = document.getElementById('val-' + key);
-                if (slider) slider.value = 0;
-                if (valDisp) valDisp.innerText = "0";
-            });
+            document.getElementById('category-select').value = '';
+            document.getElementById('perf-p1').value = '';
+            document.getElementById('perf-p2').value = '';
+            document.getElementById('perf-p3').value = '';
             updateFilters();
         }
     }
@@ -439,23 +514,30 @@
             });
         }
 
-        const sysWCheck = document.getElementById('sys-W');
         document.getElementById('lbl-sys-w').style.display = hasW ? 'flex' : 'none';
-        if(!hasW) { state.sysW = false; sysWCheck.checked = false; }
-
-        const sysSCheck = document.getElementById('sys-S');
+        if(!hasW) document.getElementById('sys-W').checked = false;
         document.getElementById('lbl-sys-s').style.display = hasS ? 'flex' : 'none';
-        if(!hasS) { state.sysS = false; sysSCheck.checked = false; }
-
-        const sysUVCheck = document.getElementById('sys-UV');
+        if(!hasS) document.getElementById('sys-S').checked = false;
         document.getElementById('lbl-sys-uv').style.display = hasUV ? 'flex' : 'none';
-        if(!hasUV) { state.sysUV = false; sysUVCheck.checked = false; }
-
-        const sysDispCheck = document.getElementById('sys-disp');
+        if(!hasUV) document.getElementById('sys-UV').checked = false;
         document.getElementById('lbl-sys-disp').style.display = hasDisp ? 'flex' : 'none';
-        if(!hasDisp) { state.dispOnly = false; sysDispCheck.checked = false; }
-
+        if(!hasDisp) document.getElementById('sys-disp').checked = false;
         document.getElementById('system-filter-group').style.display = (hasW || hasS || hasUV || hasDisp) ? 'flex' : 'none';
+
+        const catSelect = document.getElementById('category-select');
+        catSelect.innerHTML = `<option value="">${t('categorySelect')}</option>` +
+            Object.keys(i18n[state.lang].categories).map(cKey =>
+                `<option value="${cKey}" ${state.category === cKey ? 'selected' : ''}>${i18n[state.lang].categories[cKey]}</option>`
+            ).join('');
+
+        const p1Sel = document.getElementById('perf-p1');
+        const p2Sel = document.getElementById('perf-p2');
+        const p3Sel = document.getElementById('perf-p3');
+        const perfOptionsHtml = `<option value="">${t('none')}</option>` +
+            Array.from(validPerfs).map(k => `<option value="${k}">${getPerfName(k)}</option>`).join('');
+
+        p1Sel.innerHTML = perfOptionsHtml; p2Sel.innerHTML = perfOptionsHtml; p3Sel.innerHTML = perfOptionsHtml;
+        p1Sel.value = state.p1; p2Sel.value = state.p2; p3Sel.value = state.p3;
 
         const specContainer = document.getElementById('special-filters-container');
         const specList = document.getElementById('special-filters-list');
@@ -472,27 +554,6 @@
             specList.innerHTML = '';
             state.reqFda = false; state.reqPtfe = false; state.reqNatural = false;
         }
-
-        const sliderContainer = document.getElementById('perf-sliders-container');
-        const newPerfReq = {};
-
-        const slidersHtml = Array.from(validPerfs).map(key => {
-            newPerfReq[key] = state.perfReq[key] || 0;
-            return `
-                <div class="slider-group">
-                    <div class="slider-header">
-                        <span>${getPerfName(key)}</span>
-                        <span class="val" id="val-${key}">${newPerfReq[key]}</span>
-                    </div>
-                    <input type="range" id="perf-${key}" min="0" max="3" step="1" value="${newPerfReq[key]}"
-                        oninput="updateSliderValUI('${key}', this.value)"
-                        onchange="updateFilters()">
-                </div>
-            `;
-        }).join('');
-
-        sliderContainer.innerHTML = slidersHtml;
-        state.perfReq = newPerfReq;
     }
 
     function renderGrid() {
@@ -509,7 +570,6 @@
         if(state.sysS) selectedSys.push("S");
         if(state.sysUV) selectedSys.push("UV");
         const sysActive = selectedSys.length > 0;
-        const perfKeys = Object.keys(state.perfReq);
 
         let filteredData = [];
 
@@ -518,38 +578,25 @@
             let activeProfEn = null;
             let matchedMarketKey = null;
 
-            // ===== 模式一：全域搜尋 (未選擇市場) =====
             if (!state.market) {
                 let matchName = item.product_name.toLowerCase().includes(term);
                 let matchDesc = false;
-
-                // 同時提取英文與中文的配置物件
                 const allProfsEn = item.en.application_profiles || {};
                 const allProfsZh = (item.zh && item.zh.應用領域配置) || {};
 
-                // 遍歷所有領域去比對中英描述
                 for (const mKey in allProfsEn) {
                     const descEn = (allProfsEn[mKey].Description || '').toLowerCase();
                     const marketZh = i18n.zh.markets[mKey];
                     const descZh = (allProfsZh[marketZh] && allProfsZh[marketZh].描述 ? allProfsZh[marketZh].描述 : '').toLowerCase();
 
                     if (descEn.includes(term) || descZh.includes(term)) {
-                        matchDesc = true;
-                        matchedMarketKey = mKey; // 優先使用匹配到描述的市場配置來渲染卡片
-                        break;
+                        matchDesc = true; matchedMarketKey = mKey; break;
                     }
                 }
-
                 if (!matchName && !matchDesc) continue;
-
-                if (!matchedMarketKey && Object.keys(allProfsEn).length > 0) {
-                    matchedMarketKey = Object.keys(allProfsEn)[0];
-                }
-
+                if (!matchedMarketKey && Object.keys(allProfsEn).length > 0) matchedMarketKey = Object.keys(allProfsEn)[0];
                 activeProfEn = allProfsEn[matchedMarketKey] || {};
-            }
-            // ===== 模式二：特定市場過濾 =====
-            else {
+            } else {
                 activeProfEn = item.en.application_profiles[state.market];
                 if (!activeProfEn) continue;
                 matchedMarketKey = state.market;
@@ -560,58 +607,53 @@
                     const descEn = (activeProfEn.Description || '').toLowerCase();
                     const activeProfZh = (item.zh && item.zh.應用領域配置 && item.zh.應用領域配置[marketZh]) || {};
                     const descZh = (activeProfZh.描述 || '').toLowerCase();
-
-                    // 中英描述只要任一符合即可
-                    const matchDesc = descEn.includes(term) || descZh.includes(term);
-                    if (!matchName && !matchDesc) continue;
-                }
-
-                if (sysActive) {
-                    const prodSys = activeProfEn.Recommended_System_Type || [];
-                    if (!selectedSys.some(s => prodSys.includes(s))) continue;
-                }
-
-                if (state.dispOnly && activeProfEn.Available_as_Waterborne_Dispersion !== true) continue;
-                if (state.reqFda && activeProfEn.FDA_21CFR_175_300_Compliance !== "Yes") continue;
-                if (state.reqPtfe && (activeProfEn.PTFE_Alternative || 0) === 0) continue;
-                if (state.reqNatural && (activeProfEn.Natural_Naturally_Derived || 0) === 0) continue;
-            }
-
-            // --- 分數計算 ---
-            let userSum = 0, matchSum = 0, extraBonus = 0;
-
-            if (state.market) {
-                for (let j = 0; j < perfKeys.length; j++) {
-                    const key = perfKeys[j];
-                    const u = state.perfReq[key];
-                    if (u === 0) continue;
-
-                    const p = activeProfEn[key] || 0;
-                    userSum += u;
-                    if (p >= u) {
-                        matchSum += u;
-                        extraBonus += (p - u) * 4;
-                    } else {
-                        matchSum += p;
-                    }
+                    if (!matchName && !(descEn.includes(term) || descZh.includes(term))) continue;
                 }
             }
 
-            if (userSum > 0 && state.market) {
-                let matchRate = (matchSum / userSum) * 100;
-                item.computedScore = Math.min(100, Math.round(matchRate + extraBonus));
+            if (sysActive) {
+                const prodSys = activeProfEn.Recommended_System_Type || [];
+                if (!selectedSys.some(s => prodSys.includes(s))) continue;
+            }
+            if (state.dispOnly && activeProfEn.Available_as_Waterborne_Dispersion !== true) continue;
+
+            // ===== 新增：多重標籤檢測過濾機制 =====
+            const computedCats = getProductCategories(item, state.market ? matchedMarketKey : null);
+            if (state.category && !computedCats.includes(state.category)) continue;
+
+            if (state.reqFda && activeProfEn.FDA_21CFR_175_300_Compliance !== "Yes") continue;
+            if (state.reqPtfe && (activeProfEn.PTFE_Alternative || 0) === 0) continue;
+            if (state.reqNatural && (activeProfEn.Natural_Naturally_Derived || 0) === 0) continue;
+
+            const hasPriority = state.p1 || state.p2 || state.p3;
+
+            if (hasPriority && state.market) {
+                let maxWeightPoints = 0;
+                let earnedWeightPoints = 0;
+
+                if (state.p1) { maxWeightPoints += 5 * 3; earnedWeightPoints += 5 * (activeProfEn[state.p1] || 0); }
+                if (state.p2) { maxWeightPoints += 3 * 3; earnedWeightPoints += 3 * (activeProfEn[state.p2] || 0); }
+                if (state.p3) { maxWeightPoints += 2 * 3; earnedWeightPoints += 2 * (activeProfEn[state.p3] || 0); }
+
+                item.computedScore = Math.round((earnedWeightPoints / maxWeightPoints) * 100);
                 item.scoreType = "match";
             } else {
                 let totalTraitsVal = 0;
                 const keys = Object.keys(activeProfEn);
                 for(let k=0; k < keys.length; k++){
-                    if(typeof activeProfEn[keys[k]] === 'number') totalTraitsVal += activeProfEn[keys[k]];
+                    if(typeof activeProfEn[keys[k]] === 'number' && keys[k] !== 'PTFE_Alternative' && keys[k] !== 'Natural_Naturally_Derived') {
+                        totalTraitsVal += activeProfEn[keys[k]];
+                    }
                 }
                 item.computedScore = Math.min(99, Math.round(50 + totalTraitsVal * 1.5 + (activeProfEn.FDA_21CFR_175_300_Compliance === "Yes" ? 3 : 0)));
                 item.scoreType = "power";
             }
 
             item.renderMarketKey = matchedMarketKey;
+
+            // 將計算出的多重標籤暫存起來，供算圖繪製使用
+            item.renderCats = computedCats;
+
             filteredData.push(item);
         }
 
@@ -639,7 +681,6 @@
             const sysRaw = enProf.Recommended_System_Type || [];
             const badgesHTML = sysRaw.map(s => `<span class="badge badge-${s}">${s}</span>`).join('');
             const dispBadge = enProf.Available_as_Waterborne_Dispersion ? `<span class="badge badge-special">Dispersion</span>` : '';
-
             const marketTag = !state.market && mKey ? `<span class="badge" style="background:#64748b; opacity:0.8;">${t('markets')[mKey] || mKey}</span>` : '';
 
             const badgeClass = item.scoreType === "match" ? "match" : "power";
@@ -651,7 +692,14 @@
             const meanPs = meanPsObj.raw || meanPsObj.原始描述 || '-';
             const maxPsObj = dispCore['Max_Particle_Size'] || dispCore['最大粒徑'] || {};
             const maxPs = maxPsObj.raw || maxPsObj.原始描述 || '-';
+
+            const suggestedUseLevel = dispProf['Suggested_Use_Level'] || dispProf['建議使用量'] || '-';
             const desc = dispProf['Description'] || dispProf['描述'] || '';
+
+            // ===== 產生多重分類 Badge HTML =====
+            const catLabelsHTML = item.renderCats.map(c =>
+                `<span class="badge" style="background:#475569;">${i18n[state.lang].categories[c]}</span>`
+            ).join('');
 
             let perfBoxHtml = '';
             if (topTraits.length > 0) {
@@ -675,7 +723,11 @@
                     <div class="card-header">
                         <h3 class="product-title">${item.product_name}</h3>
                     </div>
-                    <div class="badges">${marketTag}${badgesHTML}${dispBadge}</div>
+                    <div class="badges">
+                        ${marketTag}
+                        ${catLabelsHTML} ${badgesHTML}
+                        ${dispBadge}
+                    </div>
                     <div class="card-desc">${desc}</div>
 
                     <div class="props-box">
@@ -696,7 +748,11 @@
                             <span>${t('maxPs')}</span>
                             <span class="prop-val">${maxPs}</span>
                         </div>
+                        <div class="prop-row">
+                            <span>${t('suggestedUse')}</span>
+                            <span class="prop-val">${suggestedUseLevel}</span>
                         </div>
+                    </div>
                     ${perfBoxHtml}
                 </div>
             `;
